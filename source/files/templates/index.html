@@ -1,10 +1,12 @@
 <!doctype html>
-<html>
+<html class="no-js" lang="en">
 
 <head>
 	
-	<meta charset="utf-8">
+	<script>/*! rgne.ws/WnP50T */;(function(a){a.className=a.className.replace(/\bno-js\b/,'js')}(document.documentElement));</script>
 	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
 	
 	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
@@ -26,75 +28,92 @@
 </head>
 <body>
 	
-	<header role="banner">
+	<div class="container">
 		
-		<h1><a href="<!-- @echo homepage -->"><!--@echo title-->: <!--@echo description--></a></h1>
+		<header>
+			
+			<h1 id="flag"><a href="http://mky.io">mky.io</a></h1>
+			
+			<nav>
+				
+				<ul class="pure-g harmonia">
+					
+					<li class="pure-u-1 pure-u-md-1-3">
+						<span>Code</span>
+						<ul>
+							<li><a href="http://github.com/mhulse" target="_blank" rel="nofollow">@mhulse</a></li>
+							<li><a href="http://github.com/registerguard" target="_blank" rel="nofollow">registerguard</a></li>
+							<li><a href="http://github.com/registerguard" target="_blank" rel="nofollow">rgpages</a></li>
+							<li><a href="https://gist.github.com/mhulse" target="_blank" rel="nofollow">Gists</a></li>
+						</ul>
+					</li> <!-- /.pure-u-1 -->
+					
+					<li class="pure-u-1 pure-u-md-1-3">
+						<span>Geekery</span>
+						<ul>
+							<li><a href="http://stackexchange.com/users/560173/mhulse" target="_blank" rel="nofollow">Stack</a></li>
+							<li><a href="https://groups.google.com/forum/#!forum/dti-lightning" target="_blank" rel="nofollow">Lightning-dev</a></li>
+							<!--<li><a href="#">Thequickbrownfox hxy jumpsoverthelazydog hxy</a></li>-->
+						</ul>
+					</li> <!-- /.pure-u-1 -->
+					
+					<li class="pure-u-1 pure-u-md-1-3">
+						<span>Bookmarks</span>
+						<ul>
+							<li><a href="https://pinboard.in/u:mhulse" target="_blank" rel="nofollow">Pinboard</a></li>
+							<li><a href="https://github.com/stars/mhulse" target="_blank" rel="nofollow">Stars</a></li>
+						</ul>
+					</li> <!-- /.pure-u-1 -->
+					
+				</ul> <!-- /.pure-g -->
+				
+			</nav>
+			
+		</header>
 		
-	</header>
-	
-	<main role="main">
+		<div class="packery">
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+		</div> <!-- /.packery -->
 		
-		<section>
+		<footer>
 			
-			<h1><!--@echo NODE_ENV--></h1>
+			<p>
+				Copyright © <a href="http://mky.io">mky.io</a> 2013-14.
+				<br>
+				All rights reserved.
+			</p>
 			
-			<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-			
-			<img src="./images/junk/test.gif">
-			
-			<!-- @endif -->
-			
-			<!-- @if NODE_ENV == 'PRODUCTION' -->
-			
-			<img src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/images/grunt-logo.svg">
-			
-			<!-- @endif -->
-			
-			<hr>
-			
-			<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-			
-			<p class="foo">This is a <code>.foo</code> test.</p>
-			
-			<!-- @endif -->
-			
-			<p class="test">This is a <code>.test</code> test.</p>
-			
-		</section>
+		</footer>
 		
-	</main>
-	
-	<hr>
-	
-	<footer role="contentinfo">
-		
-		<a
-			class="twitter-timeline"
-			href="https://twitter.com/gruntjs"
-			data-widget-id="412449818275901440"
-			data-screen-name="gruntjs"
-			width="100%"
-			height="650px"
-		>
-			Tweets by @gruntjs
-		</a>
-		
-		<hr>
-		
-		<p><a href="<!-- @echo homepage -->">Fork this shizzle</a> on <a href="https://github.com/">GitHub-izzle</a>.</p>
-		
-	</footer>
+	</div> <!-- /.container -->
 	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
 	<script src="./scripts/jquery.js"></script>
-	<script src="./scripts/jquery.cookie.js"></script>
 	<script src="./scripts/fastclick.js"></script>
 	<script src="./scripts/data.js"></script>
 	<script src="./scripts/data.mod.fastclick.js"></script>
-	<script src="./scripts/data.mod.twitter.js"></script>
-	<script src="./scripts/data.mod.test.js"></script>
 	<script src="./scripts/data.init.js"></script>
+	
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script src="jquery.harmonia.min.js"></script>
+	<script src="imagesloaded.pkgd.min.js"></script>
+	<script src="packery.pkgd.min.js"></script>
+	<script src="scripts/foo.js"></script>
 	
 	<script>
 		

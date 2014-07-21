@@ -1,9 +1,13 @@
 {
   "name": "bower",
   "dependencies": {
-    "jquery": "~2",
     "fastclick": "~1",
-    "normalize-css": "~3"
+    "harmonia": "https://github.com/mhulse/jquery-harmonia.git#~1",
+    "imagesloaded": "~3",
+    "jquery": "~2",
+    "normalize-css": "~3",
+    "packery": "~1",
+    "pure": "~0"
   },
   "exportsOverride": {
     "jquery": {
