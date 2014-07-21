@@ -1,4 +1,4 @@
-# Data: [My timing is digital.](https://www.youtube.com/watch?v=kSHytxvDDqU)
+# Data
 
 <p align="center">
 	<a href="https://github.com/mhulse/data">

@@ -1,0 +1,13 @@
+{
+  "name": "bower",
+  "dependencies": {
+    "jquery": "~2",
+    "fastclick": "~1",
+    "normalize-css": "~3"
+  },
+  "exportsOverride": {
+    "jquery": {
+      "": "dist/jquery.js"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+/**
+ * Data
+ * Take my Worf. Please.
+ *
+ * @author Micky Hulse
+ * @link http://mky.io
+ * @docs https://github.com/mhulse/data
+ * @copyright Copyright (c) 2014 Micky Hulse.
+ * @license Released under the Apache License, Version 2.0.
+ * @version 0.1.0
+ * @date 2014/07/20
+ */
+
+
+.foo {
+  font-size: smaller;
+  color: #333333;
+  border: 10px solid #666666;
+  margin: 50px;
+  padding: 100px;
+  display: block;
+}
