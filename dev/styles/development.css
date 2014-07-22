@@ -8,15 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/07/20
+ * @date 2014/07/21
  */
 
 
-.foo {
-  font-size: smaller;
-  color: #333333;
-  border: 10px solid #666666;
-  margin: 50px;
-  padding: 100px;
-  display: block;
-}

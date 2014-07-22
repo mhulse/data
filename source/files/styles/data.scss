@@ -1,11 +1,6 @@
-// Helpers:
-@import "partials/variables";
-
-// Normalization:
-@import "partials/normalize";
-
-// Core:
-@import "partials/base";
-
-// To be sorted:
-@import "partials/pending";
+@import "partials/variables",
+        "partials/normalize",
+        "partials/grids",
+        "partials/grids-responsive",
+        "partials/base",
+        "partials/pending";

@@ -19,9 +19,6 @@
         "grids-responsive.css"
       ]
     },
-    "packery": {
-      "": "packery.pkgd.js"
-    },
     "imagesloaded": {
       "": "imagesloaded.pkgd.js"
     },

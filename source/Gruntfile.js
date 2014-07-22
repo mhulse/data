@@ -445,7 +445,7 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('init', ['jshint',]);
 	
-	grunt.registerTask('plugins', ['bower', 'shell',])
+	grunt.registerTask('plugins', ['bower', 'shell',]);
 	
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	
