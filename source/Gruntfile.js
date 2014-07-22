@@ -98,6 +98,35 @@ module.exports = function(grunt) {
 			
 		},
 		
+		/*----------------------------------( SHELL )----------------------------------*/
+		
+		/**
+		 * Run shell commands.
+		 *
+		 * @see https://github.com/sindresorhus/grunt-shell
+		 */
+		
+		shell: {
+			
+			clean_bower : {
+				
+				options : {
+					
+					stderr : false,
+					
+				},
+				
+				command : [
+					
+					// Remove unwanted Bower plugin dependencies:
+					'rm -rf files/plugins/{outlayer,classie,doc-ready,eventEmitter,eventie,get-size,get-style-property,jquery-bridget,matches-selector}',
+					
+				].join(';')
+				
+			},
+			
+		},
+		
 		/*----------------------------------( WATCH )----------------------------------*/
 		
 		/**
@@ -385,21 +414,23 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-bower-task');
 	
-	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	
-	grunt.loadNpmTasks('grunt-env');
-	
-	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	
+	grunt.loadNpmTasks('grunt-env');
 	
 	grunt.loadNpmTasks('grunt-preprocess');
 	
-	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-shell');
 	
 	//----------------------------------
 	
@@ -413,6 +444,8 @@ module.exports = function(grunt) {
 	//----------------------------------
 	
 	grunt.registerTask('init', ['jshint',]);
+	
+	grunt.registerTask('plugins', ['bower', 'shell',])
 	
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	

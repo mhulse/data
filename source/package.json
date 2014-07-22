@@ -31,12 +31,13 @@
     "grunt-contrib-uglify": "~0",
     "grunt-contrib-watch": "~0",
     "grunt-env": "~0",
-    "grunt-preprocess": "~4"
+    "grunt-preprocess": "~4",
+    "grunt-shell": "~0"
   },
   "scripts": {
     "dev": "grunt",
     "prod": "grunt prod",
     "watch": "grunt watch",
-    "bower": "grunt bower"
+    "plugins": "grunt plugins"
   }
 }
