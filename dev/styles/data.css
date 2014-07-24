@@ -1696,8 +1696,8 @@ hr {
 }
 
 .packery_item {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   float: left;
   border: 10px solid transparent;
 }

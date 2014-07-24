@@ -102,8 +102,8 @@ hr { display: none; }
 .packery { *zoom: 1; } .packery::before, .packery::after { content: " "; display: table; } .packery::after { clear: both; }
 .packery { margin: 0 auto; }
 .packery_item {
-	width: 150px;
-	height: 150px;
+	width: 140px;
+	height: 140px;
 	float: left;
 	border: 10px solid rgba(0, 0, 0, 0);
 }
@@ -115,6 +115,7 @@ hr { display: none; }
 	outline: 0;
 	border: 0;
 }
+
 header { *zoom: 1; } header::before, header::after { content: " "; display: table; } header::after { clear: both; }
 header {
 	text-align: center;

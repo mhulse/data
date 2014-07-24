@@ -9,23 +9,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
 	
-	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
-	<meta name="description" content="<!--@echo description-->">
+	<title>Data | v0.1.0 | DEVELOPMENT</title>
+	<meta name="description" content="Take my Worf. Please.">
 	
 	<link rel="stylesheet" href="//fonts.mky.io/hulse/hulse.css">
 	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
-	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
+	<link rel="stylesheet" href="./styles/data.css">
 	<link rel="stylesheet" href="./styles/development.css">
 	
-	<!-- @endif -->
 	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-	
-	<link rel="stylesheet" href="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/styles/<!-- @echo name -->.min.css">
-	
-	<!-- @endif -->
 	
 </head>
 <body>
@@ -72,25 +65,10 @@
 			</nav>
 			
 		</header>
-		
-		<div class="packery">
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
-		</div> <!-- /.packery -->
-		
+
+
+
+
 		<footer>
 			
 			<p>
@@ -103,7 +81,6 @@
 		
 	</div> <!-- /.container -->
 	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
 	<script src="./scripts/fastclick.js"></script>
 	<script src="./scripts/jquery.js"></script>
@@ -117,13 +94,7 @@
 	<script src="./scripts/data.mod.packery.js"></script>
 	<script src="./scripts/data.init.js"></script>
 	
-	<!-- @endif -->
 	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-	
-	<script src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
-	
-	<!-- @endif -->
 	
 </body>
 </html>

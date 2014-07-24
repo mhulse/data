@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	
+	<script>/*! rgne.ws/WnP50T */;(function(a){a.className=a.className.replace(/\bno-js\b/,'js')}(document.documentElement));</script>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	
+	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
+	<meta name="description" content="<!--@echo description-->">
+	
+	<link rel="stylesheet" href="//fonts.mky.io/hulse/hulse.css">
+	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
+	<link rel="stylesheet" href="./styles/development.css">
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<link rel="stylesheet" href="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/styles/<!-- @echo name -->.min.css">
+	
+	<!-- @endif -->
+	
+</head>
+<body>
+	
+	<div class="container">
+		
+		<header>
+			
+			<h1 id="flag"><a href="http://mky.io">mky.io</a></h1>
+			
+			<nav>
+				
+				<ul class="pure-g harmonia">
+					
+					<li class="pure-u-1 pure-u-md-1-3">
+						<span>Code</span>
+						<ul>
+							<li><a href="http://github.com/mhulse" target="_blank" rel="nofollow">@mhulse</a></li>
+							<li><a href="http://github.com/registerguard" target="_blank" rel="nofollow">registerguard</a></li>
+							<li><a href="http://github.com/registerguard" target="_blank" rel="nofollow">rgpages</a></li>
+							<li><a href="https://gist.github.com/mhulse" target="_blank" rel="nofollow">Gists</a></li>
+						</ul>
+					</li> <!-- /.pure-u-1 -->
+					
+					<li class="pure-u-1 pure-u-md-1-3">
+						<span>Geekery</span>
+						<ul>
+							<li><a href="http://stackexchange.com/users/560173/mhulse" target="_blank" rel="nofollow">Stack</a></li>
+							<li><a href="https://groups.google.com/forum/#!forum/dti-lightning" target="_blank" rel="nofollow">Lightning-dev</a></li>
+							<!--<li><a href="#">Thequickbrownfox hxy jumpsoverthelazydog hxy</a></li>-->
+						</ul>
+					</li> <!-- /.pure-u-1 -->
+					
+					<li class="pure-u-1 pure-u-md-1-3">
+						<span>Bookmarks</span>
+						<ul>
+							<li><a href="https://pinboard.in/u:mhulse" target="_blank" rel="nofollow">Pinboard</a></li>
+							<li><a href="https://github.com/stars/mhulse" target="_blank" rel="nofollow">Stars</a></li>
+						</ul>
+					</li> <!-- /.pure-u-1 -->
+					
+				</ul> <!-- /.pure-g -->
+				
+			</nav>
+			
+		</header>

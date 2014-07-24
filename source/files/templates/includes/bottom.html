@@ -1,0 +1,36 @@
+		<footer>
+			
+			<p>
+				Copyright © <a href="http://mky.io">mky.io</a> 2013-14.
+				<br>
+				All rights reserved.
+			</p>
+			
+		</footer>
+		
+	</div> <!-- /.container -->
+	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<script src="./scripts/fastclick.js"></script>
+	<script src="./scripts/jquery.js"></script>
+	<script src="./scripts/jquery.harmonia.js"></script>
+	<script src="./scripts/imagesloaded.pkgd.js"></script>
+	<script src="./scripts/packery.pkgd.js"></script>
+	<script src="./scripts/packery.overrides.js"></script>
+	<script src="./scripts/data.js"></script>
+	<script src="./scripts/data.mod.fastclick.js"></script>
+	<script src="./scripts/data.mod.harmonia.js"></script>
+	<script src="./scripts/data.mod.packery.js"></script>
+	<script src="./scripts/data.init.js"></script>
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<script src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+	
+	<!-- @endif -->
+	
+</body>
+</html>

@@ -70,6 +70,8 @@ module.exports = function(grunt) {
 		
 		ver : 1, // Increment if more than one build is needed in a single day.
 		
+		path : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>', // Saves me some typing.
+		
 		/*----------------------------------( BOWER )----------------------------------*/
 		
 		/**
@@ -225,7 +227,7 @@ module.exports = function(grunt) {
 			
 			prod : [
 				
-				'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*',
+				'<%= path %>/**/*',
 				
 			],
 			
@@ -252,7 +254,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
+					'<%= path %>/scripts/<%= pkg.name %>.min.js' : [
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
@@ -317,7 +319,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/styles/<%= pkg.name %>.min.css' : './files/styles/<%= pkg.name %>.scss',
+					'<%= path %>/styles/<%= pkg.name %>.min.css' : './files/styles/<%= pkg.name %>.scss',
 					
 				},
 				
@@ -356,8 +358,12 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				src : './files/templates/index.html',
-				dest : '../dev/index.html'
+				files : {
+					
+					'../dev/index.html' : './files/templates/index.html',
+					'../dev/sub.html' : './files/templates/sub.html',
+					
+				},
 				
 			},
 			
@@ -365,8 +371,9 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html' : './files/templates/index.html',
-					'../prod/index.html' : './files/templates/latest.html'
+					'<%= path %>/index.html' : './files/templates/index.html',
+					'<%= path %>/sub.html' : './files/templates/sub.html',
+					'../prod/index.html' : './files/templates/latest.html',
 					
 				},
 				
@@ -405,7 +412,7 @@ module.exports = function(grunt) {
 					'images/**/*',
 					'!images/junk/**'
 				],
-				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
+				dest : '<%= path %>/'
 				
 			},
 			
