@@ -12,6 +12,8 @@
 	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
 	<meta name="description" content="<!--@echo description-->">
 	
+	<link rel="stylesheet" href="//fonts.mky.io/hulse/hulse.css">
+	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
 	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
@@ -72,21 +74,21 @@
 		</header>
 		
 		<div class="packery">
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
-			<div class="packery_item"><a href="sub.html"><img src="foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
+			<div class="packery_item"><a href="sub.html"><img src="./images/junk/foo.png"></a></div>
 		</div> <!-- /.packery -->
 		
 		<footer>
@@ -103,15 +105,17 @@
 	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
-	<script src="./scripts/jquery.js"></script>
 	<script src="./scripts/fastclick.js"></script>
+	<script src="./scripts/jquery.js"></script>
+	<script src="./scripts/jquery.harmonia.js"></script>
+	<script src="./scripts/imagesloaded.pkgd.js"></script>
+	<script src="./scripts/packery.pkgd.js"></script>
+	<script src="./scripts/packery.overrides.js"></script>
 	<script src="./scripts/data.js"></script>
 	<script src="./scripts/data.mod.fastclick.js"></script>
+	<script src="./scripts/data.mod.harmonia.js"></script>
+	<script src="./scripts/data.mod.packery.js"></script>
 	<script src="./scripts/data.init.js"></script>
-	
-	<script src="jquery.harmonia.js"></script>
-	<script src="imagesloaded.pkgd.js"></script>
-	<script src="packery.pkgd.js"></script>
 	
 	<!-- @endif -->
 	

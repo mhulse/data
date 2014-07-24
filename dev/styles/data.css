@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/07/21
+ * @date 2014/07/23
  */
 
 
@@ -1550,5 +1550,265 @@ https://github.com/yui/pure/blob/master/LICENSE.md
   .pure-u-xl-5-5,
   .pure-u-xl-24-24 {
     width: 100%;
+  }
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font: 16px/1.5 arial, sans-serif;
+  color: #999;
+  margin: 0;
+  padding: 50px 20px;
+  background: #efefef;
+}
+
+.pure-g [class*="pure-u"] {
+  font-family: arial, sans-serif;
+}
+
+/* http://purecss.io/grids/#using-grids-with-custom-fonts */
+@media only screen and (min-width: 48em) {
+  body {
+    padding: 100px;
+  }
+}
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a img {
+  outline: 0;
+}
+
+a {
+  -webkit-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+
+a,
+a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+a:visited:hover,
+a:focus,
+a:focus:hover,
+a:hover,
+a:active {
+  color: #f60;
+}
+
+hr {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80em;
+  /* 1280px */
+  min-width: 150px;
+}
+
+/*
+.container [class *= "pure-u"] { padding: 1em 0; }
+*/
+#flag {
+  font-family: "hulse", Arial, sans-serif;
+  font-size: 100px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 100px;
+  text-transform: none;
+  margin: 0 0 20px;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#flag a {
+  background: transparent;
+  border: 0;
+}
+
+/*
+#flag a,
+#flag a:visited {
+	color: #ddd;
+	text-decoration: none;
+}
+#flag a:visited:hover,
+#flag a:focus,
+#flag a:focus:hover,
+#flag a:hover,
+#flag a:active {
+	color: #000;
+}
+*/
+#flag a:active,
+#flag a:focus {
+  outline: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  #flag {
+    font-size: 80px;
+    line-height: 80px;
+    margin: 0;
+  }
+}
+.packery {
+  *zoom: 1;
+}
+
+.packery::before, .packery::after {
+  content: " ";
+  display: table;
+}
+
+.packery::after {
+  clear: both;
+}
+
+.packery {
+  margin: 0 auto;
+}
+
+.packery_item {
+  width: 150px;
+  height: 150px;
+  float: left;
+  border: 10px solid transparent;
+}
+
+.js .packery_item {
+  opacity: 0;
+}
+
+.packery_item a:active,
+.packery_item a:focus {
+  color: transparent;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+}
+
+header {
+  *zoom: 1;
+}
+
+header::before, header::after {
+  content: " ";
+  display: table;
+}
+
+header::after {
+  clear: both;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+@media only screen and (min-width: 48em) {
+  header {
+    text-align: left;
+    margin-bottom: 100px;
+  }
+
+  header h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+nav ul {
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  font-size: 14px;
+  list-style: none;
+}
+
+nav li span {
+  font-weight: bold;
+  letter-spacing: .025em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+nav li li {
+  margin-bottom: 5px;
+}
+
+nav select {
+  font-size: 16px;
+}
+
+nav .harmonia {
+  display: none;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 48em) {
+  nav {
+    margin-left: 20%;
+  }
+
+  nav .harmonia-select {
+    display: none;
+    visibility: hidden;
+  }
+
+  .js nav .harmonia {
+    display: block;
+    visibility: visible;
+  }
+}
+@media only screen and (min-width: 64em) {
+  nav {
+    margin-left: 50%;
+  }
+}
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+  letter-spacing: .05em;
+}
+
+@media only screen and (min-width: 48em) {
+  footer {
+    text-align: right;
+    margin-top: 100px;
   }
 }
