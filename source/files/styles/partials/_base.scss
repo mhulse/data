@@ -51,7 +51,7 @@ hr { display: none; }
 
 .container {
 	margin: 0 auto;
-	max-width: 80em; /* 1280px */
+	max-width: 80em; //48em;
 	min-width: 150px;
 }
 /*
@@ -116,68 +116,68 @@ hr { display: none; }
 	border: 0;
 }
 
-header { *zoom: 1; } header::before, header::after { content: " "; display: table; } header::after { clear: both; }
-header {
+#header { *zoom: 1; } #header::before, #header::after { content: " "; display: table; } #header::after { clear: both; }
+#header {
 	text-align: center;
 	margin-bottom: 50px;
 	position: relative;
 }
 @media only screen and (min-width: 48em) {
-	header {
+	#header {
 		text-align: left;
 		margin-bottom: 100px;
 	}
-	header h1 {
+	#header h1 {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 	}
 }
-nav ul {
+#header nav ul {
 	line-height: 1.1;
 	margin: 0;
 	padding: 0;
 }
-nav li {
+#header nav li {
 	font-size: 14px;
 	list-style: none;
 }
-nav li span {
+#header nav li span {
 	font-weight: bold;
 	letter-spacing: .025em;
 	margin-bottom: 10px;
 	display: block;
 }
-nav li li { margin-bottom: 5px; }
-nav select { font-size: 16px; }
-nav .harmonia {
+#header nav li li { margin-bottom: 5px; }
+#header nav select { font-size: 16px; }
+#header nav .harmonia {
 	display: none;
 	visibility: hidden;
 }
 @media only screen and (min-width: 48em) {
-	nav { margin-left: 20%; }
-	nav .harmonia-select {
+	#header nav { margin-left: 20%; }
+	#header nav .harmonia-select {
 		display: none;
 		visibility: hidden;
 	}
-	.js nav .harmonia {
+	.js #header nav .harmonia {
 		display: block;
 		visibility: visible;
 	}
 }
 @media only screen and (min-width: 64em) {
-	nav { margin-left: 50%; }
+	#header nav { margin-left: 50%; }
 }
-footer {
+#footer {
 	margin-top: 50px;
 	text-align: center;
 }
-footer p {
+#footer p {
 	font-size: 12px;
 	letter-spacing: .05em;
 }
 @media only screen and (min-width: 48em) {
-	footer {
+	#footer {
 		text-align: right;
 		margin-top: 100px;
 	}

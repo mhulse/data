@@ -1626,7 +1626,6 @@ hr {
 .container {
   margin: 0 auto;
   max-width: 80em;
-  /* 1280px */
   min-width: 150px;
 }
 
@@ -1714,101 +1713,169 @@ hr {
   border: 0;
 }
 
-header {
+#header {
   *zoom: 1;
 }
 
-header::before, header::after {
+#header::before, #header::after {
   content: " ";
   display: table;
 }
 
-header::after {
+#header::after {
   clear: both;
 }
 
-header {
+#header {
   text-align: center;
   margin-bottom: 50px;
   position: relative;
 }
 
 @media only screen and (min-width: 48em) {
-  header {
+  #header {
     text-align: left;
     margin-bottom: 100px;
   }
 
-  header h1 {
+  #header h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
   }
 }
-nav ul {
+#header nav ul {
   line-height: 1.1;
   margin: 0;
   padding: 0;
 }
 
-nav li {
+#header nav li {
   font-size: 14px;
   list-style: none;
 }
 
-nav li span {
+#header nav li span {
   font-weight: bold;
   letter-spacing: .025em;
   margin-bottom: 10px;
   display: block;
 }
 
-nav li li {
+#header nav li li {
   margin-bottom: 5px;
 }
 
-nav select {
+#header nav select {
   font-size: 16px;
 }
 
-nav .harmonia {
+#header nav .harmonia {
   display: none;
   visibility: hidden;
 }
 
 @media only screen and (min-width: 48em) {
-  nav {
+  #header nav {
     margin-left: 20%;
   }
 
-  nav .harmonia-select {
+  #header nav .harmonia-select {
     display: none;
     visibility: hidden;
   }
 
-  .js nav .harmonia {
+  .js #header nav .harmonia {
     display: block;
     visibility: visible;
   }
 }
 @media only screen and (min-width: 64em) {
-  nav {
+  #header nav {
     margin-left: 50%;
   }
 }
-footer {
+#footer {
   margin-top: 50px;
   text-align: center;
 }
 
-footer p {
+#footer p {
   font-size: 12px;
   letter-spacing: .05em;
 }
 
 @media only screen and (min-width: 48em) {
-  footer {
+  #footer {
     text-align: right;
     margin-top: 100px;
+  }
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  text-align: right;
+}
+
+/*
+** 
+** Sources:
+** 
+** http://www.sitepoint.com/forums/css-53/dissecting-pmob-example-2col-fluid-content-first-663206.html
+** http://www.pmob.co.uk/temp/2colum_sourceorder_r.htm
+** 
+** Layout tested via:
+** 
+** MAC:
+** Firefox 5.0.1, Opera 11.50, Safari 5.1, Chrome 13.0.x
+** 
+** PC:
+** Firefox 5.0, Firefox 3.6.17, Chrome 13.0.x, Safari 5.1, Opera 11.50,
+** IE 9.0.x, IE 8.0.x, IE 7.0.x, IE 6.0.x
+** 
+*/
+@media only screen and (min-width: 64em) {
+  .bar {
+    *zoom: 1;
+  }
+
+  .bar::before, .bar::after {
+    content: " ";
+    display: table;
+  }
+
+  .bar::after {
+    clear: both;
+  }
+
+  .foo .bar {
+    margin-left: 200px;
+  }
+
+  .foo .baz {
+    float: right;
+    width: 100%;
+    position: relative;
+  }
+
+  .foo .qux {
+    width: 150px;
+    margin-left: -200px;
+    *margin-right: 50px;
+    float: left;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 64em) {
+  article header h3 {
+    float: left;
+  }
+
+  article header h1,
+  article header h2 {
+    margin-left: 200px;
   }
 }
