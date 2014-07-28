@@ -1,0 +1,132 @@
+.fix {
+	
+	*zoom: 1;
+	
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	
+	&:after { clear: both; }
+	
+}
+
+.gone {
+	display: none !important;
+	visibility: hidden;
+}
+
+.off {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.ghost { visibility: hidden; }
+
+// https://github.com/mhulse/picard/issues/201
+.nix {
+	
+	&,
+	&:focus,
+	&:hover,
+	&:active {
+		color: rgba($raven, 0);
+		text-decoration: none;
+		outline: 0;
+		border: 0;
+	}
+	
+}
+
+.force {
+	margin: {
+		top: -1px;
+		bottom: -1px;
+	}
+	padding: 1px 0;
+}
+
+.nono {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	// -ms-word-break: break-all;
+	// 	word-break: break-all;
+	// 	word-break: break-word;
+}
+
+.none { max-width: none; }
+
+// Simple solution for responsive tables.
+//
+// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
+// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
+// @see http://stackoverflow.com/a/10122689/922323
+
+.scroll {
+	
+	width: 100%;
+	margin: 10px 0;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	
+	img:first-of-type {
+		max-width: none;
+		//display: block;
+	}
+	
+	> *,
+	img:first-of-type {
+		margin-top: 0;
+		margin-bottom: 0;
+		-webkit-transform: translateZ(0);
+	}
+	
+	figure & { margin: 0; }
+	
+}
+
+// For the scroll left/right icon added via JS:
+.scroll-wrap { position: relative; }
+.scroll-overlay {
+	font-size: 1em;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: lowercase;
+	text-shadow: 0 1px 3px $raven,
+				 0 1px 3px $raven,
+				 0 1px 3px $raven,
+				 0 1px 3px $raven;
+	text-align: center;
+	color: $milk;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	top: 10px;
+	left: 0;
+	opacity: .5;
+}
+.scroll-overlay::before,
+.scroll-overlay::after {
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+}
+.scroll-overlay::before { content: "\f0a5\00a0"; }
+.scroll-overlay::after { content: "\00a0\f0a4"; }
+
+// http://css-tricks.com/examples/IconFont/
+[data-icon]:before {
+	font-family: FontAwesome;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: normal;
+	content: attr(data-icon);
+	speak: none;
+}

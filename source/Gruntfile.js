@@ -70,8 +70,6 @@ module.exports = function(grunt) {
 		
 		ver : 1, // Increment if more than one build is needed in a single day.
 		
-		path : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>', // Saves me some typing.
-		
 		/*----------------------------------( BOWER )----------------------------------*/
 		
 		/**
@@ -123,7 +121,7 @@ module.exports = function(grunt) {
 					// Remove unwanted Bower plugin dependencies:
 					'rm -rf files/plugins/{outlayer,classie,doc-ready,eventEmitter,eventie,get-size,get-style-property,jquery-bridget,matches-selector}',
 					
-				].join(';')
+				].join(';'),
 				
 			},
 			
@@ -227,7 +225,7 @@ module.exports = function(grunt) {
 			
 			prod : [
 				
-				'<%= path %>/**/*',
+				'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*',
 				
 			],
 			
@@ -254,7 +252,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'<%= path %>/scripts/<%= pkg.name %>.min.js' : [
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
@@ -266,9 +264,40 @@ module.exports = function(grunt) {
 						'./files/scripts/<%= pkg.name %>.init.js',
 					],
 					
-				}
+				},
 				
-			}
+			},
+			
+		},
+		
+		/*----------------------------------( PURE )----------------------------------*/
+		
+		/**
+		 * Generate custom grid units for Pure Grids.
+		 *
+		 * @see https://github.com/yahoo/grunt-pure-grids
+		 * @see http://purecss.io/grids/
+		 */
+		
+		pure_grids: {
+			
+			dest : './files/styles/partials/_grids-responsive.scss',
+			
+			options: {
+				
+				decimals : 14,
+				includeOldIEWidths : false,
+				
+				mediaQueries: {
+					
+					sm : 'all and (min-width: 568px)',
+					med : 'all and (min-width: 768px)',
+					lrg : 'all and (min-width: 928px)',
+					xl : 'all and (min-width: 1200px)',
+					
+				},
+				
+			},
 			
 		},
 		
@@ -319,7 +348,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'<%= path %>/styles/<%= pkg.name %>.min.css' : './files/styles/<%= pkg.name %>.scss',
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/styles/<%= pkg.name %>.min.css' : './files/styles/<%= pkg.name %>.scss',
 					
 				},
 				
@@ -358,24 +387,32 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				files : {
-					
-					'../dev/index.html' : './files/templates/index.html',
-					'../dev/sub.html' : './files/templates/sub.html',
-					
-				},
+				expand : true,
+				cwd : './files/templates/',
+				src : [
+					'**/*.html',
+					'!latest.html',
+				],
+				dest : '../dev/',
 				
 			},
 			
 			prod : {
 				
-				files : {
-					
-					'<%= path %>/index.html' : './files/templates/index.html',
-					'<%= path %>/sub.html' : './files/templates/sub.html',
-					'../prod/index.html' : './files/templates/latest.html',
-					
-				},
+				expand : true,
+				cwd : './files/templates/',
+				src : [
+					'**/*.html',
+					'!latest.html',
+				],
+				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+				
+			},
+			
+			misc : {
+				
+				src : './files/templates/latest.html',
+				dest : '../prod/index.html',
 				
 			},
 			
@@ -398,6 +435,7 @@ module.exports = function(grunt) {
 				cwd : './files/',
 				src : [
 					'images/**/*',
+					'media/**/*',
 					'scripts/**/*',
 				],
 				dest : '../dev/',
@@ -410,9 +448,10 @@ module.exports = function(grunt) {
 				cwd : './files/',
 				src : [
 					'images/**/*',
-					'!images/junk/**'
+					'media/**/*',
+					'scripts/**/*',
 				],
-				dest : '<%= path %>/'
+				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 				
 			},
 			
@@ -438,6 +477,8 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-env');
 	
+	grunt.loadNpmTasks('grunt-pure-grids');
+	
 	grunt.loadNpmTasks('grunt-preprocess');
 	
 	grunt.loadNpmTasks('grunt-shell');
@@ -457,9 +498,9 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('plugins', ['bower', 'shell',]);
 	
-	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
+	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'pure_grids', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	
-	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod',]);
+	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'pure_grids', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'preprocess:misc', 'copy:prod',]);
 	
 	grunt.registerTask('default', ['dev',]);
 	

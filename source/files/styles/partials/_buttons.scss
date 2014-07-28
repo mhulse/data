@@ -1,0 +1,220 @@
+/**
+ * Simple button class.
+ *
+ * I wasn't able to normalize line-height of `<input type="buton">` in Firefox.
+ * Conclusion: Don't use `<input>` for buttons.
+ *
+ * @see https://github.com/yui/pure
+ */
+
+.button {
+	
+	font-weight: normal;
+	text-align: center;
+	line-height: normal;
+	vertical-align: baseline;
+	//white-space: nowrap;
+	display: block;
+	zoom: 1;
+	cursor: pointer;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+	
+	font: 18px $sans;
+	text-shadow: 0 1px darken($juice, 20%);
+	letter-spacing: .1em;
+	color: darken($juice, 20%);
+	width: 100%;
+	background-color: $juice;
+	border: none rgba($raven, 0);
+	border-radius: 3px;
+	margin: 10px 0;
+	padding: 5px;
+	-webkit-tap-highlight-color: rgba($raven, 0);
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active {
+		text-decoration: none;
+		color: $milk;
+	}
+	
+	&.button-hover,
+	&:hover,
+	&:focus { background-image: linear-gradient(transparent, rgba($raven, .05) 40%, rgba($raven, .10)); }
+	
+	&:focus { outline: 0; }
+	
+	&:active {
+		box-shadow: 0 0 0 2px rgba($raven, .15) inset,
+		            0 0 10px rgba($raven, .25) inset;
+	}
+	
+	&[disabled],
+	&.button-disabled,
+	&.button-disabled:visited,
+	&.button-disabled:visited:hover,
+	&.button-disabled:focus,
+	&.button-disabled:focus:hover,
+	&.button-disabled:hover,
+	&.button-disabled:active {
+		border: none;
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		filter: alpha(opacity=40);
+		-khtml-opacity: .40;
+		  -moz-opacity: .40;
+		       opacity: .40;
+		cursor: not-allowed;
+		box-shadow: none;
+	}
+	
+	&.button-hidden { display: none; }
+	
+	&.button-info,
+	&.button-success,
+	&.button-warning,
+	&.button-error { text-shadow: none; }
+	&.button-info {
+		color: darken($ice, 55%);
+		background-color: $ice;
+	}
+	&.button-success {
+		color: darken($frog, 55%);
+		background-color: $frog;
+	}
+	&.button-warning {
+		color: darken($duck, 55%);
+		background-color: $duck;
+	}
+	&.button-error {
+		color: darken($chili, 55%);
+		background-color: $chili;
+	}
+	
+}
+
+a.social {
+	
+	&.fa-lg { font-size: 1.3875em; } // Fixes rounding oddness in Firefox.
+	
+	&,
+	&:visited { color: $gray9; }
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active {
+		color: darken($gray9, 20%);
+		text-decoration: none;
+	}
+	
+}
+
+a.social-twitter {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #41b7d8; }
+	
+}
+
+a.social-facebook {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #3b5997; }
+	
+}
+
+a.social-google-plus {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #d64937; }
+	
+}
+
+a.social-linkedin {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #0073b2; }
+	
+}
+
+a.social-pinterest {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #cb2027; }
+	
+}
+
+a.social-vk {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #54769b; }
+	
+}
+
+a.social-xing {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #006567; }
+	
+}
+
+a.social-tumblr {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #34465d; }
+	
+}

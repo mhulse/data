@@ -32,6 +32,7 @@
     "grunt-contrib-watch": "~0",
     "grunt-env": "~0",
     "grunt-preprocess": "~4",
+    "grunt-pure-grids": "~1",
     "grunt-shell": "~0"
   },
   "scripts": {

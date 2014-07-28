@@ -1,0 +1,80 @@
+pre {
+	
+	font-family: $mono;
+	color: $gray8;
+	letter-spacing: .05em;
+	word-wrap: normal;
+	background: rgba($gray1, .5);
+	border-radius: 5px;
+	margin: 50px 0;
+	padding: 15px;
+	overflow: auto;
+	white-space: pre;
+	-webkit-overflow-scrolling: touch;
+	
+	+ pre  { margin-top: -25px; }
+	
+}
+
+code,
+%code {
+	font-size: inherit;
+	font-family: $mono;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	white-space: pre;           // CSS 2.0
+	white-space: pre-wrap;      // CSS 2.1
+	white-space: pre-line;      // CSS 3.0
+	white-space: -pre-wrap;     // Opera 4-6
+	white-space: -o-pre-wrap;   // Opera 7
+	white-space: -moz-pre-wrap; // Mozilla
+	white-space: -hp-pre-wrap;  // HP Printers
+	word-wrap: break-word;      // IE 5+
+}
+
+code {
+	letter-spacing: .05em;
+	color: $smurf;
+	background: rgba($smurf, .25);
+	padding: 1px 4px;
+	border-radius: 3px;
+}
+
+kbd {
+	@extend %code;
+	font-size: smaller;
+	color: $gray3;
+	text-shadow: 0 1px 0 $milk;
+	background-color: $graye;
+	border: 1px solid $grayc;
+	margin: 0 .1em;
+	padding: 0 .5em;
+	display: inline-block;
+	-webkit-background-clip: padding;
+	   -moz-background-clip: padding;
+			background-clip: padding-box;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba($raven, .2), 0 0 0 2px $milk inset;
+}
+
+samp { @extend %code; }
+
+var { @extend %code; }
+
+pre code,
+pre kbd,
+pre samp,
+pre var,
+kbd kbd {
+	font-size: inherit;
+	color: inherit;
+	text-shadow: none;
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	box-shadow: none;
+	border-radius: 0;
+}

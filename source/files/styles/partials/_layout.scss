@@ -1,0 +1,88 @@
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	min-width: 150px;
+}
+/*
+.container [class *= "pure-u"] { padding: 1em 0; }
+*/
+
+.packery { *zoom: 1; } .packery::before, .packery::after { content: " "; display: table; } .packery::after { clear: both; }
+.packery { margin: 0 auto; }
+.packery_item {
+	width: 140px;
+	height: 140px;
+	float: left;
+	border: 10px solid rgba(0, 0, 0, 0);
+}
+.js .packery_item { opacity: 0; }
+.packery_item a:active,
+.packery_item a:focus {
+	color: rgba(0, 0, 0, 0);
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+}
+
+#header { *zoom: 1; } #header::before, #header::after { content: " "; display: table; } #header::after { clear: both; }
+#header {
+	text-align: center;
+	margin-bottom: 50px;
+	position: relative;
+}
+@media all and (min-width: 768px) {
+	#header {
+		text-align: left;
+		margin-bottom: 100px;
+	}
+	#header h1 {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+#footer {
+	margin-top: 50px;
+	text-align: center;
+}
+#footer p {
+	font-size: 12px;
+	letter-spacing: .1em;
+}
+@media all and (min-width: 768px) {
+	#footer {
+		text-align: right;
+		margin-top: 100px;
+	}
+}
+
+/*
+@media all and (min-width: 1024px) {
+	.bar { *zoom: 1; } .bar::before, .bar::after { content: " "; display: table; } .bar::after { clear: both; }
+	.foo .bar { margin-left: 210px; }
+	.foo .baz {
+		float: right;
+		width: 100%;
+	}
+	.foo .qux {
+		width: 160px;
+		margin-left: -210px;
+		*margin-right: 50px; // For some reason, this makes IE6 look like other browsers.
+		float: left;
+	}
+}
+*/
+
+/*
+@media all and (min-width: 1024px) {
+	article header h3 {
+		float: left;
+	}
+	article header h1,
+	article header h2 {
+		margin-left: 130px;
+	}
+	
+}
+*/

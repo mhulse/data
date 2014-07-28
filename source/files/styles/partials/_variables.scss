@@ -1,10 +1,17 @@
 // Base:
 $milk: #fff;
-$blood: #f00;
-$sky: #13aac9;
+$lobster: #c30;
+$juice: #f60;
+$bling: #ffd100;
+$goblin: #9ea301;
+$hulk: #4e801c;
+$smurf: #13aac9;
+$dusk: #1d678f;
+$bruise: #504375;
+$tongue: #965195;
 $raven: #000;
 
-// Grayscale:
+// Gray:
 $graye: #eee;
 $grayd: #ddd;
 $grayc: #ccc;
@@ -20,6 +27,29 @@ $gray3: #333;
 $gray2: #222;
 $gray1: #111;
 
+// Other:
+$ice: #bde5f8;
+$frog: #dff2bf;
+$duck: #feefb3;
+$chili: #ffbaba;
+
 // Fonts:
 $sans: Arial, sans-serif;
 $serif: Cambria, Georgia, serif;
+$mono: monospace, serif; //Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+$amp: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
+$etc: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive;
+
+// Base styles:
+$base_padding: 10px;
+$base_margin: 10px;
+
+// Breakpoints:
+$base_breakpoint-max: 749px;
+$base_breakpoint-min: 750px;
+
+// Radii:
+$base_radii: 3px;
+
+// Rex overrides:
+$REX: "";

@@ -3,24 +3,23 @@
   "dependencies": {
     "fastclick": "~1",
     "harmonia": "https://github.com/mhulse/jquery-harmonia.git#~1",
+    "imagesloaded": "~3",
     "jquery": "~2",
     "normalize-css": "~3",
     "pure": "~0",
-    "imagesloaded": "~3",
     "packery": "~1"
   },
   "exportsOverride": {
-    "jquery": {
-      "": "dist/jquery.js"
-    },
     "pure": {
       "": [
-        "grids.css",
-        "grids-responsive.css"
+        "grids.css"
       ]
     },
     "imagesloaded": {
       "": "imagesloaded.pkgd.js"
+    },
+    "jquery": {
+      "": "dist/jquery.js"
     },
     "packery": {
       "": "dist/packery.pkgd.js"

@@ -1,6 +1,30 @@
-@import "partials/variables",
-        "partials/normalize",
-        "partials/grids",
-        "partials/grids-responsive",
+// Helpers:
+@import "partials/variables";
+
+// Normalization:
+@import "partials/normalize";
+
+// Grids:
+@import "partials/grids",
+        "partials/grids-responsive";
+
+// Core:
+@import "partials/utilities",
         "partials/base",
-        "partials/pending";
+        "partials/lists",
+        "partials/layout",
+        "partials/navigation",
+        "partials/flag",
+        "partials/type",
+        "partials/code",
+        "partials/tables",
+        "partials/buttons",
+        "partials/forms",
+        "partials/media",
+        "partials/miscellaneous";
+
+// To be sorted:
+@import "partials/pending";
+
+// Print:
+@import "partials/print";
