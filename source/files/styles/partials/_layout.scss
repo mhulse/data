@@ -57,6 +57,58 @@
 	}
 }
 
+.figure {
+	
+	margin: 0;
+	margin-bottom: 50px;
+	position: relative;
+	
+	@media all and (min-width: 1024px) {
+		
+		& {
+			margin-left: 150px;
+		}
+		
+	}
+	
+	> figcaption {
+		
+		font-size: 13px;
+		
+		@media all and (min-width: 1024px) {
+			
+			& {
+				text-align: right;
+				width: 130px;
+				position: absolute;
+				bottom: 0;
+				margin-left: -150px;
+			}
+			
+		}
+		
+		p {
+			
+			font-size: inherit;
+			
+			@media all and (min-width: 1024px) {
+				
+				&:last-child { margin-bottom: 0; }
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+@media all and (min-width: 768px) {
+	
+	article header { margin-left: 150px; }
+	
+}
+
 /*
 @media all and (min-width: 1024px) {
 	.bar { *zoom: 1; } .bar::before, .bar::after { content: " "; display: table; } .bar::after { clear: both; }
@@ -71,18 +123,5 @@
 		*margin-right: 50px; // For some reason, this makes IE6 look like other browsers.
 		float: left;
 	}
-}
-*/
-
-/*
-@media all and (min-width: 1024px) {
-	article header h3 {
-		float: left;
-	}
-	article header h1,
-	article header h2 {
-		margin-left: 130px;
-	}
-	
 }
 */

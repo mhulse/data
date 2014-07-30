@@ -118,8 +118,8 @@
 	font-style: normal;
 	font-weight: normal;
 }
-.scroll-overlay::before { content: "\f0a5\00a0"; }
-.scroll-overlay::after { content: "\00a0\f0a4"; }
+.scroll-overlay::before { content: "←"; }
+.scroll-overlay::after { content: "→"; }
 
 // http://css-tricks.com/examples/IconFont/
 [data-icon]:before {

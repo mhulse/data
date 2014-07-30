@@ -283,16 +283,16 @@ module.exports = function(grunt) {
 			
 			dest : './files/styles/partials/_grids-responsive.scss',
 			
-			options: {
+			options : {
 				
 				decimals : 14,
 				includeOldIEWidths : false,
 				
-				mediaQueries: {
+				mediaQueries : {
 					
 					sm : 'all and (min-width: 568px)',
-					med : 'all and (min-width: 768px)',
-					lrg : 'all and (min-width: 928px)',
+					md : 'all and (min-width: 768px)',
+					lg : 'all and (min-width: 928px)',
 					xl : 'all and (min-width: 1200px)',
 					
 				},

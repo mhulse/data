@@ -1,141 +1,18 @@
-.figure {
-	
-	margin: 0;
-	margin-bottom: 50px;
-	position: relative;
-	
-	@media all and (min-width: 1024px) {
-		
-		& {
-			margin-left: 150px;
-		}
-		
-	}
-	
-	figcaption {
-		
-		font-size: 13px;
-		
-		@media all and (min-width: 1024px) {
-			
-			& {
-				text-align: right;
-				width: 130px;
-				position: absolute;
-				bottom: 0;
-				margin-left: -150px;
-			}
-			
-		}
-		
-		p {
-			
-			font-size: inherit;
-			
-			@media all and (min-width: 1024px) {
-				
-				&:last-child { margin-bottom: 0; }
-				
-			}
-			
-		}
-		
-	}
-	
-}
-
-/*
 figure {
 	
-	margin: 0;
+	margin: 25px 0;
+	padding: 0;
 	
-	img {
-		//margin: 0 auto;
-		//display: block;
-		vertical-align: top;
-	}
+	figcaption { margin-top: 10px; }
 	
 }
-
-figcaption {
-	
-	text-transform: uppercase;
-	text-shadow: 0 1px 1px $raven;
-	letter-spacing: .05em;
-	word-spacing: .25em;
-	color: $grayd;
-	background: $gray1;
-	background: linear-gradient(to bottom, $gray2 0, $gray1 100%);
-	margin-top: 13px;
-	padding: 10px;
-	border-radius: 6px;
-	box-shadow: 0 0 2px rgba($raven, .9);
-	display: inline-block;
-	
-	// Caption triangle:
-	position: relative;
-	&::after {
-		content: "";
-		border-width: 0 10px 10px;
-		border-style: solid;
-		border-color: $gray2 transparent;
-		// http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/
-		width: 0;
-		margin-left: -10px;
-		position: absolute;
-		top: -9px;
-		left: 50%;
-		-webkit-transform: rotate(360deg);
-	}
-	
-	b,
-	strong {
-		color: $milk;
-		letter-spacing: .08em;
-	}
-	
-	p {
-		
-		font-size: inherit;
-		line-height: inherit;
-		
-		&:first-of-type { margin-top: 0 !important; }
-		&:last-of-type { margin-bottom: 0 !important; }
-		
-	}
-	
-	a {
-		
-		&,
-		&:visited { color: $juice; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $bling;
-			text-decoration: none;
-		}
-		
-	}
-	
-	.social {
-		
-		white-space: nowrap; // https://github.com/mhulse/picard/issues/174
-		//margin-left: 5px;
-		
-		i { margin-right: 3px; }
-		
-	}
-	
-}
-*/
 
 img {
 	
 	border: 0;
 	max-width: 100%;
 	height: auto;
+	vertical-align: top;
 	
 	a & {
 		border: 0;
@@ -143,6 +20,8 @@ img {
 	}
 	
 }
+
+iframe { border: 0; }
 
 iframe,
 object,

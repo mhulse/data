@@ -11,20 +11,12 @@
 // Core:
 @import "partials/utilities",
         "partials/base",
-        "partials/lists",
         "partials/layout",
         "partials/navigation",
         "partials/flag",
         "partials/type",
         "partials/code",
-        "partials/tables",
-        "partials/buttons",
-        "partials/forms",
-        "partials/media",
-        "partials/miscellaneous";
+        "partials/media";
 
 // To be sorted:
 @import "partials/pending";
-
-// Print:
-@import "partials/print";
