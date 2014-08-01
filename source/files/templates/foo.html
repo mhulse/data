@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<style>
+		
+		body {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+		#accordion div { xborder: 1px solid #000; }
+		#accordion h3 { margin: 0; }
+		.content,
+		.panel { display: none; }
+		.progress {
+			height: 50px;
+			background: url(images/preloader-200x200.gif) no-repeat center top;
+			background-size: 50px 50px;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	
+	<div id="accordion">
+		<h3><a href="ajax1.html">Section 1</a></h3>
+		<h3><a href="ajax2.html">Section 2</a></h3>
+	</div>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script src="./scripts/imagesloaded.pkgd.js"></script>
+	<script>
+		
+		$(function() {
+			
+			$accordion = $('#accordion');
+			$progress = $('<div />', { 'class' : 'progress' });
+			
+			$accordion
+				.children()
+				.each(function() {
+					$(this).after('<div class="panel" />');
+				});
+			
+			$accordion
+				.accordion({
+					collapsible: true,
+					active : false,
+					heightStyle: 'content',
+					animate: false,
+					beforeActivate: function(event, ui) {
+						if (ui.newPanel.is(':empty')) {
+							ui.newHeader
+								.next()
+								.load(ui.newHeader.children('a').attr('href') + ' .content', function() {
+									var $this = $(this);
+									var $content = $this.children('.content'); // Better way?
+									$this.append($progress);
+									$content
+										.imagesLoaded()
+										.always(function(instance) {
+											console.log('all images loaded');
+										})
+										.done(function(instance) {
+											console.log('all images successfully loaded');
+											$progress.fadeOut('slow', function(){
+												$content.fadeIn('slow');
+											})
+										})
+										.fail( function() {
+											console.log('all images loaded, at least one is broken');
+										})
+										.progress(function(instance, image) {
+											var result = image.isLoaded ? 'loaded' : 'broken';
+											console.log('image is ' + result + ' for ' + image.img.src);
+										});
+								});
+						}
+					},
+					activate: function() {
+						$accordion.accordion('refresh');
+					}
+				});
+			
+		});
+		
+	</script>
+	
+</body>
+</html>
