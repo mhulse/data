@@ -1,0 +1,80 @@
+.content,
+.panel { display: none; }
+.progress {
+	height: 25px;
+	background: url(../images/preloader-200x200.gif) no-repeat center top;
+	background-size: 25px 25px;
+	display: none;
+}
+
+
+#primary {
+	
+	ul {
+		
+		margin: 0;
+		padding: 0;
+		
+		li {
+			list-style: none;
+		}
+		
+	}
+	
+	> h3 {
+		
+		font-family: $kaomoji;
+		font-size: 40px;
+		line-height: 60px;
+		
+		&:active,
+		&:focus { outline: 0; }
+		
+		> span {
+			color: $tongue;
+			
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: $purty; }
+			
+			display: inline-block;
+			cursor: pointer;
+			cursor: hand;
+			//cursor: url(../images/finger.png), auto;
+			
+			span {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+			
+		}
+		
+	}
+	
+}
+
+[data-kaomoji] {
+	
+	&::before { content: attr(data-kaomoji); }
+	&:hover::before { content: attr(data-kaomoji-hover); }
+	
+}
+
+figure {
+	
+	figcaption {
+		display: table-caption;
+		caption-side: bottom;
+	}
+	
+	display: table;
+	margin: 0 auto;
+	
+}

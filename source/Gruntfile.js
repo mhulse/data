@@ -256,12 +256,15 @@ module.exports = function(grunt) {
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
+						'./files/scripts/jquery-ui.js',
+						'./files/scripts/jquery-ui.*.js',
 						'./files/scripts/imagesloaded.pkgd.js',
 						'./files/scripts/packery.pkgd.js',
 						'./files/scripts/packery.overrides.js',
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
 						'./files/scripts/<%= pkg.name %>.init.js',
+						'./files/scripts/pending.js', // Bypass jshint, for quick and dirty JS tests.
 					],
 					
 				},

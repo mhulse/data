@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/07/29
+ * @date 2014/08/02
  */
 
 
@@ -1576,8 +1576,9 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-family: Arial, sans-serif;
+  text-align: center;
   color: #666666;
-  background: #222222;
+  background: white;
   padding: 25px;
   min-height: 100%;
   text-rendering: optimizeLegibility;
@@ -1588,25 +1589,21 @@ body {
   }
 }
 
-a {
-  -webkit-transition: color 250ms linear;
-  transition: color 250ms linear;
-}
 a, a:visited {
-  color: #bbbbbb;
+  color: #1d678f;
   text-decoration: none;
 }
 a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
-  color: #ff6600;
+  color: #13aac9;
 }
 
 ::-moz-selection {
-  background: rgba(255, 102, 0, 0.55);
+  background: rgba(158, 163, 1, 0.55);
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(255, 102, 0, 0.55);
+  background: rgba(158, 163, 1, 0.55);
   text-shadow: none;
 }
 
@@ -1623,150 +1620,12 @@ hr,
   box-sizing: content-box;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1280px;
-  min-width: 150px;
-}
-
-/*
-.container [class *= "pure-u"] { padding: 1em 0; }
-*/
-.packery {
-  *zoom: 1;
-}
-
-.packery::before, .packery::after {
-  content: " ";
-  display: table;
-}
-
-.packery::after {
-  clear: both;
-}
-
-.packery {
-  margin: 0 auto;
-}
-
-.packery_item {
-  width: 140px;
-  height: 140px;
-  float: left;
-  border: 10px solid transparent;
-}
-
-.js .packery_item {
-  opacity: 0;
-}
-
-.packery_item a:active,
-.packery_item a:focus {
-  color: transparent;
-  text-decoration: none;
-  outline: 0;
-  border: 0;
-}
-
-#header {
-  *zoom: 1;
-}
-
-#header::before, #header::after {
-  content: " ";
-  display: table;
-}
-
-#header::after {
-  clear: both;
-}
-
-#header {
-  text-align: center;
-  margin-bottom: 50px;
-  position: relative;
-}
-
-@media all and (min-width: 768px) {
-  #header {
-    text-align: left;
-    margin-bottom: 100px;
-  }
-
-  #header h1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-#footer {
-  margin-top: 50px;
-  text-align: center;
-}
-
-#footer p {
+footer[role="contentinfo"] {
   font-size: 12px;
-  letter-spacing: .1em;
+  line-height: 16px;
+  margin-top: 75px;
 }
 
-@media all and (min-width: 768px) {
-  #footer {
-    text-align: right;
-    margin-top: 100px;
-  }
-}
-.figure {
-  margin: 0;
-  margin-bottom: 50px;
-  position: relative;
-}
-@media all and (min-width: 1024px) {
-  .figure {
-    margin-left: 150px;
-  }
-}
-.figure > figcaption {
-  font-size: 13px;
-}
-@media all and (min-width: 1024px) {
-  .figure > figcaption {
-    text-align: right;
-    width: 130px;
-    position: absolute;
-    bottom: 0;
-    margin-left: -150px;
-  }
-}
-.figure > figcaption p {
-  font-size: inherit;
-}
-@media all and (min-width: 1024px) {
-  .figure > figcaption p:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media all and (min-width: 768px) {
-  article header {
-    margin-left: 150px;
-  }
-}
-/*
-@media all and (min-width: 1024px) {
-	.bar { *zoom: 1; } .bar::before, .bar::after { content: " "; display: table; } .bar::after { clear: both; }
-	.foo .bar { margin-left: 210px; }
-	.foo .baz {
-		float: right;
-		width: 100%;
-	}
-	.foo .qux {
-		width: 160px;
-		margin-left: -210px;
-		*margin-right: 50px; // For some reason, this makes IE6 look like other browsers.
-		float: left;
-	}
-}
-*/
 nav[role="navigation"] ul {
   line-height: 1.1;
   margin: 0;
@@ -1813,114 +1672,92 @@ nav[role="navigation"] .harmonia {
 
 #flag {
   font-family: "hulse", Cambria, Georgia, serif;
-  font-size: 125px;
-  line-height: 125px;
+  font-size: 80px;
+  line-height: 80px;
   font-weight: normal;
   font-style: normal;
   text-transform: none;
   letter-spacing: 0;
-  margin: 0 0 25px;
+  margin: 0 0 75px;
   padding: 0;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
-#flag a {
-  background: transparent;
-  border: 0;
-}
-#flag a, #flag a:visited {
-  color: #9ea301;
-  text-decoration: none;
-}
-#flag a:visited:hover, #flag a:focus, #flag a:focus:hover, #flag a:hover, #flag a:active {
-  color: #ffd100;
-}
 #flag a:active, #flag a:focus {
   outline: 0;
-}
-@media only screen and (min-width: 48em) {
-  #flag {
-    font-size: 50px;
-    line-height: 50px;
-    margin: 0;
-    position: relative;
-    left: -6px;
-  }
-  #flag a::before {
-    content: "M";
-  }
-  #flag a span {
-    display: none;
-  }
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
-  letter-spacing: .05em;
-  text-transform: uppercase;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  margin: 0 0 25px;
+  margin: 0;
   padding: 0;
 }
 
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
-  letter-spacing: .08em;
-  text-transform: none;
+  text-transform: uppercase;
   font-weight: normal;
 }
 
-h1, .h1, .sh1 {
+h1, .h1 {
   font-size: 28px;
   line-height: 30px;
 }
 
-h2, .h2, .sh2 {
+h2, .h2 {
   font-size: 26px;
   line-height: 28px;
 }
 
-h3, .h3, .sh3 {
+h3, .h3 {
   font-size: 24px;
   line-height: 26px;
 }
 
-h4, .h4, .sh4 {
+h4, .h4 {
   font-size: 22px;
   line-height: 24px;
 }
 
-h5, .h5, .sh5 {
+h5, .h5 {
   font-size: 20px;
   line-height: 22px;
 }
 
-h6, .h6, .sh6 {
+h6, .h6 {
   font-size: 18px;
   line-height: 20px;
 }
 
-h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
-  margin-top: -23px !important;
+.sh1 {
+  font-size: 22px;
+}
+
+.sh2 {
+  font-size: 20px;
+}
+
+.sh3 {
+  font-size: 18px;
+}
+
+.sh4 {
+  font-size: 16px;
+}
+
+.sh5 {
+  font-size: 14px;
+}
+
+.sh6 {
+  font-size: 12px;
 }
 
 h1:empty {
   display: none;
-}
-
-p {
-  letter-spacing: .05em;
-  margin: 25px 0;
-}
-header + p {
-  margin-top: -15px !important;
-}
-[itemprop="articleBody"] p {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 18px 0;
 }
 
 pre {
@@ -2037,4 +1874,106 @@ audio {
 }
 .mm.tv {
   padding-bottom: 75%;
+}
+
+.tooltip {
+  font-family: monospace, serif;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-align: center;
+  color: white;
+  background: #111111;
+  position: absolute;
+  z-index: 100;
+  padding: 15px;
+}
+.tooltip::after {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #111111;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -10px;
+}
+.tooltip.top::after {
+  border-top-color: transparent;
+  border-bottom: 10px solid #111111;
+  top: -20px;
+  bottom: auto;
+}
+.tooltip.left::after {
+  left: 10px;
+  margin: 0;
+}
+.tooltip.right::after {
+  right: 10px;
+  left: auto;
+  margin: 0;
+}
+
+.content,
+.panel {
+  display: none;
+}
+
+.progress {
+  height: 25px;
+  background: url(../images/preloader-200x200.gif) no-repeat center top;
+  background-size: 25px 25px;
+  display: none;
+}
+
+#primary ul {
+  margin: 0;
+  padding: 0;
+}
+#primary ul li {
+  list-style: none;
+}
+#primary > h3 {
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  line-height: 60px;
+}
+#primary > h3:active, #primary > h3:focus {
+  outline: 0;
+}
+#primary > h3 > span {
+  color: #965195;
+  display: inline-block;
+  cursor: pointer;
+  cursor: hand;
+}
+#primary > h3 > span:focus, #primary > h3 > span:focus:hover, #primary > h3 > span:hover, #primary > h3 > span:active {
+  color: #fe4365;
+}
+#primary > h3 > span span {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+[data-kaomoji]::before {
+  content: attr(data-kaomoji);
+}
+[data-kaomoji]:hover::before {
+  content: attr(data-kaomoji-hover);
+}
+
+figure {
+  display: table;
+  margin: 0 auto;
+}
+figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
 }

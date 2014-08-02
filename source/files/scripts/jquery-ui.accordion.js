@@ -1,0 +1,1 @@
+../plugins/jquery-ui/accordion.js

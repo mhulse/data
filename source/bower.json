@@ -2,12 +2,11 @@
   "name": "bower",
   "dependencies": {
     "fastclick": "~1",
-    "harmonia": "https://github.com/mhulse/jquery-harmonia.git#~1",
     "imagesloaded": "~3",
     "jquery": "~2",
+    "jquery-ui": "~1",
     "normalize-css": "~3",
-    "pure": "~0",
-    "packery": "~1"
+    "pure": "~0"
   },
   "exportsOverride": {
     "pure": {
@@ -20,6 +19,13 @@
     },
     "jquery": {
       "": "dist/jquery.js"
+    },
+    "jquery-ui": {
+      "": [
+        "ui/core.js",
+        "ui/widget.js",
+        "ui/accordion.js"
+      ]
     },
     "packery": {
       "": "dist/packery.pkgd.js"

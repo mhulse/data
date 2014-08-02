@@ -24,8 +24,9 @@ body {
 	font-size: 14px;
 	line-height: 20px;
 	font-family: $sans;
+	text-align: center;
 	color: $gray6;
-	background: $gray2;
+	background: $milk;
 	padding: 25px;
 	min-height: 100%;
 	text-rendering: optimizeLegibility;
@@ -40,12 +41,12 @@ body {
 
 a {
 	
-	-webkit-transition: color 250ms linear;
-	        transition: color 250ms linear;
+	// -webkit-transition: color 250ms linear;
+	//         transition: color 250ms linear;
 	
 	&,
 	&:visited {
-		color: $grayb;
+		color: $dusk;
 		text-decoration: none;
 	}
 	
@@ -53,17 +54,17 @@ a {
 	&:focus,
 	&:focus:hover,
 	&:hover,
-	&:active { color: $juice; }
+	&:active { color: $smurf; }
 	
 }
 
 ::-moz-selection {
-	background: rgba($juice, .55);
+	background: rgba($goblin, .55);
 	text-shadow: none;
 }
 
 ::selection {
-	background: rgba($juice, .55);
+	background: rgba($goblin, .55);
 	text-shadow: none;
 }
 
