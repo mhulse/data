@@ -87,27 +87,13 @@
 
 #secondary {
 	
-	//counter-reset: li;
-	
 	> h3 {
 		
 		a {
 			display: inline-block;
-			padding: 0 0 3px;
+			padding: 0 0 5px;
 			border-bottom: 2px solid;
 		}
-		
-		// &::before {
-		// 	font-size: smaller;
-		// 	line-height: 1;
-		// 	margin: {
-		// 		top: 10px;
-		// 		bottom: 2px;
-		// 	}
-		// 	display: block;
-		// 	content: counter(li, decimal);
-		// 	counter-increment: li;
-		// }
 		
 	}
 	
