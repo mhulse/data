@@ -27,9 +27,9 @@ DATA.register(function() {
 				if (ui.newPanel.is(':empty')) {
 					ui.newHeader
 						.next()
-						.load(ui.newHeader.children('a').attr('href') + ' .content', function() {
+						.load(ui.newHeader.children('a').attr('href') + ' .ajax-content', function(response, status, xhr) {
 							var $this = $(this);
-							var $content = $this.children('.content'); // Better way?
+							var $content = $this.children('.ajax-content'); // Better way?
 							$progress
 								.appendTo($this)
 								.fadeIn('slow');

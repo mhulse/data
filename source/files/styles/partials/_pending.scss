@@ -1,10 +1,23 @@
-.content,
-.panel { display: none; }
-.progress {
-	height: 25px;
-	background: url(../images/preloader-200x200.gif) no-repeat center top;
-	background-size: 25px 25px;
+.ui-accordion-content {
+	position: relative;
+	min-height: 50px; // Height of loader + 10px top.
+	margin-bottom: 20px;
+}
+.ajax-content,
+.ui-accordion-content {
+	//padding: 10px;
 	display: none;
+}
+.progress {
+	width: 50px;
+	height: 50px;
+	background: url(../images/loader.gif) no-repeat;
+	background-size: 50px 50px;
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -25px;
 }
 
 
@@ -12,36 +25,41 @@
 	
 	ul {
 		
-		margin: 0;
+		margin {
+			top: 0;
+			bottom: 0;
+		}
 		padding: 0;
 		
-		li {
-			list-style: none;
-		}
+		li { list-style: none; }
 		
 	}
 	
 	> h3 {
 		
 		font-family: $kaomoji;
-		font-size: 40px;
-		line-height: 60px;
+		font-weight: normal;
+		font-size: 35px;
+		line-height: 35px;
+		white-space: nowrap;
+		margin: {
+			top: 20px;
+			bottom: 20px;
+		}
+		//overflow: hidden;
 		
 		&:active,
 		&:focus { outline: 0; }
 		
 		> span {
-			color: $tongue;
 			
-			&:focus,
-			&:focus:hover,
-			&:hover,
-			&:active { color: $purty; }
-			
+			color: $raven;
 			display: inline-block;
 			cursor: pointer;
 			cursor: hand;
 			//cursor: url(../images/finger.png), auto;
+			
+			&:hover { color: $purty; }
 			
 			span {
 				border: 0;
@@ -67,14 +85,30 @@
 	
 }
 
-figure {
+#secondary {
 	
-	figcaption {
-		display: table-caption;
-		caption-side: bottom;
+	//counter-reset: li;
+	
+	> h3 {
+		
+		a {
+			display: inline-block;
+			padding: 0 0 3px;
+			border-bottom: 2px solid;
+		}
+		
+		// &::before {
+		// 	font-size: smaller;
+		// 	line-height: 1;
+		// 	margin: {
+		// 		top: 10px;
+		// 		bottom: 2px;
+		// 	}
+		// 	display: block;
+		// 	content: counter(li, decimal);
+		// 	counter-increment: li;
+		// }
+		
 	}
-	
-	display: table;
-	margin: 0 auto;
 	
 }

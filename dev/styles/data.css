@@ -1567,9 +1567,10 @@ body {
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
   overflow-y: scroll;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
 }
 
 body {
@@ -1577,33 +1578,28 @@ body {
   line-height: 20px;
   font-family: Arial, sans-serif;
   text-align: center;
-  color: #666666;
+  color: #888888;
   background: white;
   padding: 25px;
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
-@media all and (min-width: 768px) {
-  body {
-    padding: 50px 100px;
-  }
-}
 
 a, a:visited {
-  color: #1d678f;
+  color: black;
   text-decoration: none;
 }
 a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
-  color: #13aac9;
+  color: #fe4365;
 }
 
 ::-moz-selection {
-  background: rgba(158, 163, 1, 0.55);
+  background: rgba(255, 102, 0, 0.55);
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(158, 163, 1, 0.55);
+  background: rgba(255, 102, 0, 0.55);
   text-shadow: none;
 }
 
@@ -1620,10 +1616,59 @@ hr,
   box-sizing: content-box;
 }
 
+.x1, .x2, .x3, .x4, .x5, figcaption, .x6, h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre, .x7 {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 100%;
+}
+
+.x1 {
+  max-width: 150px;
+}
+
+.x2 {
+  max-width: 250px;
+}
+
+.x3 {
+  max-width: 350px;
+}
+
+.x4 {
+  max-width: 450px;
+}
+
+.x5, figcaption {
+  max-width: 550px;
+}
+
+.x6, h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  max-width: 650px;
+}
+
+.x7 {
+  max-width: 750px;
+}
+
 footer[role="contentinfo"] {
   font-size: 12px;
   line-height: 16px;
-  margin-top: 75px;
+  margin-top: 100px;
 }
 
 nav[role="navigation"] ul {
@@ -1678,82 +1723,61 @@ nav[role="navigation"] .harmonia {
   font-style: normal;
   text-transform: none;
   letter-spacing: 0;
-  margin: 0 0 75px;
+  margin-top: 0;
+  margin-bottom: 100px;
   padding: 0;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
-#flag a:active, #flag a:focus {
+#flag a, #flag a:visited, #flag a:visited:hover, #flag a:focus, #flag a:focus:hover, #flag a:hover, #flag a:active {
+  color: #13aac9;
+  text-decoration: none;
+}
+#flag a:focus, #flag a:active {
   outline: 0;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
+h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
   overflow-wrap: break-word;
-  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
   padding: 0;
 }
 
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
-  text-transform: uppercase;
   font-weight: normal;
 }
 
-h1, .h1 {
+h1, .h1, .sh1 {
   font-size: 28px;
   line-height: 30px;
 }
 
-h2, .h2 {
+h2, .h2, .sh2 {
   font-size: 26px;
   line-height: 28px;
 }
 
-h3, .h3 {
+h3, .h3, .sh3 {
   font-size: 24px;
   line-height: 26px;
 }
 
-h4, .h4 {
+h4, .h4, .sh4 {
   font-size: 22px;
   line-height: 24px;
 }
 
-h5, .h5 {
+h5, .h5, .sh5 {
   font-size: 20px;
   line-height: 22px;
 }
 
-h6, .h6 {
+h6, .h6, .sh6 {
   font-size: 18px;
   line-height: 20px;
-}
-
-.sh1 {
-  font-size: 22px;
-}
-
-.sh2 {
-  font-size: 20px;
-}
-
-.sh3 {
-  font-size: 18px;
-}
-
-.sh4 {
-  font-size: 16px;
-}
-
-.sh5 {
-  font-size: 14px;
-}
-
-.sh6 {
-  font-size: 12px;
 }
 
 h1:empty {
@@ -1802,11 +1826,17 @@ code {
 }
 
 figure {
-  margin: 25px 0;
+  margin: 25px auto;
   padding: 0;
 }
 figure figcaption {
-  margin-top: 10px;
+  margin-top: 5px;
+}
+figure figcaption p:first-of-type {
+  margin-top: 0 !important;
+}
+figure figcaption p:last-of-type {
+  margin-bottom: 0 !important;
 }
 
 img {
@@ -1844,7 +1874,6 @@ video:active {
 
 audio {
   width: 100%;
-  margin: 20px 0;
 }
 
 .mm {
@@ -1882,7 +1911,7 @@ audio {
   letter-spacing: .08em;
   text-align: center;
   color: white;
-  background: #111111;
+  background: rgba(254, 67, 101, 0.95);
   position: absolute;
   z-index: 100;
   padding: 15px;
@@ -1892,7 +1921,7 @@ audio {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #111111;
+  border-top: 10px solid rgba(254, 67, 101, 0.95);
   content: '';
   position: absolute;
   left: 50%;
@@ -1901,7 +1930,7 @@ audio {
 }
 .tooltip.top::after {
   border-top-color: transparent;
-  border-bottom: 10px solid #111111;
+  border-bottom: 10px solid rgba(254, 67, 101, 0.95);
   top: -20px;
   bottom: auto;
 }
@@ -1915,40 +1944,106 @@ audio {
   margin: 0;
 }
 
-.content,
-.panel {
+@-webkit-keyframes skull {
+  0% {
+    background-position: center 0;
+  }
+
+  100% {
+    background-position: center -24480px;
+  }
+}
+@keyframes skull {
+  0% {
+    background-position: center 0;
+  }
+
+  100% {
+    background-position: center -24480px;
+  }
+}
+body {
+  margin-bottom: 500px;
+}
+.js body::after {
+  /* 
+  https://github.com/mhulse/picard/issues/194
+  https://github.com/mhulse/picard/issues/207
+  */
+  background-image: url(http://uploads.mky.io/skull.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-origin: content-box;
+  background-attachment: local;
+  background-size: 350px 24480px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: skull;
+  animation-name: skull;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps(48);
+  animation-timing-function: steps(48);
+}
+
+.ui-accordion-content {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.ajax-content,
+.ui-accordion-content {
   display: none;
 }
 
 .progress {
-  height: 25px;
-  background: url(../images/preloader-200x200.gif) no-repeat center top;
-  background-size: 25px 25px;
+  width: 50px;
+  height: 50px;
+  background: url(../images/loader.gif) no-repeat;
+  background-size: 50px 50px;
   display: none;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -25px;
 }
 
 #primary ul {
-  margin: 0;
   padding: 0;
+}
+#primary ul margin {
+  top: 0;
+  bottom: 0;
 }
 #primary ul li {
   list-style: none;
 }
 #primary > h3 {
   font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 40px;
-  line-height: 60px;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 35px;
+  white-space: nowrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #primary > h3:active, #primary > h3:focus {
   outline: 0;
 }
 #primary > h3 > span {
-  color: #965195;
+  color: black;
   display: inline-block;
   cursor: pointer;
   cursor: hand;
 }
-#primary > h3 > span:focus, #primary > h3 > span:focus:hover, #primary > h3 > span:hover, #primary > h3 > span:active {
+#primary > h3 > span:hover {
   color: #fe4365;
 }
 #primary > h3 > span span {
@@ -1969,11 +2064,8 @@ audio {
   content: attr(data-kaomoji-hover);
 }
 
-figure {
-  display: table;
-  margin: 0 auto;
-}
-figure figcaption {
-  display: table-caption;
-  caption-side: bottom;
+#secondary > h3 a {
+  display: inline-block;
+  padding: 0 0 3px;
+  border-bottom: 2px solid;
 }

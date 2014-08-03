@@ -1,0 +1,65 @@
+// For background, you don't have to specify all values.
+// If a value is omitted, its initial value is used.
+// The initial values for the individual background properties are as follows:
+//     * color: transparent
+//     * image: none
+//     * repeat: repeat
+//     * attachment: scroll
+//     * position: 0% 0%
+// Remember that when you give two values for position, they have to appear together.
+// When using length or percentage values, put the horizontal value first.
+// 
+// Ref: http://www.456bereastreet.com/archive/200502/efficient_css_with_shorthand_properties/
+
+@-webkit-keyframes skull {
+	0% { background-position: center 0; }
+	100% { background-position: center -24480px; }
+}
+
+@keyframes skull {
+	0% { background-position: center 0; }
+	100% { background-position: center -24480px; }
+}
+
+body{
+	
+	// http://mystrd.at/modern-clean-css-sticky-footer/
+	margin-bottom: 500px; // Height of skull.
+	
+	&::after {
+		
+		.js & {
+			
+			/* 
+			https://github.com/mhulse/picard/issues/194
+			https://github.com/mhulse/picard/issues/207
+			*/
+			background: {
+				image: url(http://uploads.mky.io/skull.jpg);
+				repeat: no-repeat;
+				position: center 0; // Wish I could make this retina display quality. :(
+				origin: content-box;
+				attachment: local;
+				size: 350px 24480px; // http://www.defusion.org.uk/archives/2010/02/19/shrinking-large-background-image-bug-in-iphone-safari/
+			}
+			//width: 350px;
+			height: 500px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			content: "";
+			-webkit-animation-duration: 2s;
+					animation-duration: 2s;
+			-webkit-animation-name: skull;
+					animation-name: skull;
+			-webkit-animation-iteration-count: infinite;
+					animation-iteration-count: infinite;
+			-webkit-animation-timing-function: steps(48);
+					animation-timing-function: steps(48);
+			
+		}
+		
+	}
+	
+}

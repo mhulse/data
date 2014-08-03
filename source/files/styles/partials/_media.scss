@@ -1,9 +1,20 @@
 figure {
 	
-	margin: 25px 0;
+	margin: 25px auto;
 	padding: 0;
 	
-	figcaption { margin-top: 10px; }
+	figcaption {
+		
+		margin-top: 5px;
+		
+		p {
+			
+			&:first-of-type { margin-top: 0 !important; }
+			&:last-of-type { margin-bottom: 0 !important; }
+			
+		}
+		
+	}
 	
 }
 
@@ -43,7 +54,7 @@ video {
 
 audio {
 	width: 100%;
-	margin: 20px 0;
+	//margin: 20px 0; // Needed for iOS.
 }
 
 .mm {

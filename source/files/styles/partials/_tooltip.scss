@@ -7,7 +7,7 @@
 	letter-spacing: .08em;
 	text-align: center;
 	color: $milk;
-	background: $gray1;
+	background: rgba($purty, .95);
 	position: absolute;
 	z-index: 100;
 	padding: 15px;
@@ -17,7 +17,7 @@
 		height: 0;
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
-		border-top: 10px solid $gray1;
+		border-top: 10px solid rgba($purty, .95);
 		content: '';
 		position: absolute;
 		left: 50%;
@@ -27,7 +27,7 @@
 	
 	&.top::after {
 		border-top-color: transparent;
-		border-bottom: 10px solid $gray1;
+		border-bottom: 10px solid rgba($purty, .95);
 		top: -20px;
 		bottom: auto;
 	}

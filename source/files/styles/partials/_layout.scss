@@ -1,5 +1,33 @@
+figcaption { @extend .x5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre { @extend .x6; }
+
+.x1, .x2, .x3, .x4, .x5, .x6, .x7 {
+	margin: {
+		right: auto;
+		left: auto;
+	}
+	display: block;
+	width: 100%;
+}
+
+.x1 { max-width: 150px; }
+.x2 { max-width: 250px; }
+.x3 { max-width: 350px; }
+.x4 { max-width: 450px; }
+.x5 { max-width: 550px; }
+.x6 { max-width: 650px; }
+.x7 { max-width: 750px; }
+
 footer[role="contentinfo"] {
 	font-size: 12px;
 	line-height: 16px;
-	margin-top: 75px;
+	margin-top: 100px;
 }
