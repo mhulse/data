@@ -19,13 +19,13 @@
 	a {
 		
 		&,
-		&:visited,
+		&:visited { color: $smurf; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $smurf;
+			color: $sky;
 			text-decoration: none;
 		}
 		&:focus,

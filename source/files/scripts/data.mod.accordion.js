@@ -23,6 +23,7 @@ DATA.register(function() {
 			active : false,
 			heightStyle: 'content',
 			animate: false,
+			icons: false,
 			beforeActivate: function(event, ui) {
 				if (ui.newPanel.is(':empty')) {
 					ui.newHeader
@@ -65,6 +66,7 @@ DATA.register(function() {
 			active : false,
 			heightStyle: 'content',
 			animate: false,
+			icons: false,
 			beforeActivate: function(event, ui) {
 				$secondary.accordion('option', 'active', false);
 			}

@@ -81,6 +81,7 @@
 [data-kaomoji] {
 	
 	&::before { content: attr(data-kaomoji); }
+	.ui-accordion-header-active &::before, // This line, and the ones below, could be moved into jQuery .ui section.
 	&:hover::before { content: attr(data-kaomoji-hover); }
 	
 }
@@ -88,12 +89,30 @@
 #secondary {
 	
 	> h3 {
-		
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
 		a {
+			
 			display: inline-block;
 			padding: 0 0 5px;
 			border-bottom: 2px solid;
+			
+			&:active,
+			&:focus { outline: 0; }
+			
 		}
+		
+	}
+	
+}
+
+h3.ui-accordion-header-active {
+	
+	> {
+		
+		span,
+		a { color: $purty !important; } // Need to make this better.
 		
 	}
 	

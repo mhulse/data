@@ -1,19 +1,79 @@
 figure {
 	
-	margin: 25px auto;
-	padding: 0;
+	margin: 0 {
+		top: 25px;
+		bottom: 25px;
+	}
 	
-	figcaption {
+	img {
+		//margin: 0 auto;
+		//display: block;
+		vertical-align: top;
+	}
+	
+}
+
+figcaption {
+	
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	//text-shadow: 0 1px 1px $raven;
+	color: $grayd;
+	
+	b,
+	strong {
+		color: $milk;
+		letter-spacing: .08em;
+	}
+	
+	p {
 		
-		font-size: 14px;
-		line-height: 20px;
-		margin-top: 5px;
+		font-size: inherit;
+		line-height: inherit;
 		
-		p {
-			
-			&:first-of-type { margin-top: 0 !important; }
-			&:last-of-type { margin-bottom: 0 !important; }
-			
+		&:first-of-type { margin-top: 0 !important; }
+		&:last-of-type { margin-bottom: 0 !important; }
+		
+	}
+	
+	a {
+		
+		&,
+		&:visited { color: $goblin; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $algae;
+			text-decoration: none;
+		}
+		
+	}
+	
+	> div {
+		
+		background: $gray2;
+		margin-top: 13px;
+		padding: 15px 20px;
+		display: inline-block;
+		
+		// Caption triangle:
+		position: relative;
+		&::after {
+			content: "";
+			border-width: 0 10px 10px;
+			border-style: solid;
+			border-color: $gray2 transparent;
+			// http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/
+			width: 0;
+			margin-left: -10px;
+			position: absolute;
+			top: -9px;
+			left: 50%;
+			-webkit-transform: rotate(360deg);
 		}
 		
 	}
@@ -56,7 +116,10 @@ video {
 
 audio {
 	width: 100%;
-	//margin: 20px 0; // Needed for iOS.
+	margin: {
+		top: 20px;
+		bottom: 20px;
+	}
 }
 
 .mm {
@@ -87,3 +150,5 @@ audio {
 	&.tv { padding-bottom: 75%; } // 4:3 = (3 / 4 = .75) x 100
 	
 }
+
+.js #disqus { display: none; }

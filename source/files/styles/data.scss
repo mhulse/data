@@ -16,9 +16,13 @@
         "partials/flag",
         "partials/type",
         "partials/code",
+        "partials/lists",
         "partials/media",
         "partials/tooltip",
         "partials/miscellaneous";
 
 // To be sorted:
 @import "partials/pending";
+
+// Print:
+@import "partials/print";

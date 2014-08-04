@@ -551,7 +551,6 @@ body {
   color: #888888;
   background: white;
   padding: 25px;
-  min-height: 100%;
 }
 
 a, a:visited {
@@ -563,26 +562,28 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
 }
 
 ::-moz-selection {
-  background: rgba(255, 102, 0, 0.55);
+  background: rgba(158, 163, 1, 0.55);
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(255, 102, 0, 0.55);
+  background: rgba(158, 163, 1, 0.55);
   text-shadow: none;
 }
 
-hr,
-.hr {
-  border: 0;
-  border-top: 1px solid #333333;
-  height: 0;
-  margin: 49px 0 50px;
-  padding: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -ms-box-sizing: content-box;
-  box-sizing: content-box;
+hr {
+  display: none;
+}
+
+section > :first-child,
+article > :first-child,
+aside > :first-child {
+  margin-top: 0 !important;
+}
+section > :last-child,
+article > :last-child,
+aside > :last-child {
+  margin-bottom: 0 !important;
 }
 
 .x1, .x2, .x3, .x4, .x5, figcaption, .x6, h1,
@@ -693,8 +694,11 @@ nav[role="navigation"] .harmonia {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
-#flag a, #flag a:visited, #flag a:visited:hover, #flag a:focus, #flag a:focus:hover, #flag a:hover, #flag a:active {
+#flag a, #flag a:visited {
   color: #13aac9;
+}
+#flag a:visited:hover, #flag a:focus, #flag a:focus:hover, #flag a:hover, #flag a:active {
+  color: #69d2e7;
   text-decoration: none;
 }
 #flag a:focus, #flag a:active {
@@ -747,24 +751,388 @@ h1:empty {
   display: none;
 }
 
+[itemprop="articleBody"] h1,
+[itemprop="articleBody"] h2,
+[itemprop="articleBody"] h3,
+[itemprop="articleBody"] h4,
+[itemprop="articleBody"] h5,
+[itemprop="articleBody"] h6 {
+  font-weight: normal;
+  color: #ff6600;
+}
+
+blockquote {
+  font-size: 20px;
+  line-height: 35px;
+  font-family: serif;
+  font-style: italic;
+  letter-spacing: .03em;
+  color: #666666;
+  border-width: 2px 0;
+  border-style: dashed;
+  border-color: #dddddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  position: relative;
+}
+blockquote p {
+  font-size: inherit;
+  line-height: inherit;
+}
+blockquote footer {
+  font-size: 70%;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+blockquote footer p {
+  margin: 0;
+}
+blockquote * {
+  max-width: none;
+}
+blockquote blockquote {
+  border-width: 1px 0;
+}
+blockquote a, blockquote a:visited {
+  color: #1d678f;
+}
+blockquote a:visited:hover, blockquote a:focus, blockquote a:focus:hover, blockquote a:hover, blockquote a:active {
+  color: #13aac9;
+  text-decoration: none;
+}
+@media (max-width: 568px) {
+  blockquote {
+    padding: 20px;
+  }
+}
+
+mark {
+  background: rgba(254, 239, 179, 0.9);
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+del,
+ins {
+  line-height: 0;
+  letter-spacing: .05em;
+  padding: 1px 3px;
+  position: relative;
+  border-radius: 2px;
+}
+
+del {
+  color: #ba0000;
+  background: rgba(255, 186, 186, 0.5);
+}
+
+ins {
+  color: #68941e;
+  text-decoration: none;
+  background: rgba(223, 242, 191, 0.5);
+}
+ins::before {
+  content: "[";
+}
+ins::after {
+  content: "]";
+}
+
+q {
+  font-family: Cambria, Georgia, serif;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+abbr {
+  font-style: italic;
+  cursor: help;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+abbr[title="et cetera"] {
+  font-family: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive;
+}
+
+cite {
+  font-style: italic;
+}
+
+dfn {
+  font-weight: bold;
+  font-style: italic;
+}
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+wbr::after {
+  content: "\00200B";
+}
+
+small,
+.small {
+  font-size: smaller;
+}
+
+span.amp {
+  font-size: 110%;
+  font-family: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+}
+
 pre {
   font-family: monospace, serif;
-  color: #888888;
+  color: #30d259;
+  text-shadow: 0 1px 0 black;
+  text-align: left;
   letter-spacing: .05em;
   word-wrap: normal;
-  background: rgba(17, 17, 17, 0.5);
+  background: #0e1705;
+  border: 1px solid black;
   border-radius: 5px;
-  margin: 50px 0;
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 15px;
   overflow: auto;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
 }
-pre + pre {
-  margin-top: -25px;
+
+.pygments {
+  color: #cccccc;
+  background: #222222;
+  border: 5px solid #222222;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pygments table {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+.pygments table .pyg {
+  position: relative;
+}
+.pygments table .pyg pre {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 5px;
+  position: absolute;
+}
+.pygments table .linenos {
+  vertical-align: top;
+  background: #333333;
+  display: block;
+  text-decoration: none;
+  color: #888888;
+  text-align: right;
+}
+.pygments table .linenos + td {
+  width: 100%;
+  vertical-align: top;
+}
+.pygments table th,
+.pygments table td {
+  border: 0 none;
+  padding: 0;
+}
+.pygments table pre {
+  margin: 0;
+}
+.pygments .hll {
+  background-color: rgba(128, 113, 173, 0.2);
+  display: block;
+}
+.pygments .c {
+  color: #75715e;
+}
+.pygments .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.pygments .k {
+  color: #66d9ef;
+}
+.pygments .l {
+  color: #ae81ff;
+}
+.pygments .n {
+  color: #f8f8f2;
+}
+.pygments .o {
+  color: #f92672;
+}
+.pygments .p {
+  color: #f8f8f2;
+}
+.pygments .cm {
+  color: #75715e;
+}
+.pygments .cp {
+  color: #75715e;
+}
+.pygments .c1 {
+  color: #75715e;
+}
+.pygments .cs {
+  color: #75715e;
+}
+.pygments .ge {
+  font-style: italic;
+}
+.pygments .gs {
+  font-weight: bold;
+}
+.pygments .kc {
+  color: #66d9ef;
+}
+.pygments .kd {
+  color: #66d9ef;
+}
+.pygments .kn {
+  color: #f92672;
+}
+.pygments .kp {
+  color: #66d9ef;
+}
+.pygments .kr {
+  color: #66d9ef;
+}
+.pygments .kt {
+  color: #66d9ef;
+}
+.pygments .ld {
+  color: #e6db74;
+}
+.pygments .m {
+  color: #ae81ff;
+}
+.pygments .s {
+  color: #e6db74;
+}
+.pygments .na {
+  color: #a6e22e;
+}
+.pygments .nb {
+  color: #f8f8f2;
+}
+.pygments .nc {
+  color: #a6e22e;
+}
+.pygments .no {
+  color: #66d9ef;
+}
+.pygments .nd {
+  color: #a6e22e;
+}
+.pygments .ni {
+  color: #f8f8f2;
+}
+.pygments .ne {
+  color: #a6e22e;
+}
+.pygments .nf {
+  color: #a6e22e;
+}
+.pygments .nl {
+  color: #f8f8f2;
+}
+.pygments .nn {
+  color: #f8f8f2;
+}
+.pygments .nx {
+  color: #a6e22e;
+}
+.pygments .py {
+  color: #f8f8f2;
+}
+.pygments .nt {
+  color: #f92672;
+}
+.pygments .nv {
+  color: #f8f8f2;
+}
+.pygments .ow {
+  color: #f92672;
+}
+.pygments .w {
+  color: #f8f8f2;
+}
+.pygments .mf {
+  color: #ae81ff;
+}
+.pygments .mh {
+  color: #ae81ff;
+}
+.pygments .mi {
+  color: #ae81ff;
+}
+.pygments .mo {
+  color: #ae81ff;
+}
+.pygments .sb {
+  color: #e6db74;
+}
+.pygments .sc {
+  color: #e6db74;
+}
+.pygments .sd {
+  color: #e6db74;
+}
+.pygments .s2 {
+  color: #e6db74;
+}
+.pygments .se {
+  color: #ae81ff;
+}
+.pygments .sh {
+  color: #e6db74;
+}
+.pygments .si {
+  color: #e6db74;
+}
+.pygments .sx {
+  color: #e6db74;
+}
+.pygments .sr {
+  color: #e6db74;
+}
+.pygments .s1 {
+  color: #e6db74;
+}
+.pygments .ss {
+  color: #e6db74;
+}
+.pygments .bp {
+  color: #f8f8f2;
+}
+.pygments .vc {
+  color: #f8f8f2;
+}
+.pygments .vg {
+  color: #f8f8f2;
+}
+.pygments .vi {
+  color: #f8f8f2;
+}
+.pygments .il {
+  color: #ae81ff;
 }
 
-code {
+code,
+kbd,
+samp,
+var {
   font-size: inherit;
   font-family: monospace, serif;
   font-weight: normal;
@@ -782,26 +1150,159 @@ code {
 
 code {
   letter-spacing: .05em;
-  color: #13aac9;
-  background: rgba(19, 170, 201, 0.25);
-  padding: 1px 4px;
+  color: #504375;
+  background: rgba(80, 67, 117, 0.25);
+  padding: 2px 3px;
   border-radius: 3px;
 }
 
-figure {
-  margin: 25px auto;
+kbd {
+  font-size: smaller;
+  color: #333333;
+  text-shadow: 0 1px 0 white;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  margin: 0 .1em;
+  padding: 0 .5em;
+  display: inline-block;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+}
+
+pre code,
+pre kbd,
+pre samp,
+pre var,
+kbd kbd {
+  font-size: inherit;
+  color: inherit;
+  text-shadow: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.gist {
+  text-align: left;
+}
+
+.gist-file {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul, ol, dl {
   padding: 0;
 }
-figure figcaption {
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 5px;
+
+ul, ol {
+  list-style: none;
 }
-figure figcaption p:first-of-type {
+
+dt {
+  font-weight: bold;
+  margin: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+.li1,
+.li2,
+.body ol,
+.body ul {
+  counter-reset: li;
+}
+.li1 > li::before,
+.li2 > li::before,
+.body ol > li::before,
+.body ul > li::before {
+  font-family: Cambria, Georgia, serif;
+  font-weight: bold;
+  color: #cca700;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  display: block;
+  content: counter(li,lower-roman);
+  counter-increment: li;
+}
+.li1 > li:first-child::before,
+.li2 > li:first-child::before,
+.body ol > li:first-child::before,
+.body ul > li:first-child::before {
+  margin-top: 0;
+}
+
+.li2 > li::before,
+.body ul > li::before {
+  content: counter(li,square);
+  margin-bottom: 2px;
+}
+
+figure {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+figure img {
+  vertical-align: top;
+}
+
+figcaption {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #dddddd;
+}
+figcaption b,
+figcaption strong {
+  color: white;
+  letter-spacing: .08em;
+}
+figcaption p {
+  font-size: inherit;
+  line-height: inherit;
+}
+figcaption p:first-of-type {
   margin-top: 0 !important;
 }
-figure figcaption p:last-of-type {
+figcaption p:last-of-type {
   margin-bottom: 0 !important;
+}
+figcaption a, figcaption a:visited {
+  color: #9ea301;
+}
+figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcaption a:hover, figcaption a:active {
+  color: #a1c820;
+  text-decoration: none;
+}
+figcaption > div {
+  background: #222222;
+  margin-top: 13px;
+  padding: 15px 20px;
+  display: inline-block;
+  position: relative;
+}
+figcaption > div::after {
+  content: "";
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: #222222 transparent;
+  width: 0;
+  margin-left: -10px;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  -webkit-transform: rotate(360deg);
 }
 
 img {
@@ -839,6 +1340,8 @@ video:active {
 
 audio {
   width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .mm {
@@ -868,6 +1371,10 @@ audio {
 }
 .mm.tv {
   padding-bottom: 75%;
+}
+
+.js #disqus {
+  display: none;
 }
 
 .tooltip {
@@ -927,34 +1434,94 @@ audio {
     background-position: center -24480px;
   }
 }
-body {
-  margin-bottom: 500px;
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx) {
+  body {
+    margin-bottom: 500px;
+  }
+  .js body::after {
+    /* 
+    https://github.com/mhulse/picard/issues/194
+    https://github.com/mhulse/picard/issues/207
+    */
+    background-image: url(http://uploads.mky.io/skull.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-origin: content-box;
+    background-attachment: local;
+    background-size: 350px 24480px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: "";
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: skull;
+    animation-name: skull;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps(48);
+    animation-timing-function: steps(48);
+  }
 }
-.js body::after {
-  /* 
-  https://github.com/mhulse/picard/issues/194
-  https://github.com/mhulse/picard/issues/207
-  */
-  background-image: url(http://uploads.mky.io/skull.jpg);
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-origin: content-box;
-  background-attachment: local;
-  background-size: 350px 24480px;
-  height: 500px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  content: "";
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: skull;
-  animation-name: skull;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: steps(48);
-  animation-timing-function: steps(48);
+.callout {
+  color: #333333;
+  letter-spacing: .03em;
+}
+.callout a {
+  font-weight: bold;
+}
+.callout a, .callout a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+.callout a:visited:hover, .callout a:focus, .callout a:focus:hover, .callout a:hover, .callout a:active {
+  color: #333333;
+  text-decoration: underline;
+}
+.callout.callout-box {
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #dddddd;
+  padding: 20px;
+  border-radius: 6px;
+}
+.callout.callout-box.callout-info {
+  background-color: #bde5f8;
+}
+.callout.callout-box.callout-success {
+  background-color: #dff2bf;
+}
+.callout.callout-box.callout-warning {
+  background-color: #feefb3;
+}
+.callout.callout-box.callout-error {
+  background-color: #ffbaba;
+}
+.callout.callout-info {
+  color: #0d5476;
+}
+.callout.callout-info a, .callout.callout-info a:visited, .callout.callout-info a:visited:hover, .callout.callout-info a:focus, .callout.callout-info a:focus:hover, .callout.callout-info a:hover, .callout.callout-info a:active {
+  color: #0d5476;
+}
+.callout.callout-success {
+  color: #4a6a15;
+}
+.callout.callout-success a, .callout.callout-success a:visited, .callout.callout-success a:visited:hover, .callout.callout-success a:focus, .callout.callout-success a:focus:hover, .callout.callout-success a:hover, .callout.callout-success a:active {
+  color: #4a6a15;
+}
+.callout.callout-warning {
+  color: #7d6502;
+}
+.callout.callout-warning a, .callout.callout-warning a:visited, .callout.callout-warning a:visited:hover, .callout.callout-warning a:focus, .callout.callout-warning a:focus:hover, .callout.callout-warning a:hover, .callout.callout-warning a:active {
+  color: #7d6502;
+}
+.callout.callout-error {
+  color: #870000;
+}
+.callout.callout-error a, .callout.callout-error a:visited, .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .callout.callout-error a:focus:hover, .callout.callout-error a:hover, .callout.callout-error a:active {
+  color: #870000;
 }
 
 .ui-accordion-content {
@@ -1025,12 +1592,71 @@ body {
 [data-kaomoji]::before {
   content: attr(data-kaomoji);
 }
-[data-kaomoji]:hover::before {
+.ui-accordion-header-active [data-kaomoji]::before, [data-kaomoji]:hover::before {
   content: attr(data-kaomoji-hover);
 }
 
+#secondary > h3 {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 #secondary > h3 a {
   display: inline-block;
   padding: 0 0 5px;
   border-bottom: 2px solid;
+}
+#secondary > h3 a:active, #secondary > h3 a:focus {
+  outline: 0;
+}
+
+h3.ui-accordion-header-active > span,
+h3.ui-accordion-header-active > a {
+  color: #fe4365 !important;
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  nav {
+    display: none;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  article {
+    page-break-before: always;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  a[href^=http]:after {
+    font-style: italic;
+    content: " < " attr(href) " > ";
+  }
+
+  a[href^="#"]:after {
+    content: "";
+  }
 }

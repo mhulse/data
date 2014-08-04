@@ -1,0 +1,54 @@
+ul, ol, dl { padding: 0; }
+
+ul, ol { list-style: none; }
+
+dt {
+	font-weight: bold;
+	margin: 0;
+}
+
+dd { margin-left: 0; }
+
+// http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
+// http://css-tricks.com/numbering-in-style/
+.li1,
+.li2,
+.body ol,
+.body ul {
+	
+	counter-reset: li;
+	
+	> li {
+		
+		&::before {
+			font-family: $serif;
+			font-weight: bold;
+			color: darken($bling, 10%);
+			margin: {
+				top: 10px;
+				bottom: 4px;
+			}
+			display: block;
+			content: counter(li, lower-roman);
+			counter-increment: li;
+		}
+		
+		&:first-child::before { margin-top: 0; }
+		
+	}
+	
+}
+
+.li2,
+.body ul {
+	
+	> li {
+		
+		&::before {
+			content: counter(li, square);
+			margin-bottom: 2px;
+		}
+		
+	}
+	
+}

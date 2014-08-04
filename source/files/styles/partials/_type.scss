@@ -43,3 +43,167 @@ h6, .h6, .sh6 {
 }
 
 h1:empty { display: none; }
+
+[itemprop="articleBody"] {
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: normal;
+		color: $juice;
+	}
+	
+}
+
+blockquote {
+	
+	font-size: 20px;
+	line-height: 35px;
+	font-family: serif;
+	font-style: italic;
+	letter-spacing: .03em;
+	color: $gray6;
+	border-width: 2px 0;
+	border-style: dashed;
+	border-color: $grayd;
+	margin: {
+		top: 20px;
+		bottom: 20px;
+	}
+	padding: 20px 40px;
+	position: relative;
+	
+	p {
+		font-size: inherit;
+		line-height: inherit;
+	}
+	
+	footer {
+		
+		font-size: 70%;
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		
+		p { margin: 0; }
+		
+	}
+	
+	* { max-width: none; }
+	
+	blockquote { border-width: 1px 0; }
+	
+	a {
+		
+		&,
+		&:visited { color: $dusk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $smurf;
+			text-decoration: none;
+		}
+		
+	}
+	
+	@media (max-width: 568px) {
+		
+		& { padding: 20px; }
+		
+	}
+	
+}
+
+mark {
+	background: rgba($duck, .9);
+	padding: 1px 3px;
+	border-radius: 3px;
+}
+
+del,
+ins {
+	line-height: 0;
+	letter-spacing: .05em;
+	padding: 1px 3px;
+	position: relative;
+	border-radius: 2px;
+}
+del {
+	color: darken($chili, 50%);
+	background: rgba($chili, .5);
+}
+ins {
+	
+	color: darken($frog, 50%);
+	text-decoration: none;
+	background: rgba($frog, .5);
+	
+	&::before { content: "["; }
+	&::after { content: "]"; }
+	
+}
+
+q {
+	font-family: $serif;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+abbr {
+	
+	font-style: italic;
+	cursor: help;
+	
+	&[title] { border-bottom: 1px dotted; }
+	
+	&[title="et cetera"] { font-family: $etc; }
+	
+}
+
+cite { font-style: italic; }
+
+dfn {
+	
+	font-weight: bold;
+	font-style: italic;
+	
+	&[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+	
+}
+
+wbr {
+	
+	&::after { content: "\00200B"; }
+	
+}
+
+small,
+.small { font-size: smaller; }
+
+span {
+	
+	// The italic version of an ampersand is more decorative and interesting
+	// than its roman counterpart.
+	//
+	// @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
+	// @see http://fluidbaselinegrid.com/css/style.css
+	
+	&.amp {
+		font-size: 110%;
+		font-family: $amp;
+		font-weight: normal;
+		font-style: italic;
+		line-height: 0;
+		vertical-align: baseline;
+		position: relative;
+	}
+	
+}

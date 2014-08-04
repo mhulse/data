@@ -21,42 +21,167 @@
 	100% { background-position: center -24480px; }
 }
 
-body{
+// I think iOS doesn't like the large BG image. 
+// Possible fix:
+// http://stackoverflow.com/a/12647559/922323
+// For now, as a fix, hiding on retina display.
+@media 
+	(-webkit-max-device-pixel-ratio: 1),
+	(max-resolution: 1dppx)
+{ // https://gist.github.com/levibuzolic/947778
 	
-	// http://mystrd.at/modern-clean-css-sticky-footer/
-	margin-bottom: 500px; // Height of skull.
-	
-	&::after {
+	body {
 		
-		.js & {
+		// http://mystrd.at/modern-clean-css-sticky-footer/
+		margin-bottom: 500px; // Height of skull.
+		
+		&::after {
 			
-			/* 
-			https://github.com/mhulse/picard/issues/194
-			https://github.com/mhulse/picard/issues/207
-			*/
-			background: {
-				image: url(http://uploads.mky.io/skull.jpg);
-				repeat: no-repeat;
-				position: center 0; // Wish I could make this retina display quality. :(
-				origin: content-box;
-				attachment: local;
-				size: 350px 24480px; // http://www.defusion.org.uk/archives/2010/02/19/shrinking-large-background-image-bug-in-iphone-safari/
+			.js & {
+				
+				/* 
+				https://github.com/mhulse/picard/issues/194
+				https://github.com/mhulse/picard/issues/207
+				*/
+				
+				background: {
+					image: url(http://uploads.mky.io/skull.jpg);
+					repeat: no-repeat;
+					position: center 0; // Wish I could make this retina display quality. :(
+					origin: content-box;
+					attachment: local;
+					size: 350px 24480px; // http://www.defusion.org.uk/archives/2010/02/19/shrinking-large-background-image-bug-in-iphone-safari/
+				}
+				height: 500px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				content: "";
+				-webkit-animation-duration: 2s;
+						animation-duration: 2s;
+				-webkit-animation-name: skull;
+						animation-name: skull;
+				-webkit-animation-iteration-count: infinite;
+						animation-iteration-count: infinite;
+				-webkit-animation-timing-function: steps(48);
+						animation-timing-function: steps(48);
+				
 			}
-			//width: 350px;
-			height: 500px;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			content: "";
-			-webkit-animation-duration: 2s;
-					animation-duration: 2s;
-			-webkit-animation-name: skull;
-					animation-name: skull;
-			-webkit-animation-iteration-count: infinite;
-					animation-iteration-count: infinite;
-			-webkit-animation-timing-function: steps(48);
-					animation-timing-function: steps(48);
+			
+		}
+		
+	}
+	
+}
+
+.callout {
+	
+	color: $gray3;
+	letter-spacing: .03em;
+	
+	a {
+		
+		font-weight: bold;
+		
+		&,
+		&:visited {
+			color: $gray3;
+			text-decoration: none;
+		}
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $gray3;
+			text-decoration: underline;
+		}
+		
+	}
+	
+	&.callout-box {
+		
+		font-size: 14px;
+		line-height: 20px;
+		background-color: $grayd;
+		padding: 20px;
+		border-radius: 6px;
+		
+		&.callout-info { background-color: $ice; }
+		&.callout-success { background-color: $frog; }
+		&.callout-warning { background-color: $duck; }
+		&.callout-error { background-color: $chili; }
+		
+	}
+	
+	&.callout-info {
+		
+		color: darken($ice, 60%);
+		
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($ice, 60%); }
+			
+		}
+		
+	}
+	
+	&.callout-success {
+		
+		color: darken($frog, 60%);
+		
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($frog, 60%); }
+			
+		}
+		
+	}
+	
+	&.callout-warning {
+		
+		color: darken($duck, 60%);
+		
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($duck, 60%); }
+			
+		}
+		
+	}
+	
+	&.callout-error {
+		
+		color: darken($chili, 60%);
+		
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($chili, 60%); }
 			
 		}
 		
