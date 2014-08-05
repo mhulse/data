@@ -14,10 +14,10 @@ DATA.register(function() {
 			var headers = $this.accordion('option', 'header');
 			var header = $(location.hash);
 			var index = $this.find(headers).index(header);
-			if (typeof $primary !== 'undefined' && $primary.length) {
-				$primary.accordion('option', 'active', $this.closest('.ui-accordion-header').index());
-			}
 			if (index >= 0) {
+				if (typeof $primary !== 'undefined' && $primary.length) {
+					$primary.accordion('option', 'active', $this.closest('.ui-accordion-header').index());
+				}
 				$this.accordion('option', 'active', index);
 			}
 		});
