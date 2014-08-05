@@ -65,9 +65,7 @@ $( function()
 
 // http://buildinternet.com/2008/12/quick-tip-blur-links-with-jquery/
 // $(document).ready(function(){
-// 	$('.ui-accordion-header').click(function(){
-// 		console.log('foo');
+// 	$('a').click(function(){
 // 		$(this).blur();
-// 		return false;
 // 	});
 // });

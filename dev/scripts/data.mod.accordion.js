@@ -60,7 +60,9 @@ DATA.register(function() {
 								.done(function(instance) {
 									console.log('all images successfully loaded');
 									$progress.fadeOut('slow', function(){
-										$content.fadeIn('slow');
+										$content.fadeIn('slow', function() {
+											$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
+										});
 									});
 								})
 								.fail( function() {
@@ -73,8 +75,12 @@ DATA.register(function() {
 						});
 				}
 			},
-			activate: function() {
+			activate: function(e, ui) {
+				if (ui.newPanel.length && ui.newPanel.not(':empty')) {
+					$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
+				}
 				$secondary.accordion('refresh');
+				ui.oldHeader.children('a').blur();
 			}
 		});
 	
@@ -90,6 +96,9 @@ DATA.register(function() {
 			},
 			beforeActivate: function(e, ui) {
 				$secondary.accordion('option', 'active', false);
+			},
+			activate: function(e, ui) {
+				$primary.accordion('refresh');
 			}
 		});
 	
