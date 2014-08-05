@@ -562,12 +562,12 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
 }
 
 ::-moz-selection {
-  background: rgba(158, 163, 1, 0.55);
+  background: rgba(255, 209, 0, 0.55);
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(158, 163, 1, 0.55);
+  background: rgba(255, 209, 0, 0.55);
   text-shadow: none;
 }
 
