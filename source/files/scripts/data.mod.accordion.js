@@ -1,12 +1,27 @@
 /* jshint unused:vars */
 
+// @see http://api.jqueryui.com/accordion/
+// @todo Combine these two accordions.
 DATA.register(function() {
 	
 	'use strict';
 	
-	// @see http://api.jqueryui.com/accordion/
-	// @todo Combine these two accordions.
-	
+	// http://jsfiddle.net/adamboduch/tJnw7/
+	// http://www.boduch.ca/2013/12/activate-accordion-section-by-url-hash.html
+	var hashchange = function($primary) {
+		var $this = $(this);
+		$(window).on('hashchange', function(e) {
+			var headers = $this.accordion('option', 'header');
+			var header = $(location.hash);
+			var index = $this.find(headers).index(header);
+			if (typeof $primary !== 'undefined' && $primary.length) {
+				$primary.accordion('option', 'active', $this.closest('.ui-accordion-header').index());
+			}
+			if (index >= 0) {
+				$this.accordion('option', 'active', index);
+			}
+		});
+	};
 	var $primary = $('#primary');
 	var $secondary = $('#secondary');
 	var $progress = $('<div />', { 'class' : 'progress' });
@@ -24,7 +39,10 @@ DATA.register(function() {
 			heightStyle: 'content',
 			animate: false,
 			icons: false,
-			beforeActivate: function(event, ui) {
+			create: function(e, ui) {
+				hashchange.call(this, $primary);
+			},
+			beforeActivate: function(e, ui) {
 				if (ui.newPanel.is(':empty')) {
 					ui.newHeader
 						.next()
@@ -67,9 +85,14 @@ DATA.register(function() {
 			heightStyle: 'content',
 			animate: false,
 			icons: false,
-			beforeActivate: function(event, ui) {
+			create: function(e, ui) {
+				hashchange.call(this);
+			},
+			beforeActivate: function(e, ui) {
 				$secondary.accordion('option', 'active', false);
 			}
 		});
+	
+	$(window).trigger('hashchange');
 	
 }); // DATA
