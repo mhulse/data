@@ -557,7 +557,7 @@ a, a:visited {
   color: black;
   text-decoration: none;
 }
-a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
+.no-touch a:visited:hover, a:focus, .no-touch a:focus:hover, .no-touch a:hover, a:active {
   color: #fe4365;
 }
 
@@ -1387,6 +1387,7 @@ audio {
   position: absolute;
   z-index: 100;
   padding: 15px;
+  pointer-events: none;
 }
 .tooltip::after {
   width: 0;
@@ -1530,8 +1531,7 @@ audio {
   margin-bottom: 20px;
 }
 
-.ajax-content,
-.ui-accordion-content {
+.ajax-content {
   display: none;
 }
 
@@ -1572,7 +1572,7 @@ audio {
   cursor: pointer;
   cursor: hand;
 }
-#primary > h3.ui-accordion-header-active, #primary > h3:hover {
+#primary > h3.ui-accordion-header-active, .no-touch #primary > h3:hover {
   color: #fe4365;
 }
 #primary > h3:active, #primary > h3:focus {
@@ -1588,11 +1588,14 @@ audio {
   position: absolute;
   width: 1px;
 }
+.js #primary > div {
+  display: none;
+}
 
 [data-kaomoji]::before {
   content: attr(data-kaomoji);
 }
-[data-kaomoji].ui-accordion-header-active::before, [data-kaomoji]:hover::before {
+[data-kaomoji].ui-accordion-header-active::before, .no-touch [data-kaomoji]:hover::before {
   content: attr(data-kaomoji-hover);
 }
 
@@ -1611,6 +1614,9 @@ audio {
 }
 #secondary > h3 a:active, #secondary > h3 a:focus {
   outline: 0;
+}
+.js #secondary > div {
+  display: none;
 }
 
 @media print {

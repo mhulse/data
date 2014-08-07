@@ -29,7 +29,7 @@ DATA.register(function() {
 	$secondary
 		.children()
 		.each(function() {
-			$(this).after('<div />', { 'class' : 'ui-accordion-content' }); // Tabs will add this class automatically, yet we want CSS to hide sooner than later.
+			$(this).after('<div />');
 		});
 	
 	$secondary

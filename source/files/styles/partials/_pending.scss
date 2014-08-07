@@ -3,11 +3,9 @@
 	min-height: 50px; // Height of loader + 10px top.
 	margin-bottom: 20px;
 }
-.ajax-content,
-.ui-accordion-content {
-	//padding: 10px;
-	display: none;
-}
+
+.ajax-content { display: none; }
+
 .progress {
 	width: 50px;
 	height: 50px;
@@ -54,7 +52,7 @@
 		cursor: hand;
 		
 		&.ui-accordion-header-active,
-		&:hover { color: $purty; }
+		.no-touch &:hover { color: $purty; }
 		&:active,
 		&:focus { outline: 0; }
 		
@@ -71,13 +69,15 @@
 		
 	}
 	
+	.js & > div { display: none; }
+	
 }
 
 [data-kaomoji] {
 	
 	&::before { content: attr(data-kaomoji); }
 	&.ui-accordion-header-active::before, // This line, and the ones below, could be moved into jQuery .ui section.
-	&:hover::before { content: attr(data-kaomoji-hover); }
+	.no-touch &:hover::before { content: attr(data-kaomoji-hover); }
 	
 }
 
@@ -102,5 +102,7 @@
 		}
 		
 	}
+	
+	.js & > div { display: none; }
 	
 }

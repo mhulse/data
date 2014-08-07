@@ -41,10 +41,10 @@ a {
 		color: $raven;
 		text-decoration: none;
 	}
-	&:visited:hover,
+	.no-touch &:visited:hover,
 	&:focus,
-	&:focus:hover,
-	&:hover,
+	.no-touch &:focus:hover,
+	.no-touch &:hover,
 	&:active { color: $purty; }
 	
 }
