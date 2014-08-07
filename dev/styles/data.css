@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/04
+ * @date 2014/08/06
  */
 
 
@@ -1562,23 +1562,23 @@ audio {
   font-weight: normal;
   font-size: 35px;
   line-height: 35px;
+  color: black;
   white-space: nowrap;
   margin-top: 20px;
   margin-bottom: 20px;
+  display: table;
+  width: auto;
+  max-width: none;
+  cursor: pointer;
+  cursor: hand;
+}
+#primary > h3.ui-accordion-header-active, #primary > h3:hover {
+  color: #fe4365;
 }
 #primary > h3:active, #primary > h3:focus {
   outline: 0;
 }
-#primary > h3 > span {
-  color: black;
-  display: inline-block;
-  cursor: pointer;
-  cursor: hand;
-}
-#primary > h3 > span:hover {
-  color: #fe4365;
-}
-#primary > h3 > span span {
+#primary > h3 span {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1592,7 +1592,7 @@ audio {
 [data-kaomoji]::before {
   content: attr(data-kaomoji);
 }
-.ui-accordion-header-active [data-kaomoji]::before, [data-kaomoji]:hover::before {
+[data-kaomoji].ui-accordion-header-active::before, [data-kaomoji]:hover::before {
   content: attr(data-kaomoji-hover);
 }
 
@@ -1601,6 +1601,9 @@ audio {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+#secondary > h3.ui-accordion-header-active a {
+  color: #fe4365;
+}
 #secondary > h3 a {
   display: inline-block;
   padding: 0 0 5px;
@@ -1608,11 +1611,6 @@ audio {
 }
 #secondary > h3 a:active, #secondary > h3 a:focus {
   outline: 0;
-}
-
-h3.ui-accordion-header-active > span,
-h3.ui-accordion-header-active > a {
-  color: #fe4365 !important;
 }
 
 @media print {

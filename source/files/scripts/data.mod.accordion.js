@@ -29,7 +29,7 @@ DATA.register(function() {
 	$secondary
 		.children()
 		.each(function() {
-			$(this).after('<div />');
+			$(this).after('<div />', { 'class' : 'ui-accordion-content' }); // Tabs will add this class automatically, yet we want CSS to hide sooner than later.
 		});
 	
 	$secondary
@@ -46,6 +46,7 @@ DATA.register(function() {
 				if (ui.newPanel.is(':empty')) {
 					ui.newHeader
 						.next()
+						// Loaded children must have .ajax-content class as that's the content target that gets loaded:
 						.load(ui.newHeader.children('a').attr('href') + ' .ajax-content', function(response, status, xhr) {
 							var $this = $(this);
 							var $content = $this.children('.ajax-content'); // Better way?
@@ -99,6 +100,7 @@ DATA.register(function() {
 			},
 			activate: function(e, ui) {
 				$primary.accordion('refresh');
+				ui.oldHeader.blur();
 			}
 		});
 	
