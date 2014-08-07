@@ -253,6 +253,7 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
+						'./files/scripts/modernizr.js',
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
