@@ -35,7 +35,7 @@
 	
 	&,
 	&:focus,
-	&:hover,
+	.no-touch &:hover,
 	&:active {
 		color: rgba($raven, 0);
 		text-decoration: none;

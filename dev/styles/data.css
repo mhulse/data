@@ -440,7 +440,7 @@ th {
   visibility: hidden;
 }
 
-.nix, .nix:focus, .nix:hover, .nix:active {
+.nix, .nix:focus, .no-touch .nix:hover, .nix:active {
   color: transparent;
   text-decoration: none;
   outline: 0;
@@ -697,7 +697,7 @@ nav[role="navigation"] .harmonia {
 #flag a, #flag a:visited {
   color: #13aac9;
 }
-#flag a:visited:hover, #flag a:focus, #flag a:focus:hover, #flag a:hover, #flag a:active {
+.no-touch #flag a:visited:hover, #flag a:focus, .no-touch #flag a:focus:hover, .no-touch #flag a:hover, #flag a:active {
   color: #69d2e7;
   text-decoration: none;
 }
@@ -798,7 +798,7 @@ blockquote blockquote {
 blockquote a, blockquote a:visited {
   color: #1d678f;
 }
-blockquote a:visited:hover, blockquote a:focus, blockquote a:focus:hover, blockquote a:hover, blockquote a:active {
+.no-touch blockquote a:visited:hover, blockquote a:focus, .no-touch blockquote a:focus:hover, .no-touch blockquote a:hover, blockquote a:active {
   color: #13aac9;
   text-decoration: none;
 }
@@ -1281,7 +1281,7 @@ figcaption p:last-of-type {
 figcaption a, figcaption a:visited {
   color: #9ea301;
 }
-figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcaption a:hover, figcaption a:active {
+.no-touch figcaption a:visited:hover, figcaption a:focus, .no-touch figcaption a:focus:hover, .no-touch figcaption a:hover, figcaption a:active {
   color: #a1c820;
   text-decoration: none;
 }
@@ -1377,7 +1377,7 @@ audio {
   display: none;
 }
 
-.tooltip {
+.no-touch .tooltip {
   font-family: monospace, serif;
   font-size: 16px;
   letter-spacing: .08em;
@@ -1389,7 +1389,7 @@ audio {
   padding: 15px;
   pointer-events: none;
 }
-.tooltip::after {
+.no-touch .tooltip::after {
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -1401,23 +1401,50 @@ audio {
   bottom: -10px;
   margin-left: -10px;
 }
-.tooltip.top::after {
+.no-touch .tooltip.top::after {
   border-top-color: transparent;
   border-bottom: 10px solid rgba(254, 67, 101, 0.95);
   top: -20px;
   bottom: auto;
 }
-.tooltip.left::after {
+.no-touch .tooltip.left::after {
   left: 10px;
   margin: 0;
 }
-.tooltip.right::after {
+.no-touch .tooltip.right::after {
   right: 10px;
   left: auto;
   margin: 0;
 }
 
 @-webkit-keyframes skull {
+  0% {
+    background-position: center 0;
+  }
+
+  100% {
+    background-position: center -24480px;
+  }
+}
+@-moz-keyframes skull {
+  0% {
+    background-position: center 0;
+  }
+
+  100% {
+    background-position: center -24480px;
+  }
+}
+@-ms-keyframes skull {
+  0% {
+    background-position: center 0;
+  }
+
+  100% {
+    background-position: center -24480px;
+  }
+}
+@-o-keyframes skull {
   0% {
     background-position: center 0;
   }
@@ -1435,34 +1462,117 @@ audio {
     background-position: center -24480px;
   }
 }
+@-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slide-up {
+  0% {
+    -moz-transform: translateY(100%);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-ms-keyframes slide-up {
+  0% {
+    -moz-transform: translateY(100%);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes slide-up {
+  0% {
+    -o-transform: translateY(100%);
+  }
+
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx) {
   body {
     margin-bottom: 500px;
   }
-  .js body::after {
-    /* 
-    https://github.com/mhulse/picard/issues/194
-    https://github.com/mhulse/picard/issues/207
-    */
+
+  .js .skull {
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  .js .skull > div {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -ms-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: slide-up;
+    -moz-animation-name: slide-up;
+    -ms-animation-name: slide-up;
+    -o-animation-name: slide-up;
+    animation-name: slide-up;
+  }
+  .js .skull > div::after {
+    content: "";
     background-image: url(http://uploads.mky.io/skull.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
     background-origin: content-box;
     background-attachment: local;
     background-size: 350px 24480px;
+    width: 300px;
     height: 500px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    content: "";
+    margin: 0 auto;
+    display: block;
     -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-name: skull;
+    -moz-animation-name: skull;
+    -ms-animation-name: skull;
+    -o-animation-name: skull;
     animation-name: skull;
     -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: steps(48);
+    -moz-animation-timing-function: steps(48);
+    -ms-animation-timing-function: steps(48);
+    -o-animation-timing-function: steps(48);
     animation-timing-function: steps(48);
   }
 }
@@ -1477,7 +1587,7 @@ audio {
   color: #333333;
   text-decoration: none;
 }
-.callout a:visited:hover, .callout a:focus, .callout a:focus:hover, .callout a:hover, .callout a:active {
+.no-touch .callout a:visited:hover, .callout a:focus, .no-touch .callout a:focus:hover, .no-touch .callout a:hover, .callout a:active {
   color: #333333;
   text-decoration: underline;
 }
@@ -1503,25 +1613,25 @@ audio {
 .callout.callout-info {
   color: #0d5476;
 }
-.callout.callout-info a, .callout.callout-info a:visited, .callout.callout-info a:visited:hover, .callout.callout-info a:focus, .callout.callout-info a:focus:hover, .callout.callout-info a:hover, .callout.callout-info a:active {
+.callout.callout-info a, .callout.callout-info a:visited, .no-touch .callout.callout-info a:visited:hover, .callout.callout-info a:focus, .no-touch .callout.callout-info a:focus:hover, .no-touch .callout.callout-info a:hover, .callout.callout-info a:active {
   color: #0d5476;
 }
 .callout.callout-success {
   color: #4a6a15;
 }
-.callout.callout-success a, .callout.callout-success a:visited, .callout.callout-success a:visited:hover, .callout.callout-success a:focus, .callout.callout-success a:focus:hover, .callout.callout-success a:hover, .callout.callout-success a:active {
+.callout.callout-success a, .callout.callout-success a:visited, .no-touch .callout.callout-success a:visited:hover, .callout.callout-success a:focus, .no-touch .callout.callout-success a:focus:hover, .no-touch .callout.callout-success a:hover, .callout.callout-success a:active {
   color: #4a6a15;
 }
 .callout.callout-warning {
   color: #7d6502;
 }
-.callout.callout-warning a, .callout.callout-warning a:visited, .callout.callout-warning a:visited:hover, .callout.callout-warning a:focus, .callout.callout-warning a:focus:hover, .callout.callout-warning a:hover, .callout.callout-warning a:active {
+.callout.callout-warning a, .callout.callout-warning a:visited, .no-touch .callout.callout-warning a:visited:hover, .callout.callout-warning a:focus, .no-touch .callout.callout-warning a:focus:hover, .no-touch .callout.callout-warning a:hover, .callout.callout-warning a:active {
   color: #7d6502;
 }
 .callout.callout-error {
   color: #870000;
 }
-.callout.callout-error a, .callout.callout-error a:visited, .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .callout.callout-error a:focus:hover, .callout.callout-error a:hover, .callout.callout-error a:active {
+.callout.callout-error a, .callout.callout-error a:visited, .no-touch .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .no-touch .callout.callout-error a:focus:hover, .no-touch .callout.callout-error a:hover, .callout.callout-error a:active {
   color: #870000;
 }
 

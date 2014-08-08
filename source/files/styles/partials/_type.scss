@@ -100,10 +100,10 @@ blockquote {
 		
 		&,
 		&:visited { color: $dusk; }
-		&:visited:hover,
+		.no-touch &:visited:hover,
 		&:focus,
-		&:focus:hover,
-		&:hover,
+		.no-touch &:focus:hover,
+		.no-touch &:hover,
 		&:active {
 			color: $smurf;
 			text-decoration: none;

@@ -1,7 +1,7 @@
 $( function()
 {
 	// http://osvaldas.info/elegant-css-and-jquery-tooltip-responsive-mobile-friendly
-	var targets = $( '[rel~=tooltip]' ),
+	var targets = $( '.no-touch [rel~=tooltip]' ),
 		target  = false,
 		tooltip = false,
 		title   = false;
@@ -69,3 +69,9 @@ $( function()
 // 		$(this).blur();
 // 	});
 // });
+// 
+$(window).load(function() {
+	
+	$('body').append('<div class="skull"><div></div></div>');
+	
+});
