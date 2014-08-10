@@ -1,6 +1,6 @@
 #flag {
 	
-	font-family: "hulse", $serif;
+	font-family: "hulse";
 	font-size: 80px;
 	line-height: 80px;
 	font-weight: normal;
@@ -25,7 +25,7 @@
 		.no-touch &:focus:hover,
 		.no-touch &:hover,
 		&:active {
-			color: $sky;
+			color: lighten($smurf, 20%);
 			text-decoration: none;
 		}
 		&:focus,

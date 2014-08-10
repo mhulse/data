@@ -7,14 +7,10 @@
 	}
 	
 	// Remove unneeded page elements:
-	nav {
-		display: none;
-	}
+	nav { display: none; }
 	
 	// Set page width & margins:
-	@page {
-		margin: 1cm; // Use centimeters or inches, not pixels.
-	}
+	@page { margin: 1cm; } // Use centimeters or inches, not pixels.
 	body {
 		width: 100%;
 		margin: 0;
@@ -27,25 +23,17 @@
 	h3,
 	h4,
 	h5,
-	h6 {
-		page-break-after: avoid; // Prevent headings from being printed at the bottom of the page.
-	}
+	h6 { page-break-after: avoid; } // Prevent headings from being printed at the bottom of the page.
 	
-	article {
-		page-break-before: always; // Always start new articles on a new page.
-	}
+	article { page-break-before: always; } // Always start new articles on a new page.
 	
-	img {
-		page-break-inside: avoid; // Prevent images from being split up.
-	}
+	img { page-break-inside: avoid; } // Prevent images from being split up.
 	
 	// Display link URLs:
 	a[href^=http]:after {
 		font-style: italic;
 		content: " < " attr(href) " > ";
 	}
-	a[href^="#"]:after {
-		content: ""; // Kills the expanded links on anchor tags.
-	}
+	a[href^="#"]:after { content: ""; } // Kills the expanded links on anchor tags.
 	
 }

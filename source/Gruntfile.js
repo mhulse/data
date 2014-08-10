@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 				command : [
 					
 					// Remove unwanted Bower plugin dependencies:
-					'rm -rf files/plugins/{outlayer,classie,doc-ready,eventEmitter,eventie,get-size,get-style-property,jquery-bridget,matches-selector}',
+					'rm -rf files/plugins/{eventEmitter,eventie}',
 					
 				].join(';'),
 				
@@ -259,44 +259,11 @@ module.exports = function(grunt) {
 						'./files/scripts/jquery-ui.js',
 						'./files/scripts/jquery-ui.*.js',
 						'./files/scripts/imagesloaded.pkgd.js',
-						'./files/scripts/packery.pkgd.js',
-						'./files/scripts/packery.overrides.js',
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
 						'./files/scripts/<%= pkg.name %>.init.js',
 						'./files/scripts/pending.js', // Bypass jshint, for quick and dirty JS tests.
 					],
-					
-				},
-				
-			},
-			
-		},
-		
-		/*----------------------------------( PURE )----------------------------------*/
-		
-		/**
-		 * Generate custom grid units for Pure Grids.
-		 *
-		 * @see https://github.com/yahoo/grunt-pure-grids
-		 * @see http://purecss.io/grids/
-		 */
-		
-		pure_grids: {
-			
-			dest : './files/styles/partials/_grids-responsive.scss',
-			
-			options : {
-				
-				decimals : 14,
-				includeOldIEWidths : false,
-				
-				mediaQueries : {
-					
-					sm : 'all and (min-width: 568px)',
-					md : 'all and (min-width: 768px)',
-					lg : 'all and (min-width: 928px)',
-					xl : 'all and (min-width: 1200px)',
 					
 				},
 				
@@ -480,8 +447,6 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-env');
 	
-	grunt.loadNpmTasks('grunt-pure-grids');
-	
 	grunt.loadNpmTasks('grunt-preprocess');
 	
 	grunt.loadNpmTasks('grunt-shell');
@@ -501,9 +466,9 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('plugins', ['bower', 'shell',]);
 	
-	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'pure_grids', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
+	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	
-	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'pure_grids', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'preprocess:misc', 'copy:prod',]);
+	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'preprocess:misc', 'copy:prod',]);
 	
 	grunt.registerTask('default', ['dev',]);
 	

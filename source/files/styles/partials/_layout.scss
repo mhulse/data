@@ -1,5 +1,16 @@
+button,
+.button { @extend .x1; }
+
+label { @extend .x3; }
+
+blockquote,
+ol,
+ul { @extend .x4; }
+
 figcaption { @extend .x5; }
 
+address,
+dl,
 h1,
 h2,
 h3,
@@ -9,7 +20,19 @@ h6,
 p,
 pre { @extend .x6; }
 
-.x1, .x2, .x3, .x4, .x5, .x6, .x7 {
+hr,
+.hr {
+	
+	@extend .x8;
+	
+	aside &,
+	section & { @extend .x7; }
+	
+	section article & { @extend .x2; }
+	
+}
+
+.x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8 {
 	margin: {
 		right: auto;
 		left: auto;
@@ -25,3 +48,122 @@ pre { @extend .x6; }
 .x5 { max-width: 550px; }
 .x6 { max-width: 650px; }
 .x7 { max-width: 750px; }
+.x8 { max-width: 800px; }
+
+section,
+article,
+aside {
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
+	
+}
+
+.progress {
+	width: 50px;
+	height: 50px;
+	background: url(../images/loader.gif) no-repeat;
+	background-size: 50px 50px;
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+.ui-accordion-content {
+	position: relative;
+	min-height: 50px; // Height of loader + 10px top.
+	margin-bottom: 20px;
+}
+
+.ajax-content { display: none; }
+
+#primary {
+	
+	ul {
+		
+		margin {
+			top: 0;
+			bottom: 0;
+		}
+		padding: 0;
+		
+		li { list-style: none; }
+		
+	}
+	
+	> h3 {
+		
+		font-family: $kaomoji;
+		font-weight: normal;
+		font-size: 35px;
+		line-height: 35px;
+		color: $raven;
+		white-space: nowrap;
+		margin: {
+			top: 20px;
+			bottom: 20px;
+		}
+		display: table;
+		width: auto;
+		max-width: none;
+		cursor: pointer;
+		cursor: hand;
+		
+		&.ui-accordion-header-active,
+		.no-touch &:hover { color: $purty; }
+		&:active,
+		&:focus { outline: 0; }
+		
+		span {
+			border: 0;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		
+	}
+	
+	.js & > div { display: none; }
+	
+}
+
+[data-kaomoji] {
+	
+	&::before { content: attr(data-kaomoji); }
+	&.ui-accordion-header-active::before, // This line, and the ones below, could be moved into jQuery .ui section.
+	.no-touch &:hover::before { content: attr(data-kaomoji-hover); }
+	
+}
+
+#secondary {
+	
+	> h3 {
+		
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		
+		&.ui-accordion-header-active a { color: $purty; }
+		
+		a {
+			
+			display: inline-block;
+			padding: 0 0 5px;
+			border-bottom: 2px solid;
+			
+			&:active,
+			&:focus { outline: 0; }
+			
+		}
+		
+	}
+	
+	.js & > div { display: none; }
+	
+}

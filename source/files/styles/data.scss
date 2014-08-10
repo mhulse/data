@@ -4,22 +4,23 @@
 // Normalization:
 @import "partials/normalize";
 
-// Grids:
-//@import "partials/grids",
-//        "partials/grids-responsive";
-
 // Core:
-@import "partials/utilities",
+@import "partials/utility",
         "partials/base",
         "partials/layout",
-        "partials/navigation",
+        "partials/skull",
         "partials/flag",
         "partials/type",
+        "partials/body",
+        "partials/button",
+        "partials/table",
         "partials/code",
-        "partials/lists",
+        "partials/list",
+        "partials/form",
         "partials/media",
+        "partials/scroll",
         "partials/tooltip",
-        "partials/miscellaneous";
+        "partials/callout";
 
 // To be sorted:
 @import "partials/pending";

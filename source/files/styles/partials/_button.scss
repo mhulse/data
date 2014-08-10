@@ -1,0 +1,90 @@
+/**
+ * Simple button class.
+ *
+ * I wasn't able to normalize line-height of `<input type="buton">` in Firefox.
+ * Conclusion: Don't use `<input>` for buttons.
+ *
+ * @see https://github.com/yui/pure
+ */
+
+.button {
+	
+	font-weight: normal;
+	text-align: center;
+	line-height: normal;
+	vertical-align: baseline;
+	//white-space: nowrap;
+	display: block;
+	zoom: 1;
+	cursor: pointer;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+	
+	font-size: 18px;
+	line-height: 20px;
+	color: darken($purty, 20%);
+	width: 100%;
+	background-color: $purty;
+	border: none rgba($raven, 0);
+	border-radius: 3px;
+	margin: {
+		top: 10px;
+		bottom: 10px;
+	}
+	padding: 0 {
+		top: 5px;
+		bottom: 5px;
+	}
+	-webkit-tap-highlight-color: rgba($raven, 0);
+	
+	&,
+	&:visited,
+	.no-touch &:visited:hover,
+	&:focus,
+	.no-touch &:focus:hover,
+	.no-touch &:hover,
+	&:active {
+		text-decoration: none;
+		color: $milk;
+	}
+	
+	.no-touch &:hover,
+	&:focus { background-image: linear-gradient(transparent, rgba($raven, .05) 40%, rgba($raven, .10)); }
+	
+	&:focus { outline: 0; }
+	
+	&:active {
+		box-shadow: 0 0 0 2px rgba($raven, .15) inset,
+		            0 0 10px rgba($raven, .25) inset;
+	}
+	
+	&[disabled],
+	&.button-disabled,
+	&.button-disabled:visited,
+	.no-touch &.button-disabled:visited:hover,
+	&.button-disabled:focus,
+	.no-touch &.button-disabled:focus:hover,
+	.no-touch &.button-disabled:hover,
+	&.button-disabled:active {
+		border: none;
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		filter: alpha(opacity=40);
+		-khtml-opacity: .40;
+		  -moz-opacity: .40;
+		       opacity: .40;
+		cursor: not-allowed;
+		box-shadow: none;
+	}
+	
+	&.button-hidden { display: none; }
+	
+}

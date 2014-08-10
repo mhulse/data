@@ -1,0 +1,55 @@
+
+// Simple solution for responsive tables.
+//
+// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
+// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
+// @see http://stackoverflow.com/a/10122689/922323
+
+.scroll {
+	
+	width: 100%;
+	margin: {
+		top: 10px;
+		bottom: 10px;
+	}
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	
+	img:first-of-type {
+		max-width: none;
+		//display: block;
+	}
+	
+	> *,
+	img:first-of-type {
+		margin-top: 0;
+		margin-bottom: 0;
+		-webkit-transform: translateZ(0);
+	}
+	
+	figure & { margin: 0; }
+	
+}
+
+// For the scroll left/right icon added via JS:
+.scroll-wrap { position: relative; }
+.scroll-overlay {
+	font-size: 1em;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: lowercase;
+	text-shadow: 0 1px 3px $raven,
+				 0 1px 3px $raven,
+				 0 1px 3px $raven,
+				 0 1px 3px $raven;
+	text-align: center;
+	color: $milk;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	top: 10px;
+	left: 0;
+	opacity: .5;
+}
+.scroll-overlay::before { content: "←"; }
+.scroll-overlay::after { content: "→"; }

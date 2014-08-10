@@ -1,2 +1,100 @@
 // Helpers:
 @import "partials/variables";
+
+// `:xxx` = pseudo-class & `::xxx` = pseudo-element.
+//
+// @see http://reference.sitepoint.com/css/pseudoclasses
+// @see http://reference.sitepoint.com/css/pseudoelements
+
+.swatches {
+	
+	max-width: 650px;
+	margin: 20px auto;
+	
+	.swatches-swatch {
+		font-size: 14px;
+		line-height: 18px;
+		border: 1px solid rgba($raven, .1);
+		margin: 5px 0;
+		padding: 5px;
+	}
+	
+	code {
+		text-shadow: 0 1px 0 rgba($raven, .8);
+		color: $milk;
+		background: rgba($raven, .5);
+		padding: 3px 5px;
+		border: 0;
+	}
+	
+	.smurf   { background: $smurf;   }
+	.purty   { background: $purty;   }
+	.juice   { background: $juice;   }
+	
+}
+
+.marker {
+	
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: normal;
+	letter-spacing: .03em;
+	margin: {
+		top: 40px;
+		bottom: 40px;
+	}
+	padding: 0;
+	
+	a {
+		
+		padding: 15px 20px;
+		background: #ffd100;
+		display: inline-block;
+		
+		&,
+		&:visited { color: darken(#ffd100, 20%); }
+		.no-touch &:visited:hover,
+		&:focus,
+		.no-touch &:focus:hover,
+		.no-touch &:hover,
+		&:active {
+			color: darken(#ffd100, 20%);
+			background: lighten(#ffd100, 25%);
+		}
+		
+	}
+	
+}
+
+.subtle {
+	font: {
+		size: 18px;
+		weight: normal;
+	}
+	text-transform: uppercase;
+	line-height: 20px;
+	letter-spacing: .1em;
+	color: darken(#ffd100, 20%);
+	margin: {
+		top: 25px;
+		bottom: 25px;
+	}
+}
+
+.marker,
+.subtle {
+	
+	code {
+		font-size: inherit;
+		color: inherit;
+		text-shadow: none;
+		background: transparent;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		display: inline;
+		box-shadow: none;
+		border-radius: 0;
+	}
+	
+}

@@ -5,15 +5,9 @@
     "imagesloaded": "~3",
     "jquery": "~2",
     "jquery-ui": "~1",
-    "normalize-css": "~3",
-    "pure": "~0"
+    "normalize-css": "~3"
   },
   "exportsOverride": {
-    "pure": {
-      "": [
-        "grids.css"
-      ]
-    },
     "imagesloaded": {
       "": "imagesloaded.pkgd.js"
     },
@@ -26,9 +20,6 @@
         "ui/widget.js",
         "ui/accordion.js"
       ]
-    },
-    "packery": {
-      "": "dist/packery.pkgd.js"
     }
   }
 }

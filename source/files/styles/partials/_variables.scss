@@ -1,20 +1,10 @@
 // Base:
-$milk: #fff;
-$lobster: #c30;
-$juice: #f60;
-$bling: #ffd100;
-$goblin: #9ea301;
-$algae: #a1c820;
-$hulk: #4e801c;
 $smurf: #13aac9;
-$sky: #69d2e7;
-$dusk: #1d678f;
-$bruise: #504375;
-$tongue: #965195;
-$raven: #000;
 $purty: #fe4365;
+$juice: #f60;
 
 // Gray:
+$milk: #fff;
 $graye: #eee;
 $grayd: #ddd;
 $grayc: #ccc;
@@ -29,31 +19,14 @@ $gray4: #444;
 $gray3: #333;
 $gray2: #222;
 $gray1: #111;
+$raven: #000;
 
-// Other:
-$ice: #bde5f8;
-$frog: #dff2bf;
-$duck: #feefb3;
+// Boxes:
 $chili: #ffbaba;
+$duck: #feefb3;
+$frog: #dff2bf;
+$ice: #bde5f8;
 
 // Fonts:
-$sans: Arial, sans-serif;
-$serif: Cambria, Georgia, serif;
-$mono: monospace, serif; //Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-$amp: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
-$etc: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive;
 $kaomoji: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-
-// Base styles:
-$base_padding: 10px;
-$base_margin: 10px;
-
-// Breakpoints:
-$base_breakpoint-max: 749px;
-$base_breakpoint-min: 750px;
-
-// Radii:
-$base_radii: 3px;
-
-// Rex overrides:
-$REX: "";
+$mono: monospace, serif; //Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;

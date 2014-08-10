@@ -8,7 +8,81 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/07
+ * @date 2014/08/09
  */
 
 
+.swatches {
+  max-width: 650px;
+  margin: 20px auto;
+}
+.swatches .swatches-swatch {
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  padding: 5px;
+}
+.swatches code {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3px 5px;
+  border: 0;
+}
+.swatches .smurf {
+  background: #13aac9;
+}
+.swatches .purty {
+  background: #fe4365;
+}
+.swatches .juice {
+  background: #ff6600;
+}
+
+.marker {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: normal;
+  letter-spacing: .03em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.marker a {
+  padding: 15px 20px;
+  background: #ffd100;
+  display: inline-block;
+}
+.marker a, .marker a:visited {
+  color: #997d00;
+}
+.no-touch .marker a:visited:hover, .marker a:focus, .no-touch .marker a:focus:hover, .no-touch .marker a:hover, .marker a:active {
+  color: #997d00;
+  background: #ffe880;
+}
+
+.subtle {
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: .1em;
+  color: #997d00;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.marker code,
+.subtle code {
+  font-size: inherit;
+  color: inherit;
+  text-shadow: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  box-shadow: none;
+  border-radius: 0;
+}

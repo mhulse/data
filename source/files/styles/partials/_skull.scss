@@ -108,7 +108,7 @@
 					attachment: local;
 					size: 350px 24480px; // http://www.defusion.org.uk/archives/2010/02/19/shrinking-large-background-image-bug-in-iphone-safari/
 				}
-				width: 300px;
+				width: 350px; // Same width as scaled background.
 				height: 500px;
 				margin: 0 auto;
 				display: block;
@@ -133,120 +133,6 @@
 				     -o-animation-timing-function: steps(48);
 						animation-timing-function: steps(48);
 			}
-			
-		}
-		
-	}
-	
-}
-
-.callout {
-	
-	color: $gray3;
-	letter-spacing: .03em;
-	
-	a {
-		
-		font-weight: bold;
-		
-		&,
-		&:visited {
-			color: $gray3;
-			text-decoration: none;
-		}
-		.no-touch &:visited:hover,
-		&:focus,
-		.no-touch &:focus:hover,
-		.no-touch &:hover,
-		&:active {
-			color: $gray3;
-			text-decoration: underline;
-		}
-		
-	}
-	
-	&.callout-box {
-		
-		font-size: 14px;
-		line-height: 20px;
-		background-color: $grayd;
-		padding: 20px;
-		border-radius: 6px;
-		
-		&.callout-info { background-color: $ice; }
-		&.callout-success { background-color: $frog; }
-		&.callout-warning { background-color: $duck; }
-		&.callout-error { background-color: $chili; }
-		
-	}
-	
-	&.callout-info {
-		
-		color: darken($ice, 60%);
-		
-		a {
-			
-			&,
-			&:visited,
-			.no-touch &:visited:hover,
-			&:focus,
-			.no-touch &:focus:hover,
-			.no-touch &:hover,
-			&:active { color: darken($ice, 60%); }
-			
-		}
-		
-	}
-	
-	&.callout-success {
-		
-		color: darken($frog, 60%);
-		
-		a {
-			
-			&,
-			&:visited,
-			.no-touch &:visited:hover,
-			&:focus,
-			.no-touch &:focus:hover,
-			.no-touch &:hover,
-			&:active { color: darken($frog, 60%); }
-			
-		}
-		
-	}
-	
-	&.callout-warning {
-		
-		color: darken($duck, 60%);
-		
-		a {
-			
-			&,
-			&:visited,
-			.no-touch &:visited:hover,
-			&:focus,
-			.no-touch &:focus:hover,
-			.no-touch &:hover,
-			&:active { color: darken($duck, 60%); }
-			
-		}
-		
-	}
-	
-	&.callout-error {
-		
-		color: darken($chili, 60%);
-		
-		a {
-			
-			&,
-			&:visited,
-			.no-touch &:visited:hover,
-			&:focus,
-			.no-touch &:focus:hover,
-			.no-touch &:hover,
-			&:active { color: darken($chili, 60%); }
 			
 		}
 		

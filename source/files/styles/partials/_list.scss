@@ -2,12 +2,31 @@ ul, ol, dl { padding: 0; }
 
 ul, ol { list-style: none; }
 
-dt {
-	font-weight: bold;
-	margin: 0;
+dl {
+	
+	margin: {
+		top: 10px;
+		bottom: 10px;
+	}
+	
+	dt {
+		font-size: 18px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		line-height: 20px;
+		margin: 0 0 5px;
+	}
+	
+	dd {
+		line-height: 18px;
+		margin: 0 0 10px;
+	}
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
+	
 }
-
-dd { margin-left: 0; }
 
 // http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
 // http://css-tricks.com/numbering-in-style/
@@ -21,9 +40,7 @@ dd { margin-left: 0; }
 	> li {
 		
 		&::before {
-			font-family: $serif;
 			font-weight: bold;
-			color: darken($bling, 10%);
 			margin: {
 				top: 10px;
 				bottom: 4px;

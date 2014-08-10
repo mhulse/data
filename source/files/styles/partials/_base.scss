@@ -25,16 +25,12 @@ body {
 	line-height: 22px;
 	font-family: $mono;
 	text-align: center;
-	color: $gray8;
+	color: $gray6;
 	background: $milk;
 	padding: 25px;
-	//min-height: 100%;
 }
 
 a {
-	
-	// -webkit-transition: color 250ms linear;
-	//         transition: color 250ms linear;
 	
 	&,
 	&:visited {
@@ -50,22 +46,166 @@ a {
 }
 
 ::-moz-selection {
-	background: rgba($bling, .55);
+	background: rgba($purty, .55);
 	text-shadow: none;
 }
 
 ::selection {
-	background: rgba($bling, .55);
+	background: rgba($purty, .55);
 	text-shadow: none;
 }
 
-hr { display: none; }
+hr,
+.hr {
+	
+	border: 0;
+	border-top: 4px solid $graye;
+	height: 0;
+	margin: {
+		top: 40px;
+		bottom: 40px;
+	}
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	    -ms-box-sizing: content-box;
+	        box-sizing: content-box;
+	
+	article &,
+	aside &,
+	section & {
+		border-top-width: 2px;
+		border-color: $grayc;
+		margin: {
+			top: 30px;
+			bottom: 30px;
+		}
+	}
+	
+}
 
-section,
-article,
-aside {
+blockquote {
+	
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: .03em;
+	text-transform: uppercase;
+	color: $juice;
+	margin: {
+		top: 20px;
+		bottom: 20px;
+	}
+	padding: 0 40px;
+	position: relative;
+	
+	p {
+		font-size: inherit;
+		line-height: inherit;
+		margin: {
+			top: 10px;
+			bottom: 10px;
+		}
+	}
+	
+	footer {
+		
+		font-size: 70%;
+		font-weight: normal;
+		letter-spacing: .05em;
+		color: $gray8;
+		
+		p { margin: 0; }
+		
+	}
+	
+	* { max-width: none; }
 	
 	> :first-child { margin-top: 0 !important; }
 	> :last-child { margin-bottom: 0 !important; }
 	
+	@media (max-width: 568px) {
+		
+		& { padding: 0 20px; }
+		
+	}
+	
 }
+
+mark {
+	background: rgba($duck, .9);
+	padding: 1px 3px;
+	border-radius: 3px;
+}
+
+del,
+ins {
+	line-height: 0;
+	letter-spacing: .05em;
+	padding: 1px 3px;
+	position: relative;
+	border-radius: 2px;
+}
+del {
+	color: darken($chili, 50%);
+	background: rgba($chili, .5);
+}
+ins {
+	
+	color: darken($frog, 50%);
+	text-decoration: none;
+	background: rgba($frog, .5);
+	
+	&::before { content: "["; }
+	&::after { content: "]"; }
+	
+}
+
+q {
+	font-weight: bolder;
+	font-style: italic;
+}
+
+abbr {
+	
+	font-style: italic;
+	cursor: help;
+	
+	&[title] { border-bottom: 1px dotted; }
+	
+}
+
+cite { font-style: italic; }
+
+dfn {
+	
+	font-weight: bold;
+	font-style: italic;
+	
+	&[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+	
+}
+
+sub,
+%sub {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub { bottom: 4px; }
+sup {
+	@extend %sub;
+	top: 8px;
+}
+
+wbr {
+	
+	&::after { content: "\00200B"; }
+	
+}
+
+small,
+.small { font-size: smaller; }

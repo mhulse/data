@@ -1,24 +1,54 @@
+@-webkit-keyframes cursor-blink { 80% { visibility: hidden; } }
+        @keyframes cursor-blink { 80% { visibility: hidden; } }
+
 pre {
 	
-	font-family: $mono;
-	color: lighten(adjust-hue($hulk, 45), 20%);
-	text-shadow: 0 1px 0 $raven;
 	text-align: left;
-	letter-spacing: .05em;
 	word-wrap: normal;
-	background: darken($hulk, 25%);
-	border: 1px solid $raven;
-	border-radius: 5px;
-	box-shadow: inset 0 0 5px 0 rgba($raven, .75);
-	margin: {
-		top: 10px;
-		bottom: 10px;
-	}
-	padding: 15px;
+	padding: 10px 15px;
 	overflow: auto;
 	white-space: pre;
 	-webkit-overflow-scrolling: touch;
 	
+	// Blinking cursor.
+	// @see http://fredericiana.com/2012/11/04/html5-blink-tag/
+	.cursor {
+		-webkit-animation-duration: 2s;
+				animation-duration: 2s;
+		-webkit-animation-name: cursor-blink;
+				animation-name: cursor-blink;
+		-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+		-webkit-animation-timing-function: steps(2, start);
+				animation-timing-function: steps(2, start);
+	}
+	
+	// Prompt style.
+	.prompt { color: $raven; }
+	
+	&.terminal {
+		
+		letter-spacing: .05em;
+		color: #30d259;
+		background: #0e1705;
+		
+		.cursor {
+			color: transparent;
+			background: #f00;
+			letter-spacing: -.15em;
+		}
+		
+		.prompt { color: #4e801c; }
+		
+	}
+	
+}
+
+.pre {
+	color: $gray4;
+	background: fade-out($graye, .5);
+	border: 1px solid $grayd;
+	border-radius: 3px;
 }
 
 .pygments {
@@ -82,7 +112,7 @@ pre {
 		
 	}
 	
-	.hll { background-color: rgba(lighten($bruise, 20%), .2); display: block; } // Highlight
+	.hll { background-color: rgba(#8071ad, 0.2); display: block; } // Highlight
 	.c   { color: #75715e; } // Comment
 	.err { color: #960050; background-color: #1e0010; } // Error
 	.k   { color: #66d9ef; } // Keyword
@@ -147,7 +177,6 @@ pre {
 code,
 %code {
 	font-size: inherit;
-	font-family: $mono;
 	font-weight: normal;
 	font-style: normal;
 	letter-spacing: normal;
@@ -163,8 +192,8 @@ code,
 
 code {
 	letter-spacing: .05em;
-	color: $bruise;
-	background: rgba($bruise, .25);
+	color: $juice;
+	background: rgba($juice, .25);
 	padding: 2px 3px;
 	border-radius: 3px;
 }
