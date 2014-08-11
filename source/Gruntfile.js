@@ -255,9 +255,9 @@ module.exports = function(grunt) {
 					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
-						'./files/scripts/jquery.*.js',
 						'./files/scripts/jquery-ui.js',
-						'./files/scripts/jquery-ui.*.js',
+						'./files/scripts/jquery-ui.widget.js',
+						'./files/scripts/jquery-ui.accordion.js',
 						'./files/scripts/imagesloaded.pkgd.js',
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
