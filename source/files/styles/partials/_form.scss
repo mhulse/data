@@ -1,13 +1,16 @@
 .form {
 	
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
 	margin: 0;
 	
 	fieldset {
 		
 		border: 0;
 		margin: {
-			top: 10px;
-			bottom: 10px;
+			top: 20px;
+			bottom: 20px;
 		}
 		padding: 1px 0 0; // Prevents margin collapse.
 		
@@ -31,13 +34,11 @@
 	
 	%fields {
 		
-		font-size: 18px;
-		line-height: normal;
 		vertical-align: baseline;
-		padding: 3px;
+		padding: 5px 10px;
 		color: $gray3;
 		letter-spacing: .05em;
-		text-align: center;
+		text-align: left;
 		border: 1px solid $grayc;
 		background: lighten($graye, 5%);
 		width: 100%;
@@ -58,19 +59,19 @@
 				background-clip: padding-box;
 		
 		&::-webkit-input-placeholder {
-			text-align: center;
+			text-align: left;
 			color: $gray9;
 		}
 		&:-moz-placeholder {
-			text-align: center;
+			text-align: left;
 			color: $gray9;
 		}
 		&::-moz-placeholder {
-			text-align: center;
+			text-align: left;
 			color: $gray9;
 		}
 		&:-ms-input-placeholder {
-			text-align: center;
+			text-align: left;
 			color: $gray9;
 		}
 		
@@ -96,32 +97,7 @@
 	input {
 		
 		&[type="text"],
-		&[type="password"] {
-			@extend %fields;
-			height: auto; // Rex override.
-		}
-		
-		&[type="search"] {
-			
-			@extend %fields;
-			background: $grayd;
-			background: linear-gradient(to bottom, $grayd 0, $milk 100%);
-			padding: 5px;
-			border-radius: 0 0 6px 6px;
-			// h-offset, v-offset, blur, spread, color
-			box-shadow: inset 0 1px 5px rgba($raven, .5), 0 3px 1px rgba($raven, .05);
-			border: 0 none;
-			border-top: 4px solid $raven;
-			display: block;
-			
-			&:focus { border-color: $purty; }
-			
-			&::-webkit-search-decoration,
-			&::-webkit-search-cancel-button,
-			&::-webkit-search-results-button,
-			&::-webkit-search-results-decoration { display: none; }
-			
-		}
+		&[type="password"] { @extend %fields; }
 		
 	}
 	
@@ -131,7 +107,7 @@
 		resize: vertical; // [ none | horizontal | vertical | both ]
 		overflow: auto;
 		margin: 0;
-		padding: 0;
+		padding: 5px 10px;
 		vertical-align: top;
 	}
 	

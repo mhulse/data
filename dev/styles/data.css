@@ -830,12 +830,15 @@ ul li::before {
 }
 
 .form {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
   margin: 0;
 }
 .form fieldset {
   border: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 1px 0 0;
 }
 .form fieldset legend {
@@ -851,14 +854,12 @@ ul li::before {
   vertical-align: middle;
   padding: 5px;
 }
-.form input[type="text"], .form input[type="password"], .form input[type="search"], .form textarea {
-  font-size: 18px;
-  line-height: normal;
+.form input[type="text"], .form input[type="password"], .form textarea {
   vertical-align: baseline;
-  padding: 3px;
+  padding: 5px 10px;
   color: #333333;
   letter-spacing: .05em;
-  text-align: center;
+  text-align: left;
   border: 1px solid #cccccc;
   background: #fbfbfb;
   width: 100%;
@@ -877,63 +878,44 @@ ul li::before {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.form input[type="text"]::-webkit-input-placeholder, .form input[type="password"]::-webkit-input-placeholder, .form input[type="search"]::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
-  text-align: center;
+.form input[type="text"]::-webkit-input-placeholder, .form input[type="password"]::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+  text-align: left;
   color: #999999;
 }
-.form input[type="text"]:-moz-placeholder, .form input[type="password"]:-moz-placeholder, .form input[type="search"]:-moz-placeholder, .form textarea:-moz-placeholder {
-  text-align: center;
+.form input[type="text"]:-moz-placeholder, .form input[type="password"]:-moz-placeholder, .form textarea:-moz-placeholder {
+  text-align: left;
   color: #999999;
 }
-.form input[type="text"]::-moz-placeholder, .form input[type="password"]::-moz-placeholder, .form input[type="search"]::-moz-placeholder, .form textarea::-moz-placeholder {
-  text-align: center;
+.form input[type="text"]::-moz-placeholder, .form input[type="password"]::-moz-placeholder, .form textarea::-moz-placeholder {
+  text-align: left;
   color: #999999;
 }
-.form input[type="text"]:-ms-input-placeholder, .form input[type="password"]:-ms-input-placeholder, .form input[type="search"]:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
-  text-align: center;
+.form input[type="text"]:-ms-input-placeholder, .form input[type="password"]:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  text-align: left;
   color: #999999;
 }
-.form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="search"]:focus, .form textarea:focus, .form input[type="text"]:active, .form input[type="password"]:active, .form input[type="search"]:active, .form textarea:active {
+.form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus, .form input[type="text"]:active, .form input[type="password"]:active, .form textarea:active {
   outline: 0;
 }
-.form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="search"]:focus, .form textarea:focus {
+.form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
   border-color: #fe4365;
 }
-.form input[disabled][type="text"], .form input[disabled][type="password"], .form input[disabled][type="search"], .form textarea[disabled] {
+.form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
   background: #eeeeee;
   color: #cccccc;
 }
-.form input[readonly][type="text"], .form input[readonly][type="password"], .form input[readonly][type="search"], .form textarea[readonly] {
+.form input[readonly][type="text"], .form input[readonly][type="password"], .form textarea[readonly] {
   background: #eeeeee;
   color: #777777;
   border-color: #cccccc;
-}
-.form input[type="text"], .form input[type="password"] {
-  height: auto;
-}
-.form input[type="search"] {
-  background: #dddddd;
-  background: linear-gradient(to bottom, #dddddd 0, white 100%);
-  padding: 5px;
-  border-radius: 0 0 6px 6px;
-  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5), 0 3px 1px rgba(0, 0, 0, 0.05);
-  border: 0 none;
-  border-top: 4px solid black;
-  display: block;
-}
-.form input[type="search"]:focus {
-  border-color: #fe4365;
-}
-.form input[type="search"]::-webkit-search-decoration, .form input[type="search"]::-webkit-search-cancel-button, .form input[type="search"]::-webkit-search-results-button, .form input[type="search"]::-webkit-search-results-decoration {
-  display: none;
 }
 .form textarea {
   min-height: 200px;
   resize: vertical;
   overflow: auto;
   margin: 0;
-  padding: 0;
+  padding: 5px 10px;
   vertical-align: top;
 }
 .form input[type="checkbox"],
