@@ -8,6 +8,7 @@
 
 .swatches {
 	
+	color: $raven;
 	max-width: 650px;
 	margin: 20px auto;
 	
@@ -19,16 +20,8 @@
 		padding: 5px;
 	}
 	
-	code {
-		text-shadow: 0 1px 0 rgba($raven, .8);
-		color: $milk;
-		background: rgba($raven, .5);
-		padding: 3px 5px;
-		border: 0;
-	}
-	
-	.smurf   { background: $smurf;   }
-	.purty   { background: $purty;   }
+	.smurf { background: $smurf; }
+	.purty { background: $purty; }
 	
 }
 

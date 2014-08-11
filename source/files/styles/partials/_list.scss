@@ -2,12 +2,14 @@ ul, ol, dl { padding: 0; }
 
 ul, ol { list-style: none; }
 
-dl {
-	
+dl, ol, ul {
 	margin: {
-		top: 10px;
-		bottom: 10px;
+		top: 25px;
+		bottom: 25px;
 	}
+}
+
+dl {
 	
 	dt {
 		font-size: 16px;

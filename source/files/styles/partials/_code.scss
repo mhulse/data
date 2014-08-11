@@ -6,6 +6,10 @@ pre {
 	letter-spacing: .05em;
 	text-align: left;
 	word-wrap: normal;
+	margin: {
+		top: 25px;
+		bottom: 25px;
+	}
 	padding: 10px 15px;
 	overflow: auto;
 	white-space: pre;
@@ -33,6 +37,12 @@ pre {
 		color: #30d259;
 		background: #0e1705;
 		
+		.cursor {
+			color: transparent;
+			background: #30d259;
+			letter-spacing: -.15em;
+		}
+		
 		.prompt { color: #4e801c; }
 		
 	}
@@ -52,8 +62,8 @@ pre {
 	background: $gray2;
 	border: 5px solid $gray2;
 	margin: {
-		top: 10px;
-		bottom: 10px;
+		top: 25px;
+		bottom: 25px;
 	}
 	
 	table {
@@ -190,6 +200,7 @@ code {
 	letter-spacing: .05em;
 	background: rgba($raven, .1);
 	padding: 1px 5px;
+	border-radius: 3px;
 }
 
 kbd {
@@ -234,7 +245,7 @@ kbd kbd {
 .gist { text-align: left; }
 .gist-file {
 	margin: {
-		top: 10px;
-		bottom: 10px;
+		top: 25px;
+		bottom: 25px;
 	}
 }
