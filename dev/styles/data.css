@@ -1672,18 +1672,18 @@ aside > :last-child {
   display: none;
 }
 
-#primary ul {
+#primary > div > ul {
   padding: 0;
 }
-#primary ul margin {
+#primary > div > ul margin {
   top: 0;
   bottom: 0;
 }
-#primary ul li {
+#primary > div > ul li {
   font-size: 18px;
   list-style: none;
 }
-#primary ul li::before {
+#primary > div > ul li::before {
   content: "";
 }
 #primary > h3 {

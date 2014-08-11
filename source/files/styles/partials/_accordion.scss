@@ -20,20 +20,24 @@
 
 #primary {
 	
-	ul {
+	> div {
 		
-		margin {
-			top: 0;
-			bottom: 0;
-		}
-		padding: 0;
-		
-		li {
+		> ul {
 			
-			font-size: 18px;
-			list-style: none;
+			margin {
+				top: 0;
+				bottom: 0;
+			}
+			padding: 0;
 			
-			&::before { content: ""; }
+			li {
+				
+				font-size: 18px;
+				list-style: none;
+				
+				&::before { content: ""; }
+				
+			}
 			
 		}
 		
