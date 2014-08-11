@@ -1692,28 +1692,6 @@ aside > :last-child {
   width: 1px;
 }
 
-.progress {
-  width: 50px;
-  height: 50px;
-  background: url(../images/loader.gif) no-repeat;
-  background-size: 50px 50px;
-  display: none;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  margin-left: -25px;
-}
-
-.ui-accordion-content {
-  position: relative;
-  min-height: 60px;
-  margin-bottom: 25px;
-}
-
-.ajax-content {
-  display: none;
-}
-
 #primary [rel="tooltip"] {
   color: black;
   font-weight: normal;
@@ -1780,7 +1758,29 @@ aside > :last-child {
   outline: 0;
 }
 
+.progress {
+  width: 50px;
+  height: 50px;
+  background: url(../images/loader.gif) no-repeat;
+  background-size: 50px 50px;
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.ui-accordion-content {
+  position: relative;
+  min-height: 60px;
+  margin-bottom: 25px;
+}
 .js .ui-accordion-content {
+  display: none;
+}
+
+.ajax-content {
+  padding-bottom: 50px;
   display: none;
 }
 
