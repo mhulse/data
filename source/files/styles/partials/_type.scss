@@ -3,10 +3,14 @@ h1, h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	margin: {
-		top: 0;
-		bottom: 5px;
+		top: 25px;
+		bottom: 25px;
 	}
 	padding: 0;
+	
+	& + & {
+		margin-top: -20px;
+	}
 	
 }
 

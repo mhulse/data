@@ -10,7 +10,7 @@ dl {
 	}
 	
 	dt {
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: bold;
 		text-transform: uppercase;
 		letter-spacing: .05em;
@@ -30,14 +30,14 @@ dl {
 
 // http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
 // http://css-tricks.com/numbering-in-style/
-.li1,
-.li2,
-.body ol,
-.body ul {
+ol,
+ul {
 	
 	counter-reset: li;
 	
-	> li {
+	li {
+		
+		line-height: 18px;
 		
 		&::before {
 			font-weight: bold;
@@ -56,10 +56,9 @@ dl {
 	
 }
 
-.li2,
-.body ul {
+ul {
 	
-	> li {
+	li {
 		
 		&::before {
 			content: counter(li, square);

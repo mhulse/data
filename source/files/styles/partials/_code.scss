@@ -3,6 +3,7 @@
 
 pre {
 	
+	letter-spacing: .05em;
 	text-align: left;
 	word-wrap: normal;
 	padding: 10px 15px;
@@ -31,12 +32,6 @@ pre {
 		letter-spacing: .05em;
 		color: #30d259;
 		background: #0e1705;
-		
-		.cursor {
-			color: transparent;
-			background: #f00;
-			letter-spacing: -.15em;
-		}
 		
 		.prompt { color: #4e801c; }
 		
@@ -191,11 +186,10 @@ code,
 }
 
 code {
+	font-weight: normal;
 	letter-spacing: .05em;
-	color: $juice;
-	background: rgba($juice, .25);
-	padding: 2px 3px;
-	border-radius: 3px;
+	background: rgba($raven, .1);
+	padding: 1px 5px;
 }
 
 kbd {

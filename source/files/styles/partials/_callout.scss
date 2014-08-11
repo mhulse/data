@@ -1,7 +1,9 @@
 .callout {
 	
-	color: $gray3;
+	line-height: 20px;
+	text-transform: uppercase;
 	letter-spacing: .03em;
+	color: $gray3;
 	
 	a {
 		
@@ -25,10 +27,8 @@
 	
 	&.callout-box {
 		
-		font-size: 14px;
-		line-height: 20px;
 		background-color: $grayd;
-		padding: 20px;
+		padding: 10px 20px;
 		border-radius: 6px;
 		
 		&.callout-info { background-color: $ice; }

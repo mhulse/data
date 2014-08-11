@@ -7,22 +7,7 @@
 	h3,
 	h4,
 	h5,
-	h6 {
-		font-weight: normal;
-		color: $juice;
-	}
-	
-	a {
-		
-		&,
-		&:visited { color: $smurf; }
-		.no-touch &:visited:hover,
-		&:focus,
-		.no-touch &:focus:hover,
-		.no-touch &:hover,
-		&:active { color: lighten($smurf, 20%); }
-		
-	}
+	h6 { font-weight: normal; }
 	
 	hr,
 	.hr {
@@ -44,21 +29,7 @@
 		background-position: center center;
 	}
 	
-	> {
-		
-		p {
-			font-size: 18px;
-			line-height: 26px;
-			letter-spacing: .03em;
-			margin: {
-				top: 25px;
-				bottom: 25px;
-			}
-		}
-		
-		:first-child { margin-top: 0 !important; }
-		:last-child { margin-bottom: 0 !important; }
-		
-	}
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
 	
 }

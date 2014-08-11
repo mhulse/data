@@ -21,8 +21,8 @@ html {
 }
 
 body {
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 14px;
+	line-height: 21px;
 	font-family: $mono;
 	text-align: center;
 	color: $gray6;
@@ -55,8 +55,7 @@ a {
 	text-shadow: none;
 }
 
-hr,
-.hr {
+hr {
 	
 	border: 0;
 	border-top: 4px solid $graye;
@@ -86,16 +85,16 @@ hr,
 
 blockquote {
 	
-	font-size: 20px;
-	line-height: 24px;
-	letter-spacing: .03em;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 20px;
+	letter-spacing: .05em;
 	text-transform: uppercase;
-	color: $juice;
 	margin: {
 		top: 20px;
 		bottom: 20px;
 	}
-	padding: 0 40px;
+	padding: 0;
 	position: relative;
 	
 	p {
@@ -189,17 +188,14 @@ dfn {
 }
 
 sub,
-%sub {
+sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
-sub { bottom: 4px; }
-sup {
-	@extend %sub;
-	top: 8px;
-}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
 
 wbr {
 	

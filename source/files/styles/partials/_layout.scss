@@ -1,9 +1,9 @@
 button,
 .button { @extend .x1; }
 
+blockquote,
 label { @extend .x3; }
 
-blockquote,
 ol,
 ul { @extend .x4; }
 
@@ -89,7 +89,14 @@ aside {
 		}
 		padding: 0;
 		
-		li { list-style: none; }
+		li {
+			
+			font-size: 18px;
+			list-style: none;
+			
+			&::before { content: ""; }
+			
+		}
 		
 	}
 	
@@ -145,9 +152,13 @@ aside {
 	
 	> h3 {
 		
+		margin: {
+			top: 0;
+			bottom: 5px;
+		}
 		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-		box-shadow: none;
+		   -moz-box-shadow: none;
+		        box-shadow: none;
 		
 		&.ui-accordion-header-active a { color: $purty; }
 		

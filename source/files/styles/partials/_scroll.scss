@@ -34,22 +34,39 @@
 // For the scroll left/right icon added via JS:
 .scroll-wrap { position: relative; }
 .scroll-overlay {
-	font-size: 1em;
-	line-height: 1;
-	letter-spacing: .1em;
-	text-transform: lowercase;
-	text-shadow: 0 1px 3px $raven,
-				 0 1px 3px $raven,
-				 0 1px 3px $raven,
-				 0 1px 3px $raven;
+	
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	line-height: 11px;
+	letter-spacing: .15em;
+	text-transform: uppercase;
 	text-align: center;
+	text-shadow: 0 0 1px $raven;
 	color: $milk;
+	border-radius: 3px;
+	background: rgba($raven, .75);
+	padding: 5px 8px;
 	position: absolute;
-	z-index: 100;
-	width: 100%;
 	top: 10px;
-	left: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	z-index: 100;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	     -o-user-select: none;
+	        user-select: none;
 	opacity: .5;
+	cursor: default;
+	
+	&::before { content: "←"; }
+	&::after { content: "→"; }
+	
+	&::before,
+	&::after { font-size: 110%; }
+	
 }
-.scroll-overlay::before { content: "←"; }
-.scroll-overlay::after { content: "→"; }
