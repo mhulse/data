@@ -29,7 +29,7 @@ DATA.register(function() {
 	$secondary
 		.children()
 		.each(function() {
-			$(this).after('<div />');
+			$(this).after('<div class="ui-accordion-content" />');
 		});
 	
 	$secondary
@@ -47,7 +47,7 @@ DATA.register(function() {
 					ui.newHeader
 						.next()
 						// Loaded children must have .ajax-content class as that's the content target that gets loaded:
-						.load(ui.newHeader.children('a').attr('href') + ' .ajax-content', function(response, status, xhr) {
+						.load(ui.newHeader.attr('data-href') + ' .ajax-content', function(response, status, xhr) {
 							var $this = $(this);
 							var $content = $this.children('.ajax-content'); // Better way?
 							$progress

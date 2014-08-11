@@ -1,6 +1,12 @@
 @-webkit-keyframes cursor-blink { 80% { visibility: hidden; } }
         @keyframes cursor-blink { 80% { visibility: hidden; } }
 
+pre,
+code,
+kbd,
+samp,
+var { font-family: $mono; }
+
 pre {
 	
 	letter-spacing: .05em;

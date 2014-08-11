@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/10
+ * @date 2014/08/11
  */
 
 
@@ -483,16 +483,15 @@ html {
 body {
   font-size: 14px;
   line-height: 21px;
-  font-family: monospace, serif;
+  font-family: Arial, sans-serif;
   text-align: center;
   color: #666666;
   background: white;
   padding: 25px;
 }
 
-p {
-  font-size: 16px;
-  line-height: 24px;
+p.excerpt {
+  margin-top: 5px;
 }
 
 a, a:visited {
@@ -500,16 +499,16 @@ a, a:visited {
   text-decoration: none;
 }
 .no-touch a:visited:hover, a:focus, .no-touch a:focus:hover, .no-touch a:hover, a:active {
-  color: #fe4365;
+  color: #ff6600;
 }
 
 ::-moz-selection {
-  background: rgba(254, 67, 101, 0.55);
+  background: rgba(255, 102, 0, 0.55);
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(254, 67, 101, 0.55);
+  background: rgba(255, 102, 0, 0.55);
   text-shadow: none;
 }
 
@@ -533,11 +532,12 @@ article hr, aside hr, section hr {
 }
 
 blockquote {
+  font-family: Cambria, Georgia, serif;
   font-size: 18px;
   font-style: italic;
-  line-height: 20px;
+  line-height: 22px;
   letter-spacing: .05em;
-  text-transform: uppercase;
+  word-spacing: .15em;
   margin-top: 25px;
   margin-bottom: 25px;
   padding: 0;
@@ -652,6 +652,8 @@ small,
 }
 
 h1, h2, h3, h4, h5, h6 {
+  letter-spacing: .02em;
+  word-spacing: .12em;
   word-wrap: break-word;
   overflow-wrap: break-word;
   margin-top: 25px;
@@ -700,6 +702,15 @@ h1:empty {
   display: none;
 }
 
+header > :first-child,
+hgroup > :first-child {
+  margin-top: 0 !important;
+}
+header > :last-child,
+hgroup > :last-child {
+  margin-bottom: 0 !important;
+}
+
 ul, ol, dl {
   padding: 0;
 }
@@ -714,10 +725,10 @@ dl, ol, ul {
 }
 
 dl dt {
-  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: .05em;
+  word-spacing: .15em;
   line-height: 20px;
   margin: 0 0 5px;
 }
@@ -899,7 +910,7 @@ ul li::before {
   outline: 0;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
-  border-color: #fe4365;
+  border-color: #ff6600;
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
@@ -942,6 +953,14 @@ ul li::before {
     visibility: hidden;
   }
 }
+pre,
+code,
+kbd,
+samp,
+var {
+  font-family: monospace, serif;
+}
+
 pre {
   letter-spacing: .05em;
   text-align: left;
@@ -1286,20 +1305,17 @@ figure img {
 }
 
 figcaption {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666666;
   text-transform: uppercase;
-  letter-spacing: .08em;
-  color: #dddddd;
-}
-figcaption b,
-figcaption strong {
-  color: white;
-  letter-spacing: .08em;
+  letter-spacing: .05em;
+  word-spacing: .15em;
 }
 figcaption p {
   font-size: inherit;
   line-height: inherit;
+  margin: 5px 0;
 }
 figcaption p:first-of-type {
   margin-top: 0 !important;
@@ -1307,25 +1323,29 @@ figcaption p:first-of-type {
 figcaption p:last-of-type {
   margin-bottom: 0 !important;
 }
-figcaption a, figcaption a:visited {
-  color: #13aac9;
+figcaption a {
+  font-weight: bold;
 }
-.no-touch figcaption a:visited:hover, figcaption a:focus, .no-touch figcaption a:focus:hover, .no-touch figcaption a:hover, figcaption a:active {
-  color: #53d4ef;
+figcaption a, figcaption a:visited {
   text-decoration: none;
 }
+.no-touch figcaption a:visited:hover, figcaption a:focus, .no-touch figcaption a:focus:hover, .no-touch figcaption a:hover, figcaption a:active {
+  color: black;
+  text-decoration: underline;
+}
 figcaption > div {
-  background: #222222;
+  background: #dddddd;
   margin-top: 13px;
   padding: 15px 20px;
   display: inline-block;
+  border-radius: 3px;
   position: relative;
 }
 figcaption > div::after {
   content: "";
   border-width: 0 10px 10px;
   border-style: solid;
-  border-color: #222222 transparent;
+  border-color: #dddddd transparent;
   width: 0;
   margin-left: -10px;
   position: absolute;
@@ -1432,9 +1452,9 @@ iframe[id^='twitter-widget-'],
   user-select: none;
   font-size: 18px;
   line-height: 20px;
-  color: #da0129;
+  color: #993d00;
   width: 100%;
-  background-color: #fe4365;
+  background-color: #ff6600;
   border: none transparent;
   border-radius: 3px;
   margin-top: 10px;
@@ -1650,6 +1670,28 @@ aside > :last-child {
   margin-bottom: 0 !important;
 }
 
+[data-kaomoji] {
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  line-height: 35px;
+}
+[data-kaomoji]::before {
+  content: attr(data-kaomoji);
+}
+[data-kaomoji].ui-accordion-header-active::before, .no-touch [data-kaomoji]:hover::before {
+  content: attr(data-kaomoji-hover);
+}
+[data-kaomoji] span {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .progress {
   width: 50px;
   height: 50px;
@@ -1664,7 +1706,7 @@ aside > :last-child {
 
 .ui-accordion-content {
   position: relative;
-  min-height: 50px;
+  min-height: 60px;
   margin-bottom: 25px;
 }
 
@@ -1672,94 +1714,80 @@ aside > :last-child {
   display: none;
 }
 
-#primary > div > ul {
-  padding: 0;
-}
-#primary > div > ul margin {
-  top: 0;
-  bottom: 0;
-}
-#primary > div > ul li {
-  font-size: 18px;
-  list-style: none;
-}
-#primary > div > ul li::before {
-  content: "";
-}
-#primary > h3 {
-  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 35px;
-  line-height: 35px;
+#primary [rel="tooltip"] {
   color: black;
+  font-weight: normal;
+  word-spacing: normal;
+  letter-spacing: normal;
   white-space: nowrap;
+  width: auto;
+  max-width: none;
   margin-top: 20px;
   margin-bottom: 20px;
   display: table;
-  width: auto;
-  max-width: none;
   cursor: pointer;
   cursor: hand;
 }
-#primary > h3.ui-accordion-header-active, .no-touch #primary > h3:hover {
-  color: #fe4365;
+#primary [rel="tooltip"].ui-accordion-header-active, .no-touch #primary [rel="tooltip"]:hover {
+  color: #ff6600;
 }
-#primary > h3:active, #primary > h3:focus {
+#primary [rel="tooltip"]:active, #primary [rel="tooltip"]:focus {
   outline: 0;
 }
-#primary > h3 span {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
+#primary ul.links {
   padding: 0;
-  position: absolute;
-  width: 1px;
 }
-.js #primary > div {
-  display: none;
+#primary ul.links margin {
+  top: 0;
+  bottom: 0;
+}
+#primary ul.links li {
+  font-size: 18px;
+  list-style: none;
+}
+#primary ul.links li::before {
+  content: "";
 }
 
-[data-kaomoji]::before {
-  content: attr(data-kaomoji);
-}
-[data-kaomoji].ui-accordion-header-active::before, .no-touch [data-kaomoji]:hover::before {
-  content: attr(data-kaomoji-hover);
-}
-
-#secondary > h3 {
+#secondary [data-href] {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: normal;
+  letter-spacing: .05em;
+  color: white;
+  width: auto;
+  max-width: none;
   margin-top: 0;
-  margin-bottom: 5px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  margin-bottom: 10px;
+  display: table;
 }
-#secondary > h3.ui-accordion-header-active a {
-  color: #fe4365;
-}
-#secondary > h3 a {
+#secondary [data-href] span {
   display: inline-block;
-  padding: 0 0 5px;
-  border-bottom: 2px solid;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  cursor: pointer;
+  cursor: hand;
 }
-#secondary > h3 a:active, #secondary > h3 a:focus {
+#secondary [data-href] span span {
+  display: inline;
+  background: black;
+  box-shadow: 10px 0 0 black, -10px 0 0 black;
+  padding: 5px 0;
+}
+#secondary [data-href].ui-accordion-header-active span span, .no-touch #secondary [data-href]:hover span span {
+  background: #ff6600;
+  box-shadow: 10px 0 0 #ff6600, -10px 0 0 #ff6600;
+}
+#secondary [data-href]:active, #secondary [data-href]:focus {
   outline: 0;
 }
-#secondary > h3:active, #secondary > h3:focus {
-  outline: 0;
-}
-.js #secondary > div {
+
+.js .ui-accordion-content {
   display: none;
 }
 
 #flag {
   font-family: "hulse";
-  font-size: 80px;
-  line-height: 80px;
+  font-size: 100px;
+  line-height: 100px;
   font-weight: normal;
   font-style: normal;
   text-transform: none;
@@ -1792,6 +1820,36 @@ aside > :last-child {
 [itemprop="articleBody"] h5,
 [itemprop="articleBody"] h6 {
   font-weight: normal;
+  text-transform: uppercase;
+}
+[itemprop="articleBody"] h5,
+[itemprop="articleBody"] h6 {
+  letter-spacing: .1em;
+  word-spacing: .2em;
+}
+[itemprop="articleBody"] h1 {
+  font-size: 24px;
+  line-height: 26px;
+}
+[itemprop="articleBody"] h2 {
+  font-size: 22px;
+  line-height: 24px;
+}
+[itemprop="articleBody"] h3 {
+  font-size: 20px;
+  line-height: 22px;
+}
+[itemprop="articleBody"] h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+[itemprop="articleBody"] h5 {
+  font-size: 16px;
+  line-height: 18px;
+}
+[itemprop="articleBody"] h6 {
+  font-size: 14px;
+  line-height: 16px;
 }
 [itemprop="articleBody"] hr,
 [itemprop="articleBody"] .hr {
@@ -1879,7 +1937,7 @@ figure .scroll {
   letter-spacing: .08em;
   text-align: center;
   color: white;
-  background: rgba(254, 67, 101, 0.95);
+  background: rgba(255, 102, 0, 0.95);
   position: absolute;
   z-index: 100;
   padding: 15px;
@@ -1890,7 +1948,7 @@ figure .scroll {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid rgba(254, 67, 101, 0.95);
+  border-top: 10px solid rgba(255, 102, 0, 0.95);
   content: '';
   position: absolute;
   left: 50%;
@@ -1899,7 +1957,7 @@ figure .scroll {
 }
 .no-touch .tooltip.top::after {
   border-top-color: transparent;
-  border-bottom: 10px solid rgba(254, 67, 101, 0.95);
+  border-bottom: 10px solid rgba(255, 102, 0, 0.95);
   top: -20px;
   bottom: auto;
 }
@@ -2073,10 +2131,6 @@ figure .scroll {
   }
 }
 .callout {
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: .03em;
   color: #333333;
   margin-top: 25px;
   margin-bottom: 25px;

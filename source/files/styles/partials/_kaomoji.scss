@@ -1,0 +1,23 @@
+[data-kaomoji] {
+		
+	font-family: $kaomoji;
+	font-size: 35px;
+	line-height: 35px;
+	
+	&::before { content: attr(data-kaomoji); }
+	
+	&.ui-accordion-header-active::before,
+	.no-touch &:hover::before { content: attr(data-kaomoji-hover); }
+	
+	span {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	
+}

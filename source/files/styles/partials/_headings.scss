@@ -1,5 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
 	
+	letter-spacing: .02em;
+	word-spacing: .12em;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	margin: {
@@ -47,3 +49,11 @@ h6, .h6, .sh6 {
 }
 
 h1:empty { display: none; }
+
+header,
+hgroup {
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
+	
+}

@@ -23,7 +23,7 @@ html {
 body {
 	font-size: 14px;
 	line-height: 21px;
-	font-family: $mono;
+	font-family: $sans;
 	text-align: center;
 	color: $gray6;
 	background: $milk;
@@ -31,8 +31,12 @@ body {
 }
 
 p {
-	font-size: 16px;
-	line-height: 24px;
+	
+	// font-size: 16px;
+	// line-height: 24px;
+	
+	&.excerpt { margin-top: 5px; }
+	
 }
 
 a {
@@ -90,11 +94,12 @@ hr {
 
 blockquote {
 	
+	font-family: $serif;
 	font-size: 18px;
 	font-style: italic;
-	line-height: 20px;
+	line-height: 22px;
 	letter-spacing: .05em;
-	text-transform: uppercase;
+	word-spacing: .15em;
 	margin: {
 		top: 25px;
 		bottom: 25px;

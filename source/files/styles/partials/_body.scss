@@ -7,7 +7,46 @@
 	h3,
 	h4,
 	h5,
-	h6 { font-weight: normal; }
+	h6 {
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	
+	h5,
+	h6 {
+		letter-spacing: .1em;
+		word-spacing: .2em;
+	}
+	
+	h1 {
+		font-size: 24px;
+		line-height: 26px;
+	}
+
+	h2 {
+		font-size: 22px;
+		line-height: 24px;
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	h4 {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	h5 {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	h6 {
+		font-size: 14px;
+		line-height: 16px;
+	}
 	
 	hr,
 	.hr {

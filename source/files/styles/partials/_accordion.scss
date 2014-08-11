@@ -12,7 +12,7 @@
 
 .ui-accordion-content {
 	position: relative;
-	min-height: 50px; // Height of loader + 10px top.
+	min-height: 60px; // Height of loader + 10px top.
 	margin-bottom: 25px;
 }
 
@@ -20,103 +20,104 @@
 
 #primary {
 	
-	> div {
+	[rel="tooltip"] {
 		
-		> ul {
-			
-			margin {
-				top: 0;
-				bottom: 0;
-			}
-			padding: 0;
-			
-			li {
-				
-				font-size: 18px;
-				list-style: none;
-				
-				&::before { content: ""; }
-				
-			}
-			
-		}
-		
-	}
-	
-	> h3 {
-		
-		font-family: $kaomoji;
-		font-weight: normal;
-		font-size: 35px;
-		line-height: 35px;
 		color: $raven;
+		font-weight: normal;
+		word-spacing: normal;
+		letter-spacing: normal;
 		white-space: nowrap;
+		width: auto;
+		max-width: none;
 		margin: {
 			top: 20px;
 			bottom: 20px;
 		}
 		display: table;
-		width: auto;
-		max-width: none;
+		
 		cursor: pointer;
 		cursor: hand;
-		
 		&.ui-accordion-header-active,
 		.no-touch &:hover { color: $purty; }
 		
 		&:active,
 		&:focus { outline: 0; }
 		
-		span {
-			border: 0;
-			clip: rect(0 0 0 0);
-			height: 1px;
-			margin: -1px;
-			overflow: hidden;
-			padding: 0;
-			position: absolute;
-			width: 1px;
+	}
+	
+	ul.links {
+		
+		margin {
+			top: 0;
+			bottom: 0;
+		}
+		padding: 0;
+		
+		li {
+			
+			font-size: 18px;
+			list-style: none;
+			
+			&::before { content: ""; }
+			
 		}
 		
 	}
-	
-	.js & > div { display: none; }
-	
-}
-
-[data-kaomoji] {
-	
-	&::before { content: attr(data-kaomoji); }
-	&.ui-accordion-header-active::before, // This line, and the ones below, could be moved into jQuery .ui section.
-	.no-touch &:hover::before { content: attr(data-kaomoji-hover); }
 	
 }
 
 #secondary {
 	
-	> h3 {
+	//* { vertical-align: top }
+	
+	[data-href] {
 		
+		font-size: 24px;
+		line-height: 36px; // 24px + 12px (half font size)
+		font-weight: normal;
+		letter-spacing: .05em;
+		color: $milk;
+		width: auto;
+		max-width: none;
 		margin: {
 			top: 0;
-			bottom: 5px;
+			bottom: 10px;
 		}
-		-webkit-box-shadow: none;
-		   -moz-box-shadow: none;
-		        box-shadow: none;
+		display: table; // Forces width to that of children.
+		// -webkit-box-shadow: none;
+		//    -moz-box-shadow: none;
+		//         box-shadow: none;
 		
-		&.ui-accordion-header-active a { color: $purty; }
-		
-		a {
+		span {
 			
 			display: inline-block;
-			padding: 0 0 5px;
-			border-bottom: 2px solid;
-			-webkit-box-shadow: none;
-			   -moz-box-shadow: none;
-			        box-shadow: none;
+			// -webkit-box-shadow: none;
+			//    -moz-box-shadow: none;
+			//         box-shadow: none;
 			
-			&:active,
-			&:focus { outline: 0; }
+			//.ui-accordion-header-active & { color: $purty; }
+			cursor: pointer;
+			cursor: hand;
+			
+			// &:active,
+			// &:focus { outline: 0; }
+			
+			span {
+				display: inline;
+				background: $raven;
+				box-shadow: 10px 0 0 $raven, -10px 0 0 $raven;
+				padding: 5px 0;
+			}
+			
+		}
+		
+		&.ui-accordion-header-active,
+		.no-touch &:hover {
+			
+			span span {
+				background: $purty;
+				box-shadow: 10px 0 0 $purty, -10px 0 0 $purty;
+			}
 			
 		}
 		
@@ -126,6 +127,7 @@
 		
 	}
 	
-	.js & > div { display: none; }
-	
 }
+
+// Hides accordion panels:
+.js .ui-accordion-content { display: none; }
