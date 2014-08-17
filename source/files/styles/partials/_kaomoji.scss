@@ -1,8 +1,13 @@
 [data-kaomoji] {
-		
+	
 	font-family: $kaomoji;
-	font-size: 35px;
-	line-height: 35px;
+	font-size: 50px;
+	line-height: 50px;
+	height: 50px;
+	white-space: nowrap;
+	font-weight: normal;
+	word-spacing: normal;
+	letter-spacing: -.1em;
 	
 	&::before { content: attr(data-kaomoji); }
 	

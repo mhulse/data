@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/11
+ * @date 2014/08/17
  */
 
 
@@ -1662,8 +1662,13 @@ aside > :last-child {
 
 [data-kaomoji] {
   font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 50px;
+  line-height: 50px;
+  height: 50px;
+  white-space: nowrap;
+  font-weight: normal;
+  word-spacing: normal;
+  letter-spacing: -.1em;
 }
 [data-kaomoji]::before {
   content: attr(data-kaomoji);
@@ -1684,10 +1689,6 @@ aside > :last-child {
 
 #primary [rel="tooltip"] {
   color: black;
-  font-weight: normal;
-  word-spacing: normal;
-  letter-spacing: normal;
-  white-space: nowrap;
   width: auto;
   max-width: none;
   margin-top: 20px;
@@ -1719,14 +1720,14 @@ aside > :last-child {
 
 #secondary [data-href] {
   font-size: 24px;
-  line-height: 36px;
+  line-height: 46px;
   font-weight: normal;
   letter-spacing: .05em;
   color: white;
   width: auto;
   max-width: none;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   display: table;
 }
 #secondary [data-href] span {
@@ -1737,8 +1738,8 @@ aside > :last-child {
 #secondary [data-href] span span {
   display: inline;
   background: black;
-  box-shadow: 10px 0 0 black, -10px 0 0 black;
-  padding: 5px 0;
+  box-shadow: 15px 0 0 black, -15px 0 0 black;
+  padding: 10px 0 12px;
 }
 #secondary [data-href].ui-accordion-header-active span span, .no-touch #secondary [data-href]:hover span span {
   background: #ff6600;

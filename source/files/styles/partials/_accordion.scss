@@ -3,10 +3,6 @@
 	[rel="tooltip"] {
 		
 		color: $raven;
-		font-weight: normal;
-		word-spacing: normal;
-		letter-spacing: normal;
-		white-space: nowrap;
 		width: auto;
 		max-width: none;
 		margin: {
@@ -53,7 +49,7 @@
 	[data-href] {
 		
 		font-size: 24px;
-		line-height: 36px; // 24px + 12px (half font size)
+		line-height: 46px; // Double line height, minus 2px for fudge factor.
 		font-weight: normal;
 		letter-spacing: .05em;
 		color: $milk;
@@ -61,32 +57,21 @@
 		max-width: none;
 		margin: {
 			top: 0;
-			bottom: 10px;
+			bottom: 12px; // Add back the fudge factor from above.
 		}
 		display: table; // Forces width to that of children.
-		// -webkit-box-shadow: none;
-		//    -moz-box-shadow: none;
-		//         box-shadow: none;
 		
 		span {
 			
 			display: inline-block;
-			// -webkit-box-shadow: none;
-			//    -moz-box-shadow: none;
-			//         box-shadow: none;
-			
-			//.ui-accordion-header-active & { color: $purty; }
 			cursor: pointer;
 			cursor: hand;
-			
-			// &:active,
-			// &:focus { outline: 0; }
 			
 			span {
 				display: inline;
 				background: $raven;
-				box-shadow: 10px 0 0 $raven, -10px 0 0 $raven;
-				padding: 5px 0;
+				box-shadow: 15px 0 0 $raven, -15px 0 0 $raven;
+				padding: 10px 0 12px;
 			}
 			
 		}

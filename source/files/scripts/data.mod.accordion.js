@@ -56,10 +56,10 @@ DATA.register(function() {
 							$content
 								.imagesLoaded()
 								.always(function(instance) {
-									console.log('all images loaded');
+									//console.log('all images loaded');
 								})
 								.done(function(instance) {
-									console.log('all images successfully loaded');
+									//console.log('all images successfully loaded');
 									$progress.fadeOut('slow', function(){
 										$content.fadeIn('slow', function() {
 											$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
@@ -67,11 +67,11 @@ DATA.register(function() {
 									});
 								})
 								.fail( function() {
-									console.log('all images loaded, at least one is broken');
+									//console.log('all images loaded, at least one is broken');
 								})
 								.progress(function(instance, image) {
-									var result = image.isLoaded ? 'loaded' : 'broken';
-									console.log('image is ' + result + ' for ' + image.img.src);
+									//var result = image.isLoaded ? 'loaded' : 'broken';
+									//console.log('image is ' + result + ' for ' + image.img.src);
 								});
 						});
 				}

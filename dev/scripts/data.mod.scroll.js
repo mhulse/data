@@ -1,3 +1,5 @@
+/* jshint unused:vars */
+
 DATA.register(function() {
 	
 	'use strict';
