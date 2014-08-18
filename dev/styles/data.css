@@ -505,6 +505,7 @@ a, a:visited {
 }
 .no-touch a:visited:hover, a:focus, .no-touch a:focus:hover, .no-touch a:hover, a:active {
   color: #ff6600;
+  border: 0;
   box-shadow: none;
 }
 

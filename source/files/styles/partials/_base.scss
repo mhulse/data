@@ -56,6 +56,7 @@ a {
 	.no-touch &:hover,
 	&:active {
 		color: $base;
+		border: 0;
 		box-shadow: none;
 	}
 	
