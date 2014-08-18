@@ -20,8 +20,7 @@
 		padding: 5px;
 	}
 	
-	.off { background: $off; }
-	.on { background: $on; }
+	.base { background: $base; }
 	
 }
 
@@ -42,6 +41,8 @@
 		padding: 15px 20px;
 		background: $gray3;
 		display: inline-block;
+		border: 0;
+		box-shadow: none;
 		
 		&,
 		&:visited { color: $grayd; }

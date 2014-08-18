@@ -25,7 +25,7 @@ body {
 	line-height: 21px;
 	font-family: $sans;
 	text-align: center;
-	color: $gray5;
+	color: $raven;
 	background: $milk;
 	padding: 25px;
 }
@@ -41,26 +41,30 @@ p {
 
 a {
 	
+	font-weight: bold;
+	border-bottom: 1px solid $base;
+	box-shadow: 0 -3px 0 $base inset;
+	
 	&,
 	&:visited {
-		color: $off;
+		color: $raven;
 		text-decoration: none;
 	}
 	.no-touch &:visited:hover,
 	&:focus,
 	.no-touch &:focus:hover,
 	.no-touch &:hover,
-	&:active { color: $on; }
+	&:active { color: $base; }
 	
 }
 
 ::-moz-selection {
-	background: rgba($on, .55);
+	background: rgba($base, .55);
 	text-shadow: none;
 }
 
 ::selection {
-	background: rgba($on, .55);
+	background: rgba($base, .55);
 	text-shadow: none;
 }
 

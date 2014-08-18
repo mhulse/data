@@ -248,7 +248,16 @@ kbd kbd {
 }
 
 // Gist embeds:
-.gist { text-align: left; }
+.gist {
+	
+	text-align: left;
+	
+	a {
+		border: 0;
+		box-shadow: none;
+	}
+	
+}
 .gist-file {
 	margin: {
 		top: 25px;

@@ -485,7 +485,7 @@ body {
   line-height: 21px;
   font-family: Arial, sans-serif;
   text-align: center;
-  color: #555555;
+  color: black;
   background: white;
   padding: 25px;
 }
@@ -494,6 +494,11 @@ p.excerpt {
   margin-top: 5px;
 }
 
+a {
+  font-weight: bold;
+  border-bottom: 1px solid #ff6600;
+  box-shadow: 0 -3px 0 #ff6600 inset;
+}
 a, a:visited {
   color: black;
   text-decoration: none;
@@ -1289,6 +1294,10 @@ kbd kbd {
 .gist {
   text-align: left;
 }
+.gist a {
+  border: 0;
+  box-shadow: none;
+}
 
 .gist-file {
   margin-top: 25px;
@@ -1307,7 +1316,6 @@ figure img {
 figcaption {
   font-size: 12px;
   line-height: 16px;
-  color: #666666;
   text-transform: uppercase;
   letter-spacing: .05em;
   word-spacing: .15em;
@@ -1324,7 +1332,7 @@ figcaption p:last-of-type {
   margin-bottom: 0 !important;
 }
 figcaption > div {
-  background: #eeeeee;
+  background: #dddddd;
   margin-top: 13px;
   padding: 15px 20px;
   display: inline-block;
@@ -1335,7 +1343,7 @@ figcaption > div::after {
   content: "";
   border-width: 0 10px 10px;
   border-style: solid;
-  border-color: #eeeeee transparent;
+  border-color: #dddddd transparent;
   width: 0;
   margin-left: -10px;
   position: absolute;
@@ -1749,22 +1757,7 @@ aside > :last-child {
 
 .ajax-content {
   display: none;
-}
-
-#flag {
-  font-family: "hulse";
-  font-size: 100px;
-  line-height: 100px;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-top: 0;
-  margin-bottom: 50px;
-  padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
+  padding-bottom: 25px;
 }
 
 [itemprop="articleBody"] {
@@ -2112,6 +2105,8 @@ figure .scroll {
 
 .harmonia-select {
   font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 @media print {
