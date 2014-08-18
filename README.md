@@ -8,6 +8,8 @@
 
 **[Take my Worf. Please.](https://www.youtube.com/watch?v=xcJRMShy6As)**
 
+More info coming soon.
+
 ---
 
 Copyright &copy; [Micky Hulse](http://mky.io) 2013-2014. **All rights reserved.**
