@@ -504,7 +504,7 @@ a, a:visited {
   text-decoration: none;
 }
 .no-touch a:visited:hover, a:focus, .no-touch a:focus:hover, .no-touch a:hover, a:active {
-  color: #ff6600;
+  color: inherit;
   border: 0;
   box-shadow: none;
 }
@@ -617,7 +617,7 @@ abbr {
   cursor: help;
 }
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: 2px solid;
 }
 
 cite {
@@ -629,7 +629,7 @@ dfn {
   font-style: italic;
 }
 dfn[title] {
-  border-bottom: 1px dotted;
+  border-bottom: 2px solid;
   cursor: help;
 }
 
@@ -1700,20 +1700,6 @@ aside > :last-child {
 #primary > h3:active, #primary > h3:focus {
   outline: 0;
 }
-#primary ul.links {
-  padding: 0;
-}
-#primary ul.links margin {
-  top: 0;
-  bottom: 0;
-}
-#primary ul.links li {
-  font-size: 18px;
-  list-style: none;
-}
-#primary ul.links li::before {
-  content: "";
-}
 
 #secondary > h3 {
   font-size: 24px;
@@ -2057,17 +2043,6 @@ figure .scroll {
   color: #333333;
   margin-top: 25px;
   margin-bottom: 25px;
-}
-.callout a {
-  font-weight: bold;
-}
-.callout a, .callout a:visited {
-  color: #333333;
-  text-decoration: none;
-}
-.no-touch .callout a:visited:hover, .callout a:focus, .no-touch .callout a:focus:hover, .no-touch .callout a:hover, .callout a:active {
-  color: #333333;
-  text-decoration: underline;
 }
 .callout.callout-box {
   background-color: #dddddd;

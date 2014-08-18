@@ -55,7 +55,7 @@ a {
 	.no-touch &:focus:hover,
 	.no-touch &:hover,
 	&:active {
-		color: $base;
+		color: inherit;
 		border: 0;
 		box-shadow: none;
 	}
@@ -181,7 +181,7 @@ abbr {
 	font-style: italic;
 	cursor: help;
 	
-	&[title] { border-bottom: 1px dotted; }
+	&[title] { border-bottom: 2px solid; }
 	
 }
 
@@ -193,7 +193,7 @@ dfn {
 	font-style: italic;
 	
 	&[title] {
-		border-bottom: 1px dotted;
+		border-bottom: 2px solid;
 		cursor: help;
 	}
 	

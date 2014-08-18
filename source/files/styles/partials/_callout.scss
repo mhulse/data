@@ -6,26 +6,6 @@
 		bottom: 25px;
 	}
 	
-	a {
-		
-		font-weight: bold;
-		
-		&,
-		&:visited {
-			color: $gray3;
-			text-decoration: none;
-		}
-		.no-touch &:visited:hover,
-		&:focus,
-		.no-touch &:focus:hover,
-		.no-touch &:hover,
-		&:active {
-			color: $gray3;
-			text-decoration: underline;
-		}
-		
-	}
-	
 	&.callout-box {
 		
 		background-color: $grayd;

@@ -27,25 +27,6 @@
 		
 	}
 	
-	ul.links {
-		
-		margin {
-			top: 0;
-			bottom: 0;
-		}
-		padding: 0;
-		
-		li {
-			
-			font-size: 18px;
-			list-style: none;
-			
-			&::before { content: ""; }
-			
-		}
-		
-	}
-	
 }
 
 #secondary {
