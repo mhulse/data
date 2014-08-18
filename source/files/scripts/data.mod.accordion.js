@@ -1,4 +1,5 @@
 /* jshint unused:vars */
+/* global ga:false */
 
 // @see http://api.jqueryui.com/accordion/
 // @todo Combine these two accordions.
@@ -43,11 +44,13 @@ DATA.register(function() {
 				hashchange.call(this, $primary);
 			},
 			beforeActivate: function(e, ui) {
+				var url;
 				if (ui.newPanel.is(':empty')) {
+					url = ui.newHeader.attr('data-href');
 					ui.newHeader
 						.next()
 						// Loaded children must have .ajax-content class as that's the content target that gets loaded:
-						.load(ui.newHeader.attr('data-href') + ' .ajax-content', function(response, status, xhr) {
+						.load(url + ' .ajax-content', function(response, status, xhr) {
 							var $this = $(this);
 							var $content = $this.children('.ajax-content'); // Better way?
 							$progress
@@ -56,20 +59,28 @@ DATA.register(function() {
 							$content
 								.imagesLoaded()
 								.always(function(instance) {
+									// Triggered after all images have been either loaded or confirmed broken.
 									//console.log('all images loaded');
 								})
 								.done(function(instance) {
+									// Triggered after all images have successfully loaded without any broken images.
 									//console.log('all images successfully loaded');
 									$progress.fadeOut('slow', function(){
 										$content.fadeIn('slow', function() {
 											$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
+											if ((typeof ga != 'undefined') && (ga !== null)) {
+												// Track that shit!
+												ga('send', 'pageview', '/' + url);
+											}
 										});
 									});
 								})
 								.fail( function() {
+									// Triggered after all images have been loaded with at least one broken image.
 									//console.log('all images loaded, at least one is broken');
 								})
 								.progress(function(instance, image) {
+									// Triggered after each image has been loaded.
 									//var result = image.isLoaded ? 'loaded' : 'broken';
 									//console.log('image is ' + result + ' for ' + image.img.src);
 								});
