@@ -716,6 +716,15 @@ hgroup > :last-child {
   margin-bottom: 0 !important;
 }
 
+.published {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #999999;
+}
+
 ul, ol, dl {
   padding: 0;
 }
