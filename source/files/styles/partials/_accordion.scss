@@ -2,14 +2,16 @@
 	
 	> h3 {
 		
-		font-family: "Gloria Hallelujah", "Comic Sans MS", "Marker Felt", sans-serif;
-		font-weight: normal;
-		font-size: 40px;
-		color: $raven;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 18px;
+		line-height: 18px;
+		letter-spacing: normal;
+		color: $graya;
 		width: auto;
 		max-width: none;
 		margin: {
-			top: 20px;
+			top: 10px;
 			bottom: 20px;
 		}
 		display: table;
@@ -18,7 +20,7 @@
 		cursor: hand;
 		
 		&.ui-state-hover,
-		&.ui-state-active { color: $base; }
+		&.ui-state-active { color: $raven; }
 		
 		&:active,
 		&:focus { outline: 0; }

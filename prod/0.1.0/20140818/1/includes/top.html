@@ -13,21 +13,13 @@
 	
 	<meta name="copyright" content="Copyright © 2013-14 Micky Hulse. All rights reserved.">
 	
-	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
-	<meta name="description" content="<!--@echo description-->">
+	<title>Data | v0.1.0 | PRODUCTION</title>
+	<meta name="description" content="Take my Worf. Please.">
 	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
-	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
-	<link rel="stylesheet" href="./styles/development.css">
 	
-	<!-- @endif -->
+	<link rel="stylesheet" href="http://mky.io/data/prod/0.1.0/20140818/1/styles/data.min.css">
 	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-	
-	<link rel="stylesheet" href="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/styles/<!-- @echo name -->.min.css">
-	
-	<!-- @endif -->
 	
 	<script>!function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r,i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=+new Date,a=s.createElement(o),m=s.getElementsByTagName(o)[0],a.src=g,m.parentNode.insertBefore(a,m)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","{{ site.ga }}","mky.io");ga("send","pageview");</script>
 	

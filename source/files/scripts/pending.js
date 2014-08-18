@@ -12,8 +12,7 @@ $(function() {
 	
 	$('nav .harmonia').harmonia({
 		currentPage : true,
-		optionDefault : 'Interwebs …',
-		openTab : true
+		optionDefault : 'Links …'
 	});
 	
 });

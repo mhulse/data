@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/17
+ * @date 2014/08/18
  */
 
 
@@ -1680,20 +1680,22 @@ aside > :last-child {
 }
 
 #primary > h3 {
-  font-family: "Gloria Hallelujah", "Comic Sans MS", "Marker Felt", sans-serif;
-  font-weight: normal;
-  font-size: 40px;
-  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: #aaaaaa;
   width: auto;
   max-width: none;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   display: table;
   cursor: pointer;
   cursor: hand;
 }
 #primary > h3.ui-state-hover, #primary > h3.ui-state-active {
-  color: #ff6600;
+  color: black;
 }
 #primary > h3:active, #primary > h3:focus {
   outline: 0;
@@ -2114,7 +2116,7 @@ figure .scroll {
 }
 
 .harmonia-select {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
 }
