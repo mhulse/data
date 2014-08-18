@@ -2,6 +2,7 @@
   "name": "bower",
   "dependencies": {
     "fastclick": "~1",
+    "harmonia": "https://github.com/mhulse/jquery-harmonia.git#v1",
     "imagesloaded": "~3",
     "jquery": "~2",
     "jquery-ui": "~1",

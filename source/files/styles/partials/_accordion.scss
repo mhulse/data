@@ -1,8 +1,12 @@
 #primary {
 	
-	[rel="tooltip"] {
+	> h3 {
 		
-		color: $raven;
+		font-family: "Comic Sans MS", "Comic Sans", cursive;
+		font-weight: normal;
+		font-size: 35px;
+		letter-spacing: -.05em;
+		color: $off;
 		width: auto;
 		max-width: none;
 		margin: {
@@ -13,8 +17,9 @@
 		
 		cursor: pointer;
 		cursor: hand;
-		&.ui-accordion-header-active,
-		.no-touch &:hover { color: $purty; }
+		
+		&.ui-state-hover,
+		&.ui-state-active { color: $on; }
 		
 		&:active,
 		&:focus { outline: 0; }
@@ -46,7 +51,7 @@
 	
 	//* { vertical-align: top }
 	
-	[data-href] {
+	> h3 {
 		
 		font-size: 24px;
 		line-height: 46px; // Double line height, minus 2px for fudge factor.
@@ -69,19 +74,19 @@
 			
 			span {
 				display: inline;
-				background: $raven;
-				box-shadow: 15px 0 0 $raven, -15px 0 0 $raven;
+				background: $off;
+				box-shadow: 15px 0 0 $off, -15px 0 0 $off;
 				padding: 10px 0 12px;
 			}
 			
 		}
 		
-		&.ui-accordion-header-active,
-		.no-touch &:hover {
+		&.ui-state-hover,
+		&.ui-state-active {
 			
 			span span {
-				background: $purty;
-				box-shadow: 10px 0 0 $purty, -10px 0 0 $purty;
+				background: $on;
+				box-shadow: 15px 0 0 $on, -15px 0 0 $on;
 			}
 			
 		}

@@ -485,7 +485,7 @@ body {
   line-height: 21px;
   font-family: Arial, sans-serif;
   text-align: center;
-  color: #666666;
+  color: #555555;
   background: white;
   padding: 25px;
 }
@@ -1660,34 +1660,11 @@ aside > :last-child {
   margin-bottom: 0 !important;
 }
 
-[data-kaomoji] {
-  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 50px;
-  line-height: 50px;
-  height: 50px;
-  white-space: nowrap;
+#primary > h3 {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-weight: normal;
-  word-spacing: normal;
-  letter-spacing: -.1em;
-}
-[data-kaomoji]::before {
-  content: attr(data-kaomoji);
-}
-[data-kaomoji].ui-accordion-header-active::before, .no-touch [data-kaomoji]:hover::before {
-  content: attr(data-kaomoji-hover);
-}
-[data-kaomoji] span {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-#primary [rel="tooltip"] {
+  font-size: 35px;
+  letter-spacing: -.05em;
   color: black;
   width: auto;
   max-width: none;
@@ -1697,10 +1674,10 @@ aside > :last-child {
   cursor: pointer;
   cursor: hand;
 }
-#primary [rel="tooltip"].ui-accordion-header-active, .no-touch #primary [rel="tooltip"]:hover {
+#primary > h3.ui-state-hover, #primary > h3.ui-state-active {
   color: #ff6600;
 }
-#primary [rel="tooltip"]:active, #primary [rel="tooltip"]:focus {
+#primary > h3:active, #primary > h3:focus {
   outline: 0;
 }
 #primary ul.links {
@@ -1718,7 +1695,7 @@ aside > :last-child {
   content: "";
 }
 
-#secondary [data-href] {
+#secondary > h3 {
   font-size: 24px;
   line-height: 46px;
   font-weight: normal;
@@ -1730,22 +1707,22 @@ aside > :last-child {
   margin-bottom: 12px;
   display: table;
 }
-#secondary [data-href] span {
+#secondary > h3 span {
   display: inline-block;
   cursor: pointer;
   cursor: hand;
 }
-#secondary [data-href] span span {
+#secondary > h3 span span {
   display: inline;
   background: black;
   box-shadow: 15px 0 0 black, -15px 0 0 black;
   padding: 10px 0 12px;
 }
-#secondary [data-href].ui-accordion-header-active span span, .no-touch #secondary [data-href]:hover span span {
+#secondary > h3.ui-state-hover span span, #secondary > h3.ui-state-active span span {
   background: #ff6600;
-  box-shadow: 10px 0 0 #ff6600, -10px 0 0 #ff6600;
+  box-shadow: 15px 0 0 #ff6600, -15px 0 0 #ff6600;
 }
-#secondary [data-href]:active, #secondary [data-href]:focus {
+#secondary > h3:active, #secondary > h3:focus {
   outline: 0;
 }
 
@@ -1784,21 +1761,11 @@ aside > :last-child {
   text-transform: none;
   letter-spacing: 0;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   padding: 0;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
-}
-#flag a, #flag a:visited {
-  color: #13aac9;
-}
-.no-touch #flag a:visited:hover, #flag a:focus, .no-touch #flag a:focus:hover, .no-touch #flag a:hover, #flag a:active {
-  color: #53d4ef;
-  text-decoration: none;
-}
-#flag a:focus, #flag a:active {
-  outline: 0;
 }
 
 [itemprop="articleBody"] {
@@ -1921,45 +1888,6 @@ figure .scroll {
 }
 .scroll-overlay::before, .scroll-overlay::after {
   font-size: 110%;
-}
-
-.no-touch .tooltip {
-  font-size: 16px;
-  letter-spacing: .08em;
-  text-align: center;
-  color: white;
-  background: rgba(255, 102, 0, 0.95);
-  position: absolute;
-  z-index: 100;
-  padding: 15px;
-  pointer-events: none;
-}
-.no-touch .tooltip::after {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid rgba(255, 102, 0, 0.95);
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  margin-left: -10px;
-}
-.no-touch .tooltip.top::after {
-  border-top-color: transparent;
-  border-bottom: 10px solid rgba(255, 102, 0, 0.95);
-  top: -20px;
-  bottom: auto;
-}
-.no-touch .tooltip.left::after {
-  left: 10px;
-  margin: 0;
-}
-.no-touch .tooltip.right::after {
-  right: 10px;
-  left: auto;
-  margin: 0;
 }
 
 @-webkit-keyframes skull {
@@ -2177,6 +2105,14 @@ figure .scroll {
 }
 .callout.callout-error a, .callout.callout-error a:visited, .no-touch .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .no-touch .callout.callout-error a:focus:hover, .no-touch .callout.callout-error a:hover, .callout.callout-error a:active {
   color: #870000;
+}
+
+.js ul.harmonia {
+  display: none;
+}
+
+.harmonia-select {
+  font-size: 20px;
 }
 
 @media print {

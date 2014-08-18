@@ -258,6 +258,7 @@ module.exports = function(grunt) {
 						'./files/scripts/jquery-ui.js',
 						'./files/scripts/jquery-ui.widget.js',
 						'./files/scripts/jquery-ui.accordion.js',
+						'./files/scripts/jquery.harmonia.js',
 						'./files/scripts/imagesloaded.pkgd.js',
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
