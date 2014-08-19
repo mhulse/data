@@ -28,7 +28,7 @@ DATA.register(function() {
 	var $progress = $('<div />', { 'class' : 'progress' });
 	
 	$secondary
-		.children()
+		.children('h3')
 		.each(function() {
 			$(this).after('<div class="ui-accordion-content" />');
 		});
@@ -40,6 +40,7 @@ DATA.register(function() {
 			heightStyle: 'content',
 			animate: false,
 			icons: false,
+			header: 'h3:not(.off)', // Allows for hidden text-only content related to each header for Google to index.
 			create: function(e, ui) {
 				hashchange.call(this, $primary);
 			},
