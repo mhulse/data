@@ -285,7 +285,7 @@ module.exports = function(grunt) {
 			
 			options : {
 				
-				noCache: true,  // Don't cache to sassc files.
+				noCache : true,  // Don't cache to sassc files.
 				precision : 14, // How many digits of precision to use when outputting decimal numbers.
 				sourcemap : 'none', // Generate CSS source maps?
 				
