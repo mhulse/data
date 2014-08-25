@@ -8,12 +8,12 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/18
+ * @date 2014/08/24
  */
 
 
 .swatches {
-  color: black;
+  color: #000;
   max-width: 650px;
   margin: 20px auto;
 }
@@ -25,7 +25,7 @@
   padding: 5px;
 }
 .swatches .base {
-  background: #ff6600;
+  background: #f60;
 }
 
 .marker {
@@ -39,15 +39,17 @@
 }
 .marker a {
   padding: 15px 20px;
-  background: #333333;
+  background: #333;
   display: inline-block;
   border: 0;
   box-shadow: none;
 }
 .marker a, .marker a:visited {
-  color: #dddddd;
+  color: #ddd;
 }
 .no-touch .marker a:visited:hover, .marker a:focus, .no-touch .marker a:focus:hover, .no-touch .marker a:hover, .marker a:active {
-  color: white;
-  background: black;
+  color: #fff;
+  background: #000;
 }
+
+/*# sourceMappingURL=development.css.map */

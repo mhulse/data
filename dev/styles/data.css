@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/18
+ * @date 2014/08/24
  */
 
 
@@ -485,8 +485,8 @@ body {
   line-height: 21px;
   font-family: Arial, sans-serif;
   text-align: center;
-  color: black;
-  background: white;
+  color: #000;
+  background: #fff;
   padding: 25px;
 }
 
@@ -496,11 +496,11 @@ p.excerpt {
 
 a {
   font-weight: bold;
-  border-bottom: 1px solid #ff6600;
-  box-shadow: 0 -3px 0 #ff6600 inset;
+  border-bottom: 1px solid #f60;
+  box-shadow: 0 -3px 0 #f60 inset;
 }
 a, a:visited {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 .no-touch a:visited:hover, a:focus, .no-touch a:focus:hover, .no-touch a:hover, a:active {
@@ -521,7 +521,7 @@ a, a:visited {
 
 hr {
   border: 0;
-  border-top: 4px solid #eeeeee;
+  border-top: 4px solid #eee;
   height: 0;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -533,7 +533,7 @@ hr {
 }
 article hr, aside hr, section hr {
   border-top-width: 2px;
-  border-color: #cccccc;
+  border-color: #ccc;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -560,7 +560,7 @@ blockquote footer {
   font-size: 70%;
   font-weight: normal;
   letter-spacing: .05em;
-  color: #888888;
+  color: #888;
 }
 blockquote footer p {
   margin: 0;
@@ -724,7 +724,7 @@ hgroup > :last-child {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .08em;
-  color: #999999;
+  color: #999;
 }
 
 ul, ol, dl {
@@ -800,8 +800,8 @@ ul li::before {
   font-weight: bold;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #999999;
-  border-bottom: 1px solid #999999;
+  color: #999;
+  border-bottom: 1px solid #999;
   padding-bottom: 5px;
   margin: 0;
 }
@@ -833,11 +833,11 @@ ul li::before {
 .table.table-border-x thead th,
 .table.table-border-x tbody th,
 .table.table-border-x tbody td {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #999;
 }
 .table.table-border-x tfoot th,
 .table.table-border-x tfoot td {
-  border-top: 1px solid #999999;
+  border-top: 1px solid #999;
 }
 .table.table-border-x tbody tr:last-child th,
 .table.table-border-x tbody tr:last-child td {
@@ -845,8 +845,8 @@ ul li::before {
 }
 .table.table-border-y th,
 .table.table-border-y td {
-  border-right: 1px solid #999999;
-  border-left: 1px solid #999999;
+  border-right: 1px solid #999;
+  border-left: 1px solid #999;
 }
 .table.table-border-y th:first-child,
 .table.table-border-y td:first-child {
@@ -877,7 +877,7 @@ ul li::before {
   display: none;
 }
 .form label {
-  color: #666666;
+  color: #666;
   letter-spacing: .05em;
   vertical-align: middle;
   padding: 5px;
@@ -885,14 +885,14 @@ ul li::before {
 .form input[type="text"], .form input[type="password"], .form textarea {
   vertical-align: baseline;
   padding: 5px 10px;
-  color: #333333;
+  color: #333;
   letter-spacing: .05em;
   text-align: left;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   background: #fbfbfb;
   width: 100%;
   display: block;
-  box-shadow: inset 0 1px 3px #cccccc;
+  box-shadow: inset 0 1px 3px #ccc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -908,35 +908,35 @@ ul li::before {
 }
 .form input[type="text"]::-webkit-input-placeholder, .form input[type="password"]::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
   text-align: left;
-  color: #999999;
+  color: #999;
 }
 .form input[type="text"]:-moz-placeholder, .form input[type="password"]:-moz-placeholder, .form textarea:-moz-placeholder {
   text-align: left;
-  color: #999999;
+  color: #999;
 }
 .form input[type="text"]::-moz-placeholder, .form input[type="password"]::-moz-placeholder, .form textarea::-moz-placeholder {
   text-align: left;
-  color: #999999;
+  color: #999;
 }
 .form input[type="text"]:-ms-input-placeholder, .form input[type="password"]:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
   text-align: left;
-  color: #999999;
+  color: #999;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus, .form input[type="text"]:active, .form input[type="password"]:active, .form textarea:active {
   outline: 0;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
-  border-color: #ff6600;
+  border-color: #f60;
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
-  background: #eeeeee;
-  color: #cccccc;
+  background: #eee;
+  color: #ccc;
 }
 .form input[readonly][type="text"], .form input[readonly][type="password"], .form textarea[readonly] {
-  background: #eeeeee;
-  color: #777777;
-  border-color: #cccccc;
+  background: #eee;
+  color: #777;
+  border-color: #ccc;
 }
 .form textarea {
   min-height: 200px;
@@ -999,7 +999,7 @@ pre .cursor {
   animation-timing-function: steps(2, start);
 }
 pre .prompt {
-  color: black;
+  color: #000;
 }
 pre.terminal {
   letter-spacing: .05em;
@@ -1016,16 +1016,16 @@ pre.terminal .prompt {
 }
 
 .pre {
-  color: #444444;
+  color: #444;
   background: rgba(238, 238, 238, 0.5);
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-radius: 3px;
 }
 
 .pygments {
-  color: #cccccc;
-  background: #222222;
-  border: 5px solid #222222;
+  color: #ccc;
+  background: #222;
+  border: 5px solid #222;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -1045,10 +1045,10 @@ pre.terminal .prompt {
 }
 .pygments table .linenos {
   vertical-align: top;
-  background: #333333;
+  background: #333;
   display: block;
   text-decoration: none;
-  color: #888888;
+  color: #888;
   text-align: right;
 }
 .pygments table .linenos + td {
@@ -1271,10 +1271,10 @@ code {
 
 kbd {
   font-size: smaller;
-  color: #333333;
-  text-shadow: 0 1px 0 white;
-  background-color: #eeeeee;
-  border: 1px solid #cccccc;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #eee;
+  border: 1px solid #ccc;
   margin: 0 .1em;
   padding: 0 .5em;
   display: inline-block;
@@ -1282,7 +1282,7 @@ kbd {
   -moz-background-clip: padding;
   background-clip: padding-box;
   border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
 }
 
 pre code,
@@ -1343,7 +1343,7 @@ figcaption p:last-of-type {
   margin-bottom: 0 !important;
 }
 figcaption > div {
-  background: #dddddd;
+  background: #ddd;
   margin-top: 13px;
   padding: 15px 20px;
   display: inline-block;
@@ -1354,7 +1354,7 @@ figcaption > div::after {
   content: "";
   border-width: 0 10px 10px;
   border-style: solid;
-  border-color: #dddddd transparent;
+  border-color: #ddd transparent;
   width: 0;
   margin-left: -10px;
   position: absolute;
@@ -1463,7 +1463,7 @@ iframe[id^='twitter-widget-'],
   line-height: 20px;
   color: #993d00;
   width: 100%;
-  background-color: #ff6600;
+  background-color: #f60;
   border: none transparent;
   border-radius: 3px;
   margin-top: 10px;
@@ -1512,7 +1512,7 @@ iframe[id^='twitter-widget-'],
 .form input[type="reset"]:active,
 .form input[type="submit"]:active {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 .no-touch .button:hover, .no-touch .form button:hover, .form .no-touch button:hover,
 .no-touch .form input[type="button"]:hover,
@@ -1685,7 +1685,7 @@ aside > :last-child {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: normal;
-  color: #aaaaaa;
+  color: #aaa;
   width: auto;
   max-width: none;
   margin-top: 10px;
@@ -1695,7 +1695,7 @@ aside > :last-child {
   cursor: hand;
 }
 #primary > h3.ui-state-hover, #primary > h3.ui-state-active {
-  color: black;
+  color: #000;
 }
 #primary > h3:active, #primary > h3:focus {
   outline: 0;
@@ -1706,7 +1706,7 @@ aside > :last-child {
   line-height: 46px;
   font-weight: normal;
   letter-spacing: .05em;
-  color: white;
+  color: #fff;
   width: auto;
   max-width: none;
   margin-top: 0;
@@ -1720,13 +1720,13 @@ aside > :last-child {
 }
 #secondary > h3 span span {
   display: inline;
-  background: black;
-  box-shadow: 15px 0 0 black, -15px 0 0 black;
+  background: #000;
+  box-shadow: 15px 0 0 #000, -15px 0 0 #000;
   padding: 10px 0 12px;
 }
 #secondary > h3.ui-state-hover span span, #secondary > h3.ui-state-active span span {
-  background: #ff6600;
-  box-shadow: 15px 0 0 #ff6600, -15px 0 0 #ff6600;
+  background: #f60;
+  box-shadow: 15px 0 0 #f60, -15px 0 0 #f60;
 }
 #secondary > h3:active, #secondary > h3:focus {
   outline: 0;
@@ -1804,7 +1804,7 @@ aside > :last-child {
   border-top: none;
   height: 4px;
   background-color: transparent;
-  background-image: linear-gradient(90deg, #dddddd 50%, transparent 50%, transparent);
+  background-image: linear-gradient(90deg, #ddd 50%, transparent 50%, transparent);
   -webkit-background-size: 10px 10px;
   -moz-background-size: 10px 10px;
   background-size: 10px 10px;
@@ -1848,8 +1848,8 @@ figure .scroll {
   letter-spacing: .15em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 0 0 1px black;
-  color: white;
+  text-shadow: 0 0 1px #000;
+  color: #fff;
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.75);
   padding: 5px 8px;
@@ -1884,7 +1884,6 @@ figure .scroll {
   0% {
     background-position: center 0;
   }
-
   100% {
     background-position: center -24480px;
   }
@@ -1893,7 +1892,6 @@ figure .scroll {
   0% {
     background-position: center 0;
   }
-
   100% {
     background-position: center -24480px;
   }
@@ -1902,7 +1900,6 @@ figure .scroll {
   0% {
     background-position: center 0;
   }
-
   100% {
     background-position: center -24480px;
   }
@@ -1911,7 +1908,6 @@ figure .scroll {
   0% {
     background-position: center 0;
   }
-
   100% {
     background-position: center -24480px;
   }
@@ -1920,7 +1916,6 @@ figure .scroll {
   0% {
     background-position: center 0;
   }
-
   100% {
     background-position: center -24480px;
   }
@@ -1929,7 +1924,6 @@ figure .scroll {
   0% {
     -webkit-transform: translateY(100%);
   }
-
   100% {
     -webkit-transform: translateY(0);
   }
@@ -1938,7 +1932,6 @@ figure .scroll {
   0% {
     -moz-transform: translateY(100%);
   }
-
   100% {
     -moz-transform: translateY(0);
   }
@@ -1947,7 +1940,6 @@ figure .scroll {
   0% {
     -moz-transform: translateY(100%);
   }
-
   100% {
     -moz-transform: translateY(0);
   }
@@ -1956,7 +1948,6 @@ figure .scroll {
   0% {
     -o-transform: translateY(100%);
   }
-
   100% {
     -o-transform: translateY(0);
   }
@@ -1965,7 +1956,6 @@ figure .scroll {
   0% {
     transform: translateY(100%);
   }
-
   100% {
     transform: translateY(0);
   }
@@ -2040,12 +2030,12 @@ figure .scroll {
   }
 }
 .callout {
-  color: #333333;
+  color: #333;
   margin-top: 25px;
   margin-bottom: 25px;
 }
 .callout.callout-box {
-  background-color: #dddddd;
+  background-color: #ddd;
   padding: 10px 20px;
   border-radius: 6px;
 }
@@ -2098,8 +2088,8 @@ figure .scroll {
 
 @media print {
   body {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
   }
 
   nav {
@@ -2141,3 +2131,5 @@ figure .scroll {
     content: "";
   }
 }
+
+/*# sourceMappingURL=data.css.map */

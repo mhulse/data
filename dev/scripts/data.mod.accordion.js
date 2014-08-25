@@ -71,7 +71,7 @@ DATA.register(function() {
 											$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
 											if ((typeof ga != 'undefined') && (ga !== null)) {
 												// Track that shit!
-												ga('send', 'pageview', '/' + url);
+												ga('send', 'pageview', { 'page': '/' + url, 'title': ui.newHeader.text() });
 											}
 										});
 									});
