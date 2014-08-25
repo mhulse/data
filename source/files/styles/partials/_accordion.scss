@@ -57,8 +57,11 @@
 			span {
 				display: inline;
 				background: $raven;
-				box-shadow: 15px 0 0 $raven, -15px 0 0 $raven;
-				padding: 10px 0 12px;
+				box-shadow: // Firefox not anti-aliasing a single box-shadow (rounding problems, I think); using multiple to make crisp.
+					0 0 0 10px $raven,
+					0 0 0 10px $raven,
+					0 0 0 10px $raven,
+					0 0 0 10px $raven;
 			}
 			
 		}
@@ -68,7 +71,11 @@
 			
 			span span {
 				background: $base;
-				box-shadow: 15px 0 0 $base, -15px 0 0 $base;
+				box-shadow: // IBID.
+					0 0 0 10px $base,
+					0 0 0 10px $base,
+					0 0 0 10px $base,
+					0 0 0 10px $base;
 			}
 			
 		}
