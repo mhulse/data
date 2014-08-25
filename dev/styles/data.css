@@ -1969,7 +1969,7 @@ figure .scroll {
     margin-bottom: 500px;
   }
 
-  .js .skull {
+  .js.no-touch .skull {
     height: 500px;
     position: absolute;
     left: 0;
@@ -1977,7 +1977,7 @@ figure .scroll {
     bottom: 0;
     overflow: hidden;
   }
-  .js .skull > div {
+  .js.no-touch .skull > div {
     -webkit-transform: translateY(100%);
     -moz-transform: translateY(100%);
     -ms-transform: translateY(100%);
@@ -1999,7 +1999,7 @@ figure .scroll {
     -o-animation-name: slide-up;
     animation-name: slide-up;
   }
-  .js .skull > div::after {
+  .js.no-touch .skull > div::after {
     content: "";
     background-image: url(http://uploads.mky.io/skull.jpg);
     background-repeat: no-repeat;
