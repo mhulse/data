@@ -1679,7 +1679,7 @@ aside > :last-child {
   margin-bottom: 0 !important;
 }
 
-#primary > h3 {
+#primary > h2 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 18px;
@@ -1694,10 +1694,10 @@ aside > :last-child {
   cursor: pointer;
   cursor: hand;
 }
-#primary > h3.ui-state-hover, #primary > h3.ui-state-active {
+#primary > h2.ui-state-hover, #primary > h2.ui-state-active {
   color: #000;
 }
-#primary > h3:active, #primary > h3:focus {
+#primary > h2:active, #primary > h2:focus {
   outline: 0;
 }
 
