@@ -34,7 +34,7 @@
 	> h3 {
 		
 		font-size: 30px;
-		line-height: 36px;
+		line-height: 36px; // Eyeballed this with box-shadows turned off.
 		font-weight: normal;
 		letter-spacing: .05em;
 		color: $milk;
@@ -109,7 +109,7 @@
 	
 	position: relative;
 	min-height: 50px;
-	margin-bottom: 30px; // Same as above h3.
+	margin-bottom: 40px; // Same as above h3 + 10px for better spacing.
 	
 	// Hides accordion panels:
 	.js & { display: none; }
@@ -118,5 +118,6 @@
 
 .ajax-content {
 	display: none;
+	margin-top: -15px;
 	padding-bottom: 30px; // Arbitrary.
 }

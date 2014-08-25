@@ -1750,7 +1750,7 @@ aside > :last-child {
 .ui-accordion-content {
   position: relative;
   min-height: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .js .ui-accordion-content {
   display: none;
@@ -1758,6 +1758,7 @@ aside > :last-child {
 
 .ajax-content {
   display: none;
+  margin-top: -15px;
   padding-bottom: 30px;
 }
 
