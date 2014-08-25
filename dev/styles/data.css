@@ -719,8 +719,8 @@ hgroup > :last-child {
 }
 
 .published {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .08em;
