@@ -31,12 +31,10 @@
 
 #secondary {
 	
-	//* { vertical-align: top }
-	
 	> h3 {
 		
-		font-size: 24px;
-		line-height: 46px; // Double line height, minus 2px for fudge factor.
+		font-size: 30px;
+		line-height: 36px;
 		font-weight: normal;
 		letter-spacing: .05em;
 		color: $milk;
@@ -44,24 +42,25 @@
 		max-width: none;
 		margin: {
 			top: 0;
-			bottom: 12px; // Add back the fudge factor from above.
+			bottom: 30px; // 20px of top/bottom box-shadows + 10px margin.
 		}
+		padding: 0 10px; // Reclaim 10px left/right of box-shadow.
 		display: table; // Forces width to that of children.
+		cursor: pointer;
+		cursor: hand;
 		
 		span {
 			
-			display: inline-block;
-			cursor: pointer;
-			cursor: hand;
+			box-shadow: // Firefox not anti-aliasing a single box-shadow (rounding problems, I think); using multiple to make crisp.
+				0 0 0 10px $raven,
+				0 0 0 10px $raven,
+				0 0 0 10px $raven,
+				0 0 0 10px $raven;
 			
 			span {
-				display: inline;
 				background: $raven;
-				box-shadow: // Firefox not anti-aliasing a single box-shadow (rounding problems, I think); using multiple to make crisp.
-					0 0 0 10px $raven,
-					0 0 0 10px $raven,
-					0 0 0 10px $raven,
-					0 0 0 10px $raven;
+				position: relative;
+				box-shadow: none;
 			}
 			
 		}
@@ -69,13 +68,19 @@
 		&.ui-state-hover,
 		&.ui-state-active {
 			
-			span span {
-				background: $base;
+			span {
+				
 				box-shadow: // IBID.
 					0 0 0 10px $base,
 					0 0 0 10px $base,
 					0 0 0 10px $base,
 					0 0 0 10px $base;
+				
+				span {
+					background: $base;
+					box-shadow: none;
+				}
+				
 			}
 			
 		}
@@ -95,7 +100,7 @@
 	background-size: 50px 50px;
 	display: none;
 	position: absolute;
-	top: 10px;
+	top: 0;
 	left: 50%;
 	margin-left: -25px;
 }
@@ -103,8 +108,8 @@
 .ui-accordion-content {
 	
 	position: relative;
-	min-height: 60px; // Height of loader + 10px top.
-	margin-bottom: 25px;
+	min-height: 50px;
+	margin-bottom: 30px; // Same as above h3.
 	
 	// Hides accordion panels:
 	.js & { display: none; }
@@ -113,5 +118,5 @@
 
 .ajax-content {
 	display: none;
-	padding-bottom: 25px;
+	padding-bottom: 30px; // Arbitrary.
 }

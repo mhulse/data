@@ -1702,30 +1702,34 @@ aside > :last-child {
 }
 
 #secondary > h3 {
-  font-size: 24px;
-  line-height: 46px;
+  font-size: 30px;
+  line-height: 36px;
   font-weight: normal;
   letter-spacing: .05em;
   color: #fff;
   width: auto;
   max-width: none;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
+  padding: 0 10px;
   display: table;
-}
-#secondary > h3 span {
-  display: inline-block;
   cursor: pointer;
   cursor: hand;
 }
-#secondary > h3 span span {
-  display: inline;
-  background: #000;
+#secondary > h3 span {
   box-shadow: 0 0 0 10px #000, 0 0 0 10px #000, 0 0 0 10px #000, 0 0 0 10px #000;
+}
+#secondary > h3 span span {
+  background: #000;
+  position: relative;
+  box-shadow: none;
+}
+#secondary > h3.ui-state-hover span, #secondary > h3.ui-state-active span {
+  box-shadow: 0 0 0 10px #f60, 0 0 0 10px #f60, 0 0 0 10px #f60, 0 0 0 10px #f60;
 }
 #secondary > h3.ui-state-hover span span, #secondary > h3.ui-state-active span span {
   background: #f60;
-  box-shadow: 0 0 0 10px #f60, 0 0 0 10px #f60, 0 0 0 10px #f60, 0 0 0 10px #f60;
+  box-shadow: none;
 }
 #secondary > h3:active, #secondary > h3:focus {
   outline: 0;
@@ -1738,15 +1742,15 @@ aside > :last-child {
   background-size: 50px 50px;
   display: none;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 50%;
   margin-left: -25px;
 }
 
 .ui-accordion-content {
   position: relative;
-  min-height: 60px;
-  margin-bottom: 25px;
+  min-height: 50px;
+  margin-bottom: 30px;
 }
 .js .ui-accordion-content {
   display: none;
@@ -1754,7 +1758,7 @@ aside > :last-child {
 
 .ajax-content {
   display: none;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 }
 
 [itemprop="articleBody"] {
