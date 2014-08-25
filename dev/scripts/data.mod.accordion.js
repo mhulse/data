@@ -56,7 +56,7 @@ DATA.register(function() {
 							var $content = $this.children('.ajax-content'); // Better way?
 							$progress
 								.appendTo($this)
-								.fadeIn('slow');
+								.fadeIn('fast');
 							$content
 								.imagesLoaded()
 								.always(function(instance) {
@@ -66,9 +66,9 @@ DATA.register(function() {
 								.done(function(instance) {
 									// Triggered after all images have successfully loaded without any broken images.
 									//console.log('all images successfully loaded');
-									$progress.fadeOut('slow', function(){
-										$content.fadeIn('slow', function() {
-											$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
+									$progress.fadeOut('fast', function(){
+										$content.fadeIn('fast', function() {
+											$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'fast');
 											if ((typeof ga != 'undefined') && (ga !== null)) {
 												// Track that shit!
 												ga('send', 'pageview', { 'page': '/' + url, 'title': ui.newHeader.text() });
@@ -76,7 +76,7 @@ DATA.register(function() {
 										});
 									});
 								})
-								.fail( function() {
+								.fail(function() {
 									// Triggered after all images have been loaded with at least one broken image.
 									//console.log('all images loaded, at least one is broken');
 								})
@@ -90,7 +90,7 @@ DATA.register(function() {
 			},
 			activate: function(e, ui) {
 				if (ui.newPanel.length && ui.newPanel.not(':empty')) {
-					$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
+					$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'fast');
 				}
 				$secondary.accordion('refresh');
 				ui.oldHeader.children('a').blur();
