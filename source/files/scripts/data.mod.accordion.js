@@ -40,7 +40,7 @@ DATA.register(function() {
 			heightStyle: 'content',
 			animate: false,
 			icons: false,
-			header: 'h3:not(.off)', // Allows for hidden text-only content related to each header for Google to index.
+			header: '> h3:not(.off)', // Allows for hidden text-only content related to each header for Google to index.
 			create: function(e, ui) {
 				hashchange.call(this, $primary);
 			},
@@ -104,6 +104,7 @@ DATA.register(function() {
 			heightStyle: 'content',
 			animate: false,
 			icons: false,
+			header: '> h2',
 			create: function(e, ui) {
 				hashchange.call(this);
 			},
