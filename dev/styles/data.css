@@ -722,9 +722,9 @@ hgroup > :last-child {
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
-  text-transform: uppercase;
   letter-spacing: .08em;
   color: #999;
+  margin-top: -15px;
 }
 
 ul, ol, dl {
