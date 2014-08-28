@@ -41,9 +41,9 @@ p {
 
 a {
 	
-	font-weight: bold;
-	border-bottom: 1px solid $base;
-	box-shadow: 0 -3px 0 $base inset;
+	//font-weight: bold;
+	//border-bottom: 1px solid #AEE239;
+	box-shadow: 0 -.25em 0 #AEE239 inset;
 	
 	&,
 	&:visited {
@@ -56,19 +56,19 @@ a {
 	.no-touch &:hover,
 	&:active {
 		color: inherit;
-		border: 0;
-		box-shadow: none;
+		//border: 0;
+		//box-shadow: none;
 	}
 	
 }
 
 ::-moz-selection {
-	background: rgba($base, .55);
+	background: rgba($primary, .55);
 	text-shadow: none;
 }
 
 ::selection {
-	background: rgba($base, .55);
+	background: rgba($primary, .55);
 	text-shadow: none;
 }
 

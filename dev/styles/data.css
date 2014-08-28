@@ -495,9 +495,7 @@ p.excerpt {
 }
 
 a {
-  font-weight: bold;
-  border-bottom: 1px solid #00a8c6;
-  box-shadow: 0 -3px 0 #00a8c6 inset;
+  box-shadow: 0 -.25em 0 #AEE239 inset;
 }
 a, a:visited {
   color: #000;
@@ -505,8 +503,6 @@ a, a:visited {
 }
 .no-touch a:visited:hover, a:focus, .no-touch a:focus:hover, .no-touch a:hover, a:active {
   color: inherit;
-  border: 0;
-  box-shadow: none;
 }
 
 ::-moz-selection {
@@ -724,7 +720,6 @@ hgroup > :last-child {
   font-weight: normal;
   letter-spacing: .08em;
   color: #999;
-  margin-top: -15px;
 }
 
 ul, ol, dl {
@@ -1454,6 +1449,7 @@ iframe[id^='twitter-widget-'],
   display: block;
   zoom: 1;
   cursor: pointer;
+  letter-spacing: .08em;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1465,6 +1461,7 @@ iframe[id^='twitter-widget-'],
   width: 100%;
   background-color: #00a8c6;
   border: none transparent;
+  box-shadow: none;
   border-radius: 3px;
   margin-top: 10px;
   margin-bottom: 10px;

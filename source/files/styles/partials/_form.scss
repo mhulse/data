@@ -78,7 +78,7 @@
 		&:focus,
 		&:active { outline: 0; }
 		
-		&:focus { border-color: $base; }
+		&:focus { border-color: $primary; }
 		
 		&[disabled] {
 			cursor: not-allowed;

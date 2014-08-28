@@ -24,8 +24,11 @@
   margin: 5px 0;
   padding: 5px;
 }
-.swatches .base {
+.swatches .primary {
   background: #00a8c6;
+}
+.swatches .secondary {
+  background: #aee239;
 }
 
 .marker {

@@ -17,6 +17,7 @@
 	display: block;
 	zoom: 1;
 	cursor: pointer;
+	letter-spacing: .08em;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
@@ -30,10 +31,11 @@
 	
 	font-size: 18px;
 	line-height: 20px;
-	color: darken($base, 20%);
+	color: darken($primary, 20%);
 	width: 100%;
-	background-color: $base;
+	background-color: $primary;
 	border: none rgba($raven, 0);
+	box-shadow: none;
 	border-radius: 3px;
 	margin: {
 		top: 10px;

@@ -19,7 +19,7 @@
 		cursor: hand;
 		
 		&.ui-state-hover,
-		&.ui-state-active { color: $base; }
+		&.ui-state-active { color: $primary; }
 		
 		&:active,
 		&:focus { outline: 0; }
@@ -70,13 +70,13 @@
 			span {
 				
 				box-shadow: // IBID.
-					0 0 0 10px $base,
-					0 0 0 10px $base,
-					0 0 0 10px $base,
-					0 0 0 10px $base;
+					0 0 0 10px $primary,
+					0 0 0 10px $primary,
+					0 0 0 10px $primary,
+					0 0 0 10px $primary;
 				
 				span {
-					background: $base;
+					background: $primary;
 					box-shadow: none;
 				}
 				
