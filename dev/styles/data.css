@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/25
+ * @date 2014/08/27
  */
 
 
@@ -496,8 +496,8 @@ p.excerpt {
 
 a {
   font-weight: bold;
-  border-bottom: 1px solid #f60;
-  box-shadow: 0 -3px 0 #f60 inset;
+  border-bottom: 1px solid #00a8c6;
+  box-shadow: 0 -3px 0 #00a8c6 inset;
 }
 a, a:visited {
   color: #000;
@@ -510,12 +510,12 @@ a, a:visited {
 }
 
 ::-moz-selection {
-  background: rgba(255, 102, 0, 0.55);
+  background: rgba(0, 168, 198, 0.55);
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(255, 102, 0, 0.55);
+  background: rgba(0, 168, 198, 0.55);
   text-shadow: none;
 }
 
@@ -676,33 +676,33 @@ h1 + h1, h2 + h1, h3 + h1, h4 + h1, h5 + h1, h6 + h1, h1 + h2, h2 + h2, h3 + h2,
 }
 
 h1, .h1, .sh1 {
-  font-size: 28px;
-  line-height: 30px;
-}
-
-h2, .h2, .sh2 {
   font-size: 26px;
   line-height: 28px;
 }
 
-h3, .h3, .sh3 {
+h2, .h2, .sh2 {
   font-size: 24px;
   line-height: 26px;
 }
 
-h4, .h4, .sh4 {
+h3, .h3, .sh3 {
   font-size: 22px;
   line-height: 24px;
 }
 
-h5, .h5, .sh5 {
+h4, .h4, .sh4 {
   font-size: 20px;
   line-height: 22px;
 }
 
-h6, .h6, .sh6 {
+h5, .h5, .sh5 {
   font-size: 18px;
   line-height: 20px;
+}
+
+h6, .h6, .sh6 {
+  font-size: 16px;
+  line-height: 18px;
 }
 
 h1:empty {
@@ -926,7 +926,7 @@ ul li::before {
   outline: 0;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
-  border-color: #f60;
+  border-color: #00a8c6;
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
@@ -1461,9 +1461,9 @@ iframe[id^='twitter-widget-'],
   user-select: none;
   font-size: 18px;
   line-height: 20px;
-  color: #993d00;
+  color: #005160;
   width: 100%;
-  background-color: #f60;
+  background-color: #00a8c6;
   border: none transparent;
   border-radius: 3px;
   margin-top: 10px;
@@ -1680,12 +1680,11 @@ aside > :last-child {
 }
 
 #primary > h2 {
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: normal;
   font-size: 18px;
   line-height: 18px;
-  letter-spacing: normal;
-  color: #aaa;
+  letter-spacing: .03em;
+  color: #000;
   width: auto;
   max-width: none;
   margin-top: 10px;
@@ -1695,15 +1694,15 @@ aside > :last-child {
   cursor: hand;
 }
 #primary > h2.ui-state-hover, #primary > h2.ui-state-active {
-  color: #000;
+  color: #00a8c6;
 }
 #primary > h2:active, #primary > h2:focus {
   outline: 0;
 }
 
 #secondary > h3 {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 26px;
+  line-height: 30px;
   font-weight: normal;
   letter-spacing: .05em;
   color: #fff;
@@ -1725,10 +1724,10 @@ aside > :last-child {
   box-shadow: none;
 }
 #secondary > h3.ui-state-hover span, #secondary > h3.ui-state-active span {
-  box-shadow: 0 0 0 10px #f60, 0 0 0 10px #f60, 0 0 0 10px #f60, 0 0 0 10px #f60;
+  box-shadow: 0 0 0 10px #00a8c6, 0 0 0 10px #00a8c6, 0 0 0 10px #00a8c6, 0 0 0 10px #00a8c6;
 }
 #secondary > h3.ui-state-hover span span, #secondary > h3.ui-state-active span span {
-  background: #f60;
+  background: #00a8c6;
   box-shadow: none;
 }
 #secondary > h3:active, #secondary > h3:focus {

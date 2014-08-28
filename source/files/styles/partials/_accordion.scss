@@ -2,12 +2,11 @@
 	
 	> h2 {
 		
-		font-weight: bold;
-		text-transform: uppercase;
+		font-weight: normal;
 		font-size: 18px;
 		line-height: 18px;
-		letter-spacing: normal;
-		color: $graya;
+		letter-spacing: .03em;
+		color: $raven;
 		width: auto;
 		max-width: none;
 		margin: {
@@ -20,7 +19,7 @@
 		cursor: hand;
 		
 		&.ui-state-hover,
-		&.ui-state-active { color: $raven; }
+		&.ui-state-active { color: $base; }
 		
 		&:active,
 		&:focus { outline: 0; }
@@ -33,8 +32,8 @@
 	
 	> h3 {
 		
-		font-size: 30px;
-		line-height: 36px; // Eyeballed this with box-shadows turned off.
+		font-size: 26px;
+		line-height: 30px; // Eyeballed this with margin and box-shadows turned off.
 		font-weight: normal;
 		letter-spacing: .05em;
 		color: $milk;
@@ -109,7 +108,7 @@
 	
 	position: relative;
 	min-height: 50px;
-	margin-bottom: 40px; // Same as above h3 + 10px for better spacing.
+	margin-bottom: 40px; // Same margin as above h3 + 10px for better spacing.
 	
 	// Hides accordion panels:
 	.js & { display: none; }
