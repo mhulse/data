@@ -42,8 +42,11 @@ p {
 a {
 	
 	//font-weight: bold;
-	//border-bottom: 1px solid #AEE239;
-	box-shadow: 0 -.25em 0 #AEE239 inset;
+	//border-bottom: 1px solid $secondary;
+	box-shadow: inset 0 -.25em 0 $secondary;
+	
+	-webkit-transition: box-shadow 100ms linear;
+	        transition: box-shadow 100ms linear;
 	
 	&,
 	&:visited {
@@ -57,18 +60,18 @@ a {
 	&:active {
 		color: inherit;
 		//border: 0;
-		//box-shadow: none;
+		box-shadow: inset 0 -2em 0 $tertiary;
 	}
 	
 }
 
 ::-moz-selection {
-	background: rgba($primary, .55);
+	background: rgba($secondary, .55);
 	text-shadow: none;
 }
 
 ::selection {
-	background: rgba($primary, .55);
+	background: rgba($secondary, .55);
 	text-shadow: none;
 }
 

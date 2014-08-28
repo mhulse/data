@@ -56,10 +56,14 @@
 	&:active {
 		text-decoration: none;
 		color: $milk;
+		box-shadow: none;
 	}
 	
 	.no-touch &:hover,
-	&:focus { background-image: linear-gradient(transparent, rgba($raven, .05) 40%, rgba($raven, .10)); }
+	&:focus {
+		background-image: linear-gradient(transparent, rgba($raven, .05) 40%,
+		                  rgba($raven, .10));
+	}
 	
 	&:focus { outline: 0; }
 	

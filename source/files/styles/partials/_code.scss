@@ -253,8 +253,15 @@ kbd kbd {
 	text-align: left;
 	
 	a {
-		border: 0;
-		box-shadow: none;
+		
+		&,
+		&:visited,
+		.no-touch &:visited:hover,
+		&:focus,
+		.no-touch &:focus:hover,
+		.no-touch &:hover,
+		&:active { box-shadow: none; }
+		
 	}
 	
 }

@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/27
+ * @date 2014/08/28
  */
 
 
@@ -495,7 +495,9 @@ p.excerpt {
 }
 
 a {
-  box-shadow: 0 -.25em 0 #AEE239 inset;
+  box-shadow: inset 0 -0.25em 0 #aee239;
+  -webkit-transition: box-shadow 100ms linear;
+  transition: box-shadow 100ms linear;
 }
 a, a:visited {
   color: #000;
@@ -503,15 +505,16 @@ a, a:visited {
 }
 .no-touch a:visited:hover, a:focus, .no-touch a:focus:hover, .no-touch a:hover, a:active {
   color: inherit;
+  box-shadow: inset 0 -2em 0 #ff0;
 }
 
 ::-moz-selection {
-  background: rgba(0, 168, 198, 0.55);
+  background: rgba(174, 226, 57, 0.55);
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(0, 168, 198, 0.55);
+  background: rgba(174, 226, 57, 0.55);
   text-shadow: none;
 }
 
@@ -1300,8 +1303,7 @@ kbd kbd {
 .gist {
   text-align: left;
 }
-.gist a {
-  border: 0;
+.gist a, .gist a:visited, .no-touch .gist a:visited:hover, .gist a:focus, .no-touch .gist a:focus:hover, .no-touch .gist a:hover, .gist a:active {
   box-shadow: none;
 }
 
@@ -1510,6 +1512,7 @@ iframe[id^='twitter-widget-'],
 .form input[type="submit"]:active {
   text-decoration: none;
   color: #fff;
+  box-shadow: none;
 }
 .no-touch .button:hover, .no-touch .form button:hover, .form .no-touch button:hover,
 .no-touch .form input[type="button"]:hover,
@@ -1755,7 +1758,6 @@ aside > :last-child {
 .ajax-content {
   display: none;
   margin-top: -15px;
-  padding-bottom: 30px;
 }
 
 [itemprop="articleBody"] {

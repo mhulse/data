@@ -110,13 +110,11 @@
 	min-height: 50px;
 	margin-bottom: 40px; // Same margin as above h3 + 10px for better spacing.
 	
-	// Hides accordion panels:
-	.js & { display: none; }
+	.js & { display: none; } // Hides accordion panels.
 	
 }
 
 .ajax-content {
 	display: none;
-	margin-top: -15px;
-	padding-bottom: 30px; // Arbitrary.
+	margin-top: -15px; // Overlap h3 margin.
 }
