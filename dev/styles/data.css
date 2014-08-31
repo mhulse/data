@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/30
+ * @date 2014/08/31
  */
 
 
@@ -1882,6 +1882,16 @@ figure .scroll {
   font-size: 110%;
 }
 
+.js ul.harmonia {
+  display: none;
+}
+
+.harmonia-select {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
 @-webkit-keyframes skull {
   0% {
     background-position: center 0;
@@ -2031,63 +2041,6 @@ figure .scroll {
     animation-timing-function: steps(48);
   }
 }
-.callout {
-  color: #333;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-.callout.callout-box {
-  background-color: #ddd;
-  padding: 10px 20px;
-  border-radius: 6px;
-}
-.callout.callout-box.callout-info {
-  background-color: #bde5f8;
-}
-.callout.callout-box.callout-success {
-  background-color: #dff2bf;
-}
-.callout.callout-box.callout-warning {
-  background-color: #feefb3;
-}
-.callout.callout-box.callout-error {
-  background-color: #ffbaba;
-}
-.callout.callout-info {
-  color: #0d5476;
-}
-.callout.callout-info a, .callout.callout-info a:visited, .no-touch .callout.callout-info a:visited:hover, .callout.callout-info a:focus, .no-touch .callout.callout-info a:focus:hover, .no-touch .callout.callout-info a:hover, .callout.callout-info a:active {
-  color: #0d5476;
-}
-.callout.callout-success {
-  color: #4a6a15;
-}
-.callout.callout-success a, .callout.callout-success a:visited, .no-touch .callout.callout-success a:visited:hover, .callout.callout-success a:focus, .no-touch .callout.callout-success a:focus:hover, .no-touch .callout.callout-success a:hover, .callout.callout-success a:active {
-  color: #4a6a15;
-}
-.callout.callout-warning {
-  color: #7d6502;
-}
-.callout.callout-warning a, .callout.callout-warning a:visited, .no-touch .callout.callout-warning a:visited:hover, .callout.callout-warning a:focus, .no-touch .callout.callout-warning a:focus:hover, .no-touch .callout.callout-warning a:hover, .callout.callout-warning a:active {
-  color: #7d6502;
-}
-.callout.callout-error {
-  color: #870000;
-}
-.callout.callout-error a, .callout.callout-error a:visited, .no-touch .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .no-touch .callout.callout-error a:focus:hover, .no-touch .callout.callout-error a:hover, .callout.callout-error a:active {
-  color: #870000;
-}
-
-.js ul.harmonia {
-  display: none;
-}
-
-.harmonia-select {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
-
 header[role="banner"] div {
   color: rgba(62, 41, 0, 0.75);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
@@ -2166,6 +2119,8 @@ header[role="banner"] > div > div > div::before, header[role="banner"] > div > d
   left: 12px;
   bottom: 12px;
   background: transparent;
+  -webkit-transform: skew(-5deg) rotate(-5deg);
+  -ms-transform: skew(-5deg) rotate(-5deg);
   transform: skew(-5deg) rotate(-5deg);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   z-index: -1;
@@ -2173,7 +2128,56 @@ header[role="banner"] > div > div > div::before, header[role="banner"] > div > d
 header[role="banner"] > div > div > div::after {
   left: auto;
   right: 12px;
+  -webkit-transform: skew(5deg) rotate(5deg);
+  -ms-transform: skew(5deg) rotate(5deg);
   transform: skew(5deg) rotate(5deg);
+}
+
+.callout {
+  color: #333;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.callout.callout-box {
+  background-color: #ddd;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.callout.callout-box.callout-info {
+  background-color: #bde5f8;
+}
+.callout.callout-box.callout-success {
+  background-color: #dff2bf;
+}
+.callout.callout-box.callout-warning {
+  background-color: #feefb3;
+}
+.callout.callout-box.callout-error {
+  background-color: #ffbaba;
+}
+.callout.callout-info {
+  color: #0d5476;
+}
+.callout.callout-info a, .callout.callout-info a:visited, .no-touch .callout.callout-info a:visited:hover, .callout.callout-info a:focus, .no-touch .callout.callout-info a:focus:hover, .no-touch .callout.callout-info a:hover, .callout.callout-info a:active {
+  color: #0d5476;
+}
+.callout.callout-success {
+  color: #4a6a15;
+}
+.callout.callout-success a, .callout.callout-success a:visited, .no-touch .callout.callout-success a:visited:hover, .callout.callout-success a:focus, .no-touch .callout.callout-success a:focus:hover, .no-touch .callout.callout-success a:hover, .callout.callout-success a:active {
+  color: #4a6a15;
+}
+.callout.callout-warning {
+  color: #7d6502;
+}
+.callout.callout-warning a, .callout.callout-warning a:visited, .no-touch .callout.callout-warning a:visited:hover, .callout.callout-warning a:focus, .no-touch .callout.callout-warning a:focus:hover, .no-touch .callout.callout-warning a:hover, .callout.callout-warning a:active {
+  color: #7d6502;
+}
+.callout.callout-error {
+  color: #870000;
+}
+.callout.callout-error a, .callout.callout-error a:visited, .no-touch .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .no-touch .callout.callout-error a:focus:hover, .no-touch .callout.callout-error a:hover, .callout.callout-error a:active {
+  color: #870000;
 }
 
 @media print {

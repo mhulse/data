@@ -1,0 +1,140 @@
+header[role="banner"] {
+	
+	$card: #fffaf0;
+	
+	div {
+		
+		color: rgba(darken($card, 85%), .75);
+		text-shadow: 0 1px 0 rgba($milk, .75);
+		
+		a {
+			
+			&,
+			&:visited,
+			.no-touch &:visited:hover,
+			&:focus,
+			.no-touch &:focus:hover,
+			.no-touch &:hover,
+			&:active {
+				color: inherit;
+				box-shadow: none;
+			}
+			
+		}
+		
+		h1 {
+			
+			font-size: 18px;
+			line-height: 20px;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%); // 08/30/2014 Needed!
+			    -ms-transform: translateY(-50%);
+			        transform: translateY(-50%);
+			
+			span {
+				
+				display: none;
+				
+				+ span {
+					font-size: 14px;
+					font-weight: normal;
+					font-variant: small-caps;
+					letter-spacing: .05em;
+					display: block;
+				}
+			
+			}
+			
+		}
+		
+		p {
+			
+			font-size: 11px;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			line-height: 12px;
+			margin: 0;
+			padding: 0;
+			max-width: none;
+			width: auto;
+			position: absolute;
+			bottom: 15px;
+			left: 20px;
+			
+			+ p {
+				left: auto;
+				right: 20px;
+			}
+			
+		}
+		
+	}
+	
+	> div {
+		
+		max-width: 3.5in; // Aspect ratio: 3.5in x 2in = 1.75:1 = (1 / 1.75 = .57142857142857) x 100 = 57.142857142857
+		margin: 0 auto 15px;
+		position: relative;
+		
+		// http://stackoverflow.com/a/21738815/922323
+		> div {
+			
+			padding-top: 57.142857142857%; // 2in at its widest.
+			
+			// http://www.sitepoint.com/pure-css3-paper-curls/
+			> div {
+				
+				// http://www.colorzilla.com/gradient-editor/#ffffff+0,fffaf0+100;Custom
+				background-color: $card;
+				background: -moz-linear-gradient(top, $milk 0, $card 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $milk), color-stop(100%, $card));
+				background: -webkit-linear-gradient(top, $milk 0, $card 100%);
+				background: -o-linear-gradient(top, $milk 0, $card 100%);
+				background: -ms-linear-gradient(top, $milk 0, $card 100%);
+				background: linear-gradient(to bottom, $milk 0, $card 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$milk', endColorstr='$card',GradientType=0);
+				
+				border-radius: 3px;
+				box-shadow:
+					0 0 5px rgba($raven, .1),
+					inset 0 -5px 35px rgba(darken($card, 75%), .2),
+					inset 0 0 0 1px rgba(darken($card, 75%), .1);
+				
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				
+				&::before,
+				&::after {
+					position: absolute;
+					width: 40%;
+					height: 10px;
+					content: ' ';
+					left: 12px;
+					bottom: 12px;
+					background: transparent;
+					-webkit-transform: skew(-5deg) rotate(-5deg);
+					    -ms-transform: skew(-5deg) rotate(-5deg);
+					        transform: skew(-5deg) rotate(-5deg);
+					box-shadow: 0 6px 12px rgba($raven, .3);
+					z-index: -1;
+				}
+				&::after {
+					left: auto;
+					right: 12px;
+					-webkit-transform: skew(5deg) rotate(5deg);
+					    -ms-transform: skew(5deg) rotate(5deg);
+					        transform: skew(5deg) rotate(5deg);
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
