@@ -36,7 +36,9 @@ header[role="banner"] {
 			margin: 0;
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%); // 08/30/2014 Needed!
+			    -ms-transform: translateY(-50%);
+			        transform: translateY(-50%);
 			
 			span {
 				
