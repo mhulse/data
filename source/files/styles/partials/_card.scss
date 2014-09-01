@@ -1,24 +1,19 @@
 header[role="banner"] {
 	
-	$card: #f8f8ff;
-	
 	div {
 		
-		color: rgba(darken($raven, 85%), .75);
+		color: $raven;
 		
 		a {
 			
 			&,
-			&:visited {
-				color: inherit;
-				box-shadow: none;
-			}
+			&:visited,
 			.no-touch &:visited:hover,
 			&:focus,
 			.no-touch &:focus:hover,
 			.no-touch &:hover,
 			&:active {
-				color: $primary;
+				color: inherit;
 				box-shadow: none;
 			}
 			
@@ -89,20 +84,20 @@ header[role="banner"] {
 			> div {
 				
 				// http://www.colorzilla.com/gradient-editor/#ffffff+0,fffaf0+100;Custom
-				background-color: $card;
-				background: -moz-linear-gradient(top, $milk 0, $card 100%);
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $milk), color-stop(100%, $card));
-				background: -webkit-linear-gradient(top, $milk 0, $card 100%);
-				background: -o-linear-gradient(top, $milk 0, $card 100%);
-				background: -ms-linear-gradient(top, $milk 0, $card 100%);
-				background: linear-gradient(to bottom, $milk 0, $card 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$milk', endColorstr='$card',GradientType=0);
+				background-color: #f9f2e7;
+				// background: -moz-linear-gradient(top, $milk 0, $gray3 100%);
+				// background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $milk), color-stop(100%, $gray3));
+				// background: -webkit-linear-gradient(top, $milk 0, $gray3 100%);
+				// background: -o-linear-gradient(top, $milk 0, $gray3 100%);
+				// background: -ms-linear-gradient(top, $milk 0, $gray3 100%);
+				// background: linear-gradient(to bottom, $milk 0, $gray3 100%);
+				// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$milk', endColorstr='$gray3',GradientType=0);
 				
-				border-radius: 3px;
-				box-shadow:
-					0 2px 3px rgba($raven, .075),
-					//inset 0 -15px 20px rgba($raven, .05),
-					inset 0 0 0 1px rgba($raven, .15);
+				border-radius: 5px;
+				// box-shadow:
+				// 	0 2px 3px rgba($raven, .075),
+				// 	//inset 0 -15px 20px rgba($raven, .05),
+				// 	inset 0 0 0 1px rgba($raven, .15);
 				
 				position: absolute;
 				top: 0;
@@ -110,28 +105,28 @@ header[role="banner"] {
 				bottom: 0;
 				left: 0;
 				
-				&::before,
-				&::after {
-					position: absolute;
-					width: 40%;
-					height: 10px;
-					content: ' ';
-					left: 12px;
-					bottom: 12px;
-					background: transparent;
-					-webkit-transform: skew(-8deg) rotate(-8deg);
-					    -ms-transform: skew(-8deg) rotate(-8deg);
-					        transform: skew(-8deg) rotate(-8deg);
-					box-shadow: 0 6px 12px rgba($raven, .3);
-					z-index: -1;
-				}
-				&::after {
-					left: auto;
-					right: 12px;
-					-webkit-transform: skew(8deg) rotate(8deg);
-					    -ms-transform: skew(8deg) rotate(8deg);
-					        transform: skew(8deg) rotate(8deg);
-				}
+				// &::before,
+				// &::after {
+				// 	position: absolute;
+				// 	width: 40%;
+				// 	height: 10px;
+				// 	content: ' ';
+				// 	left: 12px;
+				// 	bottom: 12px;
+				// 	background: transparent;
+				// 	-webkit-transform: skew(-8deg) rotate(-8deg);
+				// 	    -ms-transform: skew(-8deg) rotate(-8deg);
+				// 	        transform: skew(-8deg) rotate(-8deg);
+				// 	box-shadow: 0 6px 12px rgba($raven, .3);
+				// 	z-index: -1;
+				// }
+				// &::after {
+				// 	left: auto;
+				// 	right: 12px;
+				// 	-webkit-transform: skew(8deg) rotate(8deg);
+				// 	    -ms-transform: skew(8deg) rotate(8deg);
+				// 	        transform: skew(8deg) rotate(8deg);
+				// }
 				
 			}
 			
