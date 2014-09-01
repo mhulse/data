@@ -2042,8 +2042,7 @@ figure .scroll {
   }
 }
 header[role="banner"] div {
-  color: rgba(62, 41, 0, 0.75);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.75);
 }
 header[role="banner"] div a, header[role="banner"] div a:visited, .no-touch header[role="banner"] div a:visited:hover, header[role="banner"] div a:focus, .no-touch header[role="banner"] div a:focus:hover, .no-touch header[role="banner"] div a:hover, header[role="banner"] div a:active {
   color: inherit;
@@ -2095,16 +2094,16 @@ header[role="banner"] > div > div {
   padding-top: 57.142857142857%;
 }
 header[role="banner"] > div > div > div {
-  background-color: #fffaf0;
-  background: -moz-linear-gradient(top, #fff 0, #fffaf0 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(100%, #fffaf0));
-  background: -webkit-linear-gradient(top, #fff 0, #fffaf0 100%);
-  background: -o-linear-gradient(top, #fff 0, #fffaf0 100%);
-  background: -ms-linear-gradient(top, #fff 0, #fffaf0 100%);
-  background: linear-gradient(to bottom, #fff 0, #fffaf0 100%);
+  background-color: #f8f8ff;
+  background: -moz-linear-gradient(top, #fff 0, #f8f8ff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(100%, #f8f8ff));
+  background: -webkit-linear-gradient(top, #fff 0, #f8f8ff 100%);
+  background: -o-linear-gradient(top, #fff 0, #f8f8ff 100%);
+  background: -ms-linear-gradient(top, #fff 0, #f8f8ff 100%);
+  background: linear-gradient(to bottom, #fff 0, #f8f8ff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$milk', endColorstr='$card',GradientType=0);
   border-radius: 3px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), inset 0 -5px 35px rgba(113, 75, 0, 0.2), inset 0 0 0 1px rgba(113, 75, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), inset 0 -15px 20px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -2119,18 +2118,18 @@ header[role="banner"] > div > div > div::before, header[role="banner"] > div > d
   left: 12px;
   bottom: 12px;
   background: transparent;
-  -webkit-transform: skew(-5deg) rotate(-5deg);
-  -ms-transform: skew(-5deg) rotate(-5deg);
-  transform: skew(-5deg) rotate(-5deg);
+  -webkit-transform: skew(-8deg) rotate(-8deg);
+  -ms-transform: skew(-8deg) rotate(-8deg);
+  transform: skew(-8deg) rotate(-8deg);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   z-index: -1;
 }
 header[role="banner"] > div > div > div::after {
   left: auto;
   right: 12px;
-  -webkit-transform: skew(5deg) rotate(5deg);
-  -ms-transform: skew(5deg) rotate(5deg);
-  transform: skew(5deg) rotate(5deg);
+  -webkit-transform: skew(8deg) rotate(8deg);
+  -ms-transform: skew(8deg) rotate(8deg);
+  transform: skew(8deg) rotate(8deg);
 }
 
 .callout {
