@@ -2044,8 +2044,12 @@ figure .scroll {
 header[role="banner"] div {
   color: rgba(0, 0, 0, 0.75);
 }
-header[role="banner"] div a, header[role="banner"] div a:visited, .no-touch header[role="banner"] div a:visited:hover, header[role="banner"] div a:focus, .no-touch header[role="banner"] div a:focus:hover, .no-touch header[role="banner"] div a:hover, header[role="banner"] div a:active {
+header[role="banner"] div a, header[role="banner"] div a:visited {
   color: inherit;
+  box-shadow: none;
+}
+.no-touch header[role="banner"] div a:visited:hover, header[role="banner"] div a:focus, .no-touch header[role="banner"] div a:focus:hover, .no-touch header[role="banner"] div a:hover, header[role="banner"] div a:active {
+  color: #00a8c6;
   box-shadow: none;
 }
 header[role="banner"] div h1 {
@@ -2103,7 +2107,7 @@ header[role="banner"] > div > div > div {
   background: linear-gradient(to bottom, #fff 0, #f8f8ff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$milk', endColorstr='$card',GradientType=0);
   border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), inset 0 -15px 20px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.075), inset 0 0 0 1px rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 0;
   right: 0;

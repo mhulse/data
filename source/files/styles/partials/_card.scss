@@ -9,13 +9,16 @@ header[role="banner"] {
 		a {
 			
 			&,
-			&:visited,
+			&:visited {
+				color: inherit;
+				box-shadow: none;
+			}
 			.no-touch &:visited:hover,
 			&:focus,
 			.no-touch &:focus:hover,
 			.no-touch &:hover,
 			&:active {
-				color: inherit;
+				color: $primary;
 				box-shadow: none;
 			}
 			
@@ -97,9 +100,9 @@ header[role="banner"] {
 				
 				border-radius: 3px;
 				box-shadow:
-					0 2px 3px rgba($raven, .1),
-					inset 0 -15px 20px rgba($raven, .05),
-					inset 0 0 0 1px rgba($raven, .1);
+					0 2px 3px rgba($raven, .075),
+					//inset 0 -15px 20px rgba($raven, .05),
+					inset 0 0 0 1px rgba($raven, .15);
 				
 				position: absolute;
 				top: 0;
