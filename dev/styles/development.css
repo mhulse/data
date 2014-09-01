@@ -24,8 +24,11 @@
   margin: 5px 0;
   padding: 5px;
 }
+.swatches .neutral {
+  background: #f9f2e7;
+}
 .swatches .primary {
-  background: #00a8c6;
+  background: #f06;
 }
 .swatches .secondary {
   background: #aee239;

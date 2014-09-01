@@ -924,7 +924,7 @@ ul li::before {
   outline: 0;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
-  border-color: #00a8c6;
+  border-color: #f06;
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
@@ -1459,9 +1459,9 @@ iframe[id^='twitter-widget-'],
   user-select: none;
   font-size: 18px;
   line-height: 20px;
-  color: #005160;
+  color: #99003d;
   width: 100%;
-  background-color: #00a8c6;
+  background-color: #f06;
   border: none transparent;
   box-shadow: none;
   border-radius: 3px;
@@ -1694,7 +1694,7 @@ aside > :last-child {
   cursor: hand;
 }
 #primary > h2.ui-state-hover, #primary > h2.ui-state-active {
-  color: #00a8c6;
+  color: #f06;
 }
 #primary > h2:active, #primary > h2:focus {
   outline: 0;
@@ -1724,10 +1724,10 @@ aside > :last-child {
   box-shadow: none;
 }
 #secondary > h3.ui-state-hover span, #secondary > h3.ui-state-active span {
-  box-shadow: 0 0 0 10px #00a8c6, 0 0 0 10px #00a8c6, 0 0 0 10px #00a8c6, 0 0 0 10px #00a8c6;
+  box-shadow: 0 0 0 10px #f06, 0 0 0 10px #f06, 0 0 0 10px #f06, 0 0 0 10px #f06;
 }
 #secondary > h3.ui-state-hover span span, #secondary > h3.ui-state-active span span {
-  background: #00a8c6;
+  background: #f06;
   box-shadow: none;
 }
 #secondary > h3:active, #secondary > h3:focus {
