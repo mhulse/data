@@ -10,8 +10,8 @@
 		width: auto;
 		max-width: none;
 		margin: {
-			top: 10px;
-			bottom: 20px;
+			top: 5px; // Padding of below `<span>` accounts for rest of white space.
+			bottom: 15px; // IBID.
 		}
 		display: table;
 		
@@ -23,6 +23,12 @@
 		
 		&:active,
 		&:focus { outline: 0; }
+		
+		span {
+			//border: 1px solid; // Use border to gauge margins between `<select>` and secondary accordion.
+			display: inline-block;
+			padding: 10px 30px; // Better for touch/fingers.
+		}
 		
 	}
 	

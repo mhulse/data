@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/08/31
+ * @date 2014/09/01
  */
 
 
@@ -1459,17 +1459,15 @@ iframe[id^='twitter-widget-'],
   user-select: none;
   font-size: 18px;
   line-height: 20px;
-  color: #99003d;
+  color: #749e17;
   width: 100%;
-  background-color: #f06;
+  background-color: #aee239;
   border: none transparent;
   box-shadow: none;
   border-radius: 3px;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px 5px;
   -webkit-tap-highlight-color: transparent;
 }
 .button::-moz-focus-inner, .form button::-moz-focus-inner,
@@ -1511,7 +1509,7 @@ iframe[id^='twitter-widget-'],
 .form input[type="reset"]:active,
 .form input[type="submit"]:active {
   text-decoration: none;
-  color: #fff;
+  color: #435b0d;
   box-shadow: none;
 }
 .no-touch .button:hover, .no-touch .form button:hover, .form .no-touch button:hover,
@@ -1687,8 +1685,8 @@ aside > :last-child {
   color: #000;
   width: auto;
   max-width: none;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
   display: table;
   cursor: pointer;
   cursor: hand;
@@ -1698,6 +1696,10 @@ aside > :last-child {
 }
 #primary > h2:active, #primary > h2:focus {
   outline: 0;
+}
+#primary > h2 span {
+  display: inline-block;
+  padding: 10px 30px;
 }
 
 #secondary > h3 {
