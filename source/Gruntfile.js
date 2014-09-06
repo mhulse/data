@@ -359,32 +359,48 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				expand : true,
-				cwd : './files/templates/',
-				src : [
-					'**/*.html',
-					'!latest.html',
+				files : [
+					
+					{
+						
+						expand : true,
+						cwd : './files/templates/',
+						src : [
+							'**/*.html',
+							'!includes/**/*',
+							'!latest.html',
+						],
+						dest : '../dev/',
+						
+					},
+					
 				],
-				dest : '../dev/',
 				
 			},
 			
 			prod : {
 				
-				expand : true,
-				cwd : './files/templates/',
-				src : [
-					'**/*.html',
-					'!latest.html',
+				files : [
+					
+					{
+						
+						expand : true,
+						cwd : './files/templates/',
+						src : [
+							'**/*.html',
+							'!includes/**/*',
+							'!latest.html',
+						],
+						dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						
+					}, {
+						
+						src : './files/templates/latest.html',
+						dest : '../prod/index.html',
+						
+					},
+					
 				],
-				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
-				
-			},
-			
-			misc : {
-				
-				src : './files/templates/latest.html',
-				dest : '../prod/index.html',
 				
 			},
 			
@@ -403,27 +419,42 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				expand : true,
-				cwd : './files/',
-				src : [
-					'images/**/*',
-					'media/**/*',
-					'scripts/**/*',
+				files : [
+					
+					{
+						
+						expand : true,
+						cwd : './files/',
+						src : [
+							'images/**/*',
+							'media/**/*',
+							'scripts/**/*',
+						],
+						dest : '../dev/',
+						
+					},
+					
 				],
-				dest : '../dev/',
 				
 			},
 			
 			prod : {
 				
-				expand : true,
-				cwd : './files/',
-				src : [
-					'images/**/*',
-					'media/**/*',
-					'scripts/**/*',
+				files : [
+					
+					{
+						
+						expand : true,
+						cwd : './files/',
+						src : [
+							'images/**/*',
+							'media/**/*',
+						],
+						dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						
+					},
+					
 				],
-				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 				
 			},
 			
@@ -470,7 +501,7 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	
-	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'preprocess:misc', 'copy:prod',]);
+	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod',]);
 	
 	grunt.registerTask('default', ['dev',]);
 	
