@@ -1827,7 +1827,6 @@ aside > :last-child {
   margin: 25px auto;
   position: relative;
   overflow: hidden;
-  -webkit-overflow-scrolling: touch;
 }
 .scroll img:first-of-type {
   max-width: none;
@@ -1836,7 +1835,6 @@ aside > :last-child {
 .scroll img:first-of-type {
   margin-top: 0;
   margin-bottom: 0;
-  -webkit-transform: translateZ(0);
 }
 figure .scroll {
   margin-top: 0;
@@ -1844,14 +1842,14 @@ figure .scroll {
 }
 
 .ps-container .ps-scrollbar-x-rail {
-  height: 8px;
-  background-color: rgba(174, 226, 57, 0.5);
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 .ps-container .ps-scrollbar-x {
-  background-color: rgba(255, 255, 0, 0.75);
-  height: 8px;
+  background-color: rgba(255, 255, 0, 0.9);
+  height: 6px;
   position: absolute;
   bottom: 0;
   cursor: pointer;
