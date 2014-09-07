@@ -1,18 +1,12 @@
 
-// Simple solution for responsive tables.
-//
-// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
-// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
-// @see http://stackoverflow.com/a/10122689/922323
+// @see https://github.com/noraesae/perfect-scrollbar
 
 .scroll {
 	
 	width: 100%;
-	margin: {
-		top: 25px;
-		bottom: 25px;
-	}
-	overflow-y: auto;
+	margin: 25px auto;
+	position: relative;
+	overflow: hidden;
 	-webkit-overflow-scrolling: touch;
 	
 	img:first-of-type {
@@ -27,46 +21,58 @@
 		-webkit-transform: translateZ(0);
 	}
 	
-	figure & { margin: 0; }
+	figure & {
+		margin: {
+			top: 0;
+			bottom: 0;
+		}
+	}
 	
 }
 
-// For the scroll left/right icon added via JS:
-.scroll-wrap { position: relative; }
-.scroll-overlay {
+
+.ps-container {
 	
-	font-family: arial, sans-serif;
-	font-size: 11px;
-	line-height: 11px;
-	letter-spacing: .15em;
-	text-transform: uppercase;
-	text-align: center;
-	text-shadow: 0 0 1px $raven;
-	color: $milk;
-	border-radius: 3px;
-	background: rgba($raven, .75);
-	padding: 5px 8px;
-	position: absolute;
-	top: 10px;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	   -moz-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	     -o-transform: translateX(-50%);
-	        transform: translateX(-50%);
-	z-index: 100;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	     -o-user-select: none;
-	        user-select: none;
-	opacity: .5;
-	cursor: default;
+	.ps-scrollbar-x-rail {
+		
+		height: 8px;
+		background-color: rgba($milk, .5);
+		// opacity: .5;
+		// filter: alpha(opacity=50);
+		position: absolute;
+		bottom: 0;
+		
+		// &:hover,
+		// &.hover {
+			
+		// 	opacity: 1;
+		// 	filter: alpha(opacity=100);
+			
+		// 	//.ps-scrollbar-x { background-color: $tertiary; }
+			
+		// }
+		
+		// &.in-scrolling {
+		// 	opacity: 1;
+		// 	filter: alpha(opacity=100);
+		// }
+		
+	}
 	
-	&::before { content: "←"; }
-	&::after { content: "→"; }
-	
-	&::before,
-	&::after { font-size: 110%; }
+	.ps-scrollbar-x {
+		background-color: rgba($raven, .75);
+		height: 8px;
+		position: absolute;
+		bottom: 0;
+		cursor: pointer;
+		// -webkit-border-radius: 4px;
+		//    -moz-border-radius: 4px;
+		//         border-radius: 4px;
+		// -webkit-transition: background-color .2s linear;
+		//    -moz-transition: background-color .2s linear;
+		//     -ms-transition: background-color .2s linear;
+		//      -o-transition: background-color .2s linear;
+		//         transition: background-color .2s linear;
+	}
 	
 }

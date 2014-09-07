@@ -12,7 +12,6 @@
  */
 
 
-@charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -924,7 +923,7 @@ ul li::before {
   outline: 0;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
-  border-color: #f06;
+  border-color: #13aac9;
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
@@ -1318,6 +1317,8 @@ figure {
   margin-bottom: 25px;
 }
 figure img {
+  margin: 0 auto;
+  display: block;
   vertical-align: top;
 }
 
@@ -1692,7 +1693,7 @@ aside > :last-child {
   cursor: hand;
 }
 #primary > h2.ui-state-hover, #primary > h2.ui-state-active {
-  color: #f06;
+  color: #13aac9;
 }
 #primary > h2:active, #primary > h2:focus {
   outline: 0;
@@ -1726,10 +1727,10 @@ aside > :last-child {
   box-shadow: none;
 }
 #secondary > h3.ui-state-hover span, #secondary > h3.ui-state-active span {
-  box-shadow: 0 0 0 10px #f06, 0 0 0 10px #f06, 0 0 0 10px #f06, 0 0 0 10px #f06;
+  box-shadow: 0 0 0 10px #13aac9, 0 0 0 10px #13aac9, 0 0 0 10px #13aac9, 0 0 0 10px #13aac9;
 }
 #secondary > h3.ui-state-hover span span, #secondary > h3.ui-state-active span span {
-  background: #f06;
+  background: #13aac9;
   box-shadow: none;
 }
 #secondary > h3:active, #secondary > h3:focus {
@@ -1823,9 +1824,9 @@ aside > :last-child {
 
 .scroll {
   width: 100%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  overflow-y: auto;
+  margin: 25px auto;
+  position: relative;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 .scroll img:first-of-type {
@@ -1838,50 +1839,22 @@ aside > :last-child {
   -webkit-transform: translateZ(0);
 }
 figure .scroll {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.scroll-wrap {
-  position: relative;
-}
-
-.scroll-overlay {
-  font-family: arial, sans-serif;
-  font-size: 11px;
-  line-height: 11px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  text-align: center;
-  text-shadow: 0 0 1px #000;
-  color: #fff;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.75);
-  padding: 5px 8px;
+.ps-container .ps-scrollbar-x-rail {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 100;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  opacity: .5;
-  cursor: default;
+  bottom: 0;
 }
-.scroll-overlay::before {
-  content: "←";
-}
-.scroll-overlay::after {
-  content: "→";
-}
-.scroll-overlay::before, .scroll-overlay::after {
-  font-size: 110%;
+.ps-container .ps-scrollbar-x {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
 }
 
 .js ul.harmonia {

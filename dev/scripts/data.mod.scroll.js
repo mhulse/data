@@ -4,58 +4,40 @@ DATA.register(function() {
 	
 	'use strict';
 	
-	$.fn.hasVerticalScrollBar = function () {
+	var timer;
+	var options = { suppressScrollY: true, wheelPropagation: true };
+	var _scroll = function() {
 		
-		return (this[0].clientHeight < this[0].scrollHeight) ? true : false;
+		// Make `.scroll` fit width of children:
+		$(this)
+			.each(function() {
+				
+				var $this = $(this);
+				
+				//console.log($this.children().width());
+				
+				$this.css('maxWidth', $this.children().width());
+				
+			})
+			// Re-initialize plugin:
+			.perfectScrollbar(options);
 		
 	};
+	var $scroll = $('.scroll');
 	
-	$.fn.hasHorizontalScrollBar = function() {
-		
-		return (this[0].clientWidth < this[0].scrollWidth) ? true : false;
-		
-	};
+	// Call on page load (to catch non-ajaxed `.scroll`s):
+	_scroll.call($scroll);
 	
-	var $scroll = $('img').closest('.scroll'),
-	    $scroll_wrap = $('<div />', { 'class': 'scroll-wrap' }),
-	    $scroll_overlay = $('<div />', { 'class': 'scroll-overlay' }),
-	    resizeTimer;
-	
-	$scroll.wrap($scroll_wrap);
-	$scroll_overlay
-		.text('Scroll')
-		.hide()
-		.insertAfter($scroll);
-	
-	$scroll.on('foo', function() {
-		
-		var $this = $(this),
-		    $that = $this.parent('.scroll-wrap').find('.scroll-overlay');
-		
-		if ($this.hasHorizontalScrollBar()) {
-			$that.show();
-			//console.log('show');
-		} else {
-			$that.hide();
-			//console.log('hide');
-		}
-		
-	});
-	
-	// https://github.com/mhulse/picard/issues/137
-	$(window).load(function() {
-		
-		$scroll.trigger('foo');
-		
-	});
+	// Listen for custom `scroll.perfect` event (called from `data.mod.accordion.js`):
+	$(document).on('scroll.perfect', '.scroll', _scroll);
 	
 	$(window).resize(function() {
 		
-		clearTimeout(resizeTimer);
+		clearTimeout(timer);
 		
-		resizeTimer = setTimeout(function() {
+		timer = setTimeout(function() {
 			
-			$scroll.trigger('foo');
+			$('.scroll').perfectScrollbar('update'); // Update initialized `perfectScrollbar()` instances.
 			
 		}, 100);
 		
