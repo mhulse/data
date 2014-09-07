@@ -1845,12 +1845,12 @@ figure .scroll {
 
 .ps-container .ps-scrollbar-x-rail {
   height: 8px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(174, 226, 57, 0.5);
   position: absolute;
   bottom: 0;
 }
 .ps-container .ps-scrollbar-x {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 255, 0, 0.75);
   height: 8px;
   position: absolute;
   bottom: 0;

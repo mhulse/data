@@ -36,7 +36,7 @@
 	.ps-scrollbar-x-rail {
 		
 		height: 8px;
-		background-color: rgba($milk, .5);
+		background-color: rgba($secondary, .5);
 		// opacity: .5;
 		// filter: alpha(opacity=50);
 		position: absolute;
@@ -60,7 +60,7 @@
 	}
 	
 	.ps-scrollbar-x {
-		background-color: rgba($raven, .75);
+		background-color: rgba($tertiary, .75);
 		height: 8px;
 		position: absolute;
 		bottom: 0;
