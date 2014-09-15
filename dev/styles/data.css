@@ -923,7 +923,7 @@ ul li::before {
   outline: 0;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
-  border-color: #13aac9;
+  border-color: #ff0090;
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
@@ -1693,7 +1693,7 @@ aside > :last-child {
   cursor: hand;
 }
 #primary > h2.ui-state-hover, #primary > h2.ui-state-active {
-  color: #13aac9;
+  color: #ff0090;
 }
 #primary > h2:active, #primary > h2:focus {
   outline: 0;
@@ -1713,25 +1713,20 @@ aside > :last-child {
   max-width: none;
   margin-top: 0;
   margin-bottom: 30px;
-  padding: 0 10px;
   display: table;
   cursor: pointer;
   cursor: hand;
 }
-#secondary > h3 span {
-  box-shadow: 0 0 0 10px #000, 0 0 0 10px #000, 0 0 0 10px #000, 0 0 0 10px #000;
-}
-#secondary > h3 span span {
+#secondary > h3 > span {
+  padding: 10px;
   background: #000;
+  box-decoration-break: clone;
+}
+#secondary > h3 > span > span {
   position: relative;
-  box-shadow: none;
 }
-#secondary > h3.ui-state-hover span, #secondary > h3.ui-state-active span {
-  box-shadow: 0 0 0 10px #13aac9, 0 0 0 10px #13aac9, 0 0 0 10px #13aac9, 0 0 0 10px #13aac9;
-}
-#secondary > h3.ui-state-hover span span, #secondary > h3.ui-state-active span span {
-  background: #13aac9;
-  box-shadow: none;
+#secondary > h3.ui-state-hover > span, #secondary > h3.ui-state-active > span {
+  background: #ff0090;
 }
 #secondary > h3:active, #secondary > h3:focus {
   outline: 0;
@@ -2067,7 +2062,7 @@ header[role="banner"] > div > div {
   padding-top: 57.142857142857%;
 }
 header[role="banner"] > div > div > div {
-  background-color: #f9f2e7;
+  background-color: #07e7f7;
   border-radius: 5px;
   position: absolute;
   top: 0;

@@ -49,44 +49,25 @@
 			top: 0;
 			bottom: 30px; // 20px of top/bottom box-shadows + 10px margin.
 		}
-		padding: 0 10px; // Reclaim 10px left/right of box-shadow.
 		display: table; // Forces width to that of children.
 		cursor: pointer;
 		cursor: hand;
 		
-		span {
+		> span {
 			
-			box-shadow: // Firefox not anti-aliasing a single box-shadow (rounding problems, I think); using multiple to make crisp.
-				0 0 0 10px $raven,
-				0 0 0 10px $raven,
-				0 0 0 10px $raven,
-				0 0 0 10px $raven;
+			// https://github.com/mhulse/data/issues/18
+			padding: 10px;
+			background: $raven;
+			box-decoration-break: clone;
 			
-			span {
-				background: $raven;
-				position: relative;
-				box-shadow: none;
-			}
+			> span { position: relative; }
 			
 		}
 		
 		&.ui-state-hover,
 		&.ui-state-active {
 			
-			span {
-				
-				box-shadow: // IBID.
-					0 0 0 10px $primary,
-					0 0 0 10px $primary,
-					0 0 0 10px $primary,
-					0 0 0 10px $primary;
-				
-				span {
-					background: $primary;
-					box-shadow: none;
-				}
-				
-			}
+			> span { background: $primary; }
 			
 		}
 		
