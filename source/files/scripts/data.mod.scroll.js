@@ -5,7 +5,11 @@ DATA.register(function() {
 	'use strict';
 	
 	var timer;
-	var options = { suppressScrollY: true, wheelPropagation: true };
+	var options = {
+		suppressScrollY: true,
+		wheelPropagation: true,
+		minScrollbarLength: 100
+	};
 	var _scroll = function() {
 		
 		// Make `.scroll` fit width of children:
