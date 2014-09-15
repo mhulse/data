@@ -58,7 +58,11 @@
 			// https://github.com/mhulse/data/issues/18
 			padding: 10px;
 			background: $raven;
-			box-decoration-break: clone;
+			-webkit-box-decoration-break: clone;
+			   -moz-box-decoration-break: clone;
+			    -ms-box-decoration-break: clone;
+			     -o-box-decoration-break: clone;
+			        box-decoration-break: clone;
 			
 			> span { position: relative; }
 			

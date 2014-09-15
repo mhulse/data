@@ -1720,6 +1720,10 @@ aside > :last-child {
 #secondary > h3 > span {
   padding: 10px;
   background: #000;
+  -webkit-box-decoration-break: clone;
+  -moz-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 #secondary > h3 > span > span {
