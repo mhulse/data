@@ -492,7 +492,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   color: #000;
-  background: #fff url(../images/grunge.gif);
+  background: #fff url(../images/grunge.gif) center top;
   padding: 25px;
 }
 
