@@ -39,15 +39,15 @@
 	> h3 {
 		
 		font-size: 26px;
-		line-height: 30px; // Eyeballed this with margin and box-shadows turned off.
+		line-height: 46px; // Eyeballed this. Would prefer `30px` if Firefox `mix-blend-mode` bug gets fixed (see below).
 		font-weight: normal;
 		letter-spacing: .05em;
-		color: $milk;
+		color: $raven;
 		width: auto;
 		max-width: none;
 		margin: {
 			top: 0;
-			bottom: 30px; // 20px of top/bottom box-shadows + 10px margin.
+			bottom: 20px; // Would prefer `30px` if Firefox `mix-blend-mode` bug gets fixed (see below).
 		}
 		display: table; // Forces width to that of children.
 		cursor: pointer;
@@ -57,21 +57,22 @@
 			
 			// https://github.com/mhulse/data/issues/18
 			padding: 10px;
-			background: $raven;
+			background: $secondary;
 			-webkit-box-decoration-break: clone;
 			   -moz-box-decoration-break: clone;
 			    -ms-box-decoration-break: clone;
 			     -o-box-decoration-break: clone;
 			        box-decoration-break: clone;
+			mix-blend-mode: multiply; // This causes background to overlap text in Firefox. :(
 			
-			> span { position: relative; }
+			> span { position: relative; } // This fixes overlap if no `mix-blend-mode`.
 			
 		}
 		
 		&.ui-state-hover,
 		&.ui-state-active {
 			
-			> span { background: $primary; }
+			> span { background: $tertiary; }
 			
 		}
 		
@@ -93,13 +94,14 @@
 	top: 0;
 	left: 50%;
 	margin-left: -25px;
+	mix-blend-mode: multiply;
 }
 
 .ui-accordion-content {
 	
 	position: relative;
 	min-height: 50px;
-	margin-bottom: 40px; // Same margin as above h3 + 10px for better spacing.
+	margin-bottom: 30px; // Same margin as above h3 + 10px for better spacing.
 	
 	.js & { display: none; } // Hides accordion panels.
 	
@@ -107,5 +109,5 @@
 
 .ajax-content {
 	display: none;
-	margin-top: -15px; // Overlap h3 margin.
+	margin-top: -10px; // Overlap h3 margin.
 }

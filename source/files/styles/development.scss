@@ -11,6 +11,7 @@
 	color: $raven;
 	max-width: 650px;
 	margin: 20px auto;
+	mix-blend-mode: multiply;
 	
 	.swatches-swatch {
 		font-size: 14px;
@@ -38,6 +39,7 @@
 		bottom: 40px;
 	}
 	padding: 0;
+	mix-blend-mode: multiply;
 	
 	a {
 		
@@ -56,6 +58,7 @@
 		&:active {
 			color: $milk;
 			background: $raven;
+			box-shadow: none;
 		}
 		
 	}

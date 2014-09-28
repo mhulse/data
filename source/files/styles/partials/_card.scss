@@ -93,6 +93,8 @@ header[role="banner"] {
 				// background: linear-gradient(to bottom, $milk 0, $gray3 100%);
 				// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$milk', endColorstr='$gray3',GradientType=0);
 				
+				mix-blend-mode: multiply;
+				
 				border-radius: 5px;
 				// box-shadow:
 				// 	0 2px 3px rgba($raven, .075),

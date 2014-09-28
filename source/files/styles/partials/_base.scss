@@ -26,7 +26,7 @@ body {
 	font-family: $sans;
 	text-align: center;
 	color: $raven;
-	background: $milk;
+	background: $milk url(../images/grunge.gif);
 	padding: 25px;
 }
 
@@ -44,6 +44,7 @@ a {
 	//font-weight: bold;
 	//border-bottom: 1px solid $secondary;
 	box-shadow: inset 0 -.25em 0 $secondary;
+	xmix-blend-mode: multiply;
 	
 	-webkit-transition: box-shadow 100ms linear;
 	        transition: box-shadow 100ms linear;
@@ -158,6 +159,7 @@ ins {
 	padding: 1px 3px;
 	position: relative;
 	border-radius: 2px;
+	mix-blend-mode: multiply;
 }
 del {
 	color: darken($chili, 50%);

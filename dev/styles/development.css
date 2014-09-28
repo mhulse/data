@@ -16,6 +16,7 @@
   color: #000;
   max-width: 650px;
   margin: 20px auto;
+  mix-blend-mode: multiply;
 }
 .swatches .swatches-swatch {
   font-size: 14px;
@@ -45,6 +46,7 @@
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 0;
+  mix-blend-mode: multiply;
 }
 .marker a {
   padding: 15px 20px;
@@ -59,4 +61,5 @@
 .no-touch .marker a:visited:hover, .marker a:focus, .no-touch .marker a:focus:hover, .no-touch .marker a:hover, .marker a:active {
   color: #fff;
   background: #000;
+  box-shadow: none;
 }

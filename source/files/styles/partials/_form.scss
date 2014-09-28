@@ -57,6 +57,7 @@
 		-webkit-background-clip: padding;
 		   -moz-background-clip: padding;
 				background-clip: padding-box;
+		mix-blend-mode: multiply;
 		
 		&::-webkit-input-placeholder {
 			text-align: left;

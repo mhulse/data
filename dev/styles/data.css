@@ -495,6 +495,7 @@ p.excerpt {
 
 a {
   box-shadow: inset 0 -0.25em 0 #aee239;
+  xmix-blend-mode: multiply;
   -webkit-transition: box-shadow 100ms linear;
   transition: box-shadow 100ms linear;
 }
@@ -586,6 +587,7 @@ ins {
   padding: 1px 3px;
   position: relative;
   border-radius: 2px;
+  mix-blend-mode: multiply;
 }
 
 del {
@@ -902,6 +904,7 @@ ul li::before {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  mix-blend-mode: multiply;
 }
 .form input[type="text"]::-webkit-input-placeholder, .form input[type="password"]::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
   text-align: left;
@@ -1328,6 +1331,7 @@ figcaption {
   text-transform: uppercase;
   letter-spacing: .05em;
   word-spacing: .15em;
+  mix-blend-mode: multiply;
 }
 figcaption p {
   font-size: inherit;
@@ -1458,6 +1462,7 @@ iframe[id^='twitter-widget-'],
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  mix-blend-mode: multiply;
   font-size: 18px;
   line-height: 20px;
   color: #749e17;
@@ -1705,32 +1710,33 @@ aside > :last-child {
 
 #secondary > h3 {
   font-size: 26px;
-  line-height: 30px;
+  line-height: 46px;
   font-weight: normal;
   letter-spacing: .05em;
-  color: #fff;
+  color: #000;
   width: auto;
   max-width: none;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: table;
   cursor: pointer;
   cursor: hand;
 }
 #secondary > h3 > span {
   padding: 10px;
-  background: #000;
+  background: #aee239;
   -webkit-box-decoration-break: clone;
   -moz-box-decoration-break: clone;
   -ms-box-decoration-break: clone;
   -o-box-decoration-break: clone;
   box-decoration-break: clone;
+  mix-blend-mode: multiply;
 }
 #secondary > h3 > span > span {
   position: relative;
 }
 #secondary > h3.ui-state-hover > span, #secondary > h3.ui-state-active > span {
-  background: #ff0090;
+  background: #ff0;
 }
 #secondary > h3:active, #secondary > h3:focus {
   outline: 0;
@@ -1746,12 +1752,13 @@ aside > :last-child {
   top: 0;
   left: 50%;
   margin-left: -25px;
+  mix-blend-mode: multiply;
 }
 
 .ui-accordion-content {
   position: relative;
   min-height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .js .ui-accordion-content {
   display: none;
@@ -1759,7 +1766,7 @@ aside > :last-child {
 
 .ajax-content {
   display: none;
-  margin-top: -15px;
+  margin-top: -10px;
 }
 
 [itemprop="articleBody"] {
@@ -1851,7 +1858,7 @@ figure .scroll {
   visibility: visible;
 }
 .ps-container .ps-scrollbar-x {
-  background-color: rgba(255, 255, 0, 0.9);
+  background-color: rgba(255, 0, 144, 0.9);
   height: 6px;
   position: absolute;
   bottom: 0;
@@ -1963,6 +1970,7 @@ figure .scroll {
     right: 0;
     bottom: 0;
     overflow: hidden;
+    mix-blend-mode: multiply;
   }
   .js.no-touch .skull > div {
     -webkit-transform: translateY(100%);
@@ -2074,6 +2082,7 @@ header[role="banner"] > div > div {
 }
 header[role="banner"] > div > div > div {
   background-color: #07e7f7;
+  mix-blend-mode: multiply;
   border-radius: 5px;
   position: absolute;
   top: 0;
@@ -2086,6 +2095,7 @@ header[role="banner"] > div > div > div {
   color: #333;
   margin-top: 25px;
   margin-bottom: 25px;
+  mix-blend-mode: multiply;
 }
 .callout.callout-box {
   background-color: #ddd;
