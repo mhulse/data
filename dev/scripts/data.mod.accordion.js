@@ -168,6 +168,14 @@ DATA.register(function() {
 			}
 		});
 	
+	// Open for touch (no skull, so fill the space):
+	if ($('html.touch').length) {
+		
+		// Set the active option, after initialization:
+		$primary.accordion('option', 'active', 0);
+		
+	}
+	
 	$(window).trigger('hashchange');
 	
 }); // DATA
