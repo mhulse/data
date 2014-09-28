@@ -94,7 +94,7 @@ DATA.register(function() {
 											
 											$content.fadeIn('fast', function() {
 												
-												$content.find('.scroll').trigger('scroll.perfect');
+												$content.find('.scroll').trigger('scroll.perfect'); // See `data.mod.scroll.js`.
 												
 												$('html, body').animate({ scrollTop: ui.newHeader.offset().top }, 'fast');
 												

@@ -25,7 +25,6 @@
     },
     "perfect-scrollbar": {
       "": [
-        "src/jquery.mousewheel.js",
         "src/perfect-scrollbar.js"
       ]
     }

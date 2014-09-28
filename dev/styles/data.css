@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
  * @version 0.1.0
- * @date 2014/09/14
+ * @date 2014/09/27
  */
 
 
@@ -485,7 +485,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   color: #000;
-  background: #fff;
+  background: #fff url(../images/grunge.gif);
   padding: 25px;
 }
 
@@ -1845,6 +1845,10 @@ figure .scroll {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
+  visibility: hidden;
+}
+.ps-container.ps-active-x .ps-scrollbar-x-rail {
+  visibility: visible;
 }
 .ps-container .ps-scrollbar-x {
   background-color: rgba(255, 255, 0, 0.9);
@@ -1852,6 +1856,9 @@ figure .scroll {
   position: absolute;
   bottom: 0;
   cursor: pointer;
+}
+.ps-container .ps-scrollbar-y-rail {
+  display: none !important;
 }
 
 .js ul.harmonia {

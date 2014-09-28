@@ -34,30 +34,14 @@
 .ps-container {
 	
 	.ps-scrollbar-x-rail {
-		
 		height: 6px;
 		background-color: rgba($raven, .5);
-		// opacity: .5;
-		// filter: alpha(opacity=50);
 		position: absolute;
 		top: 0;
-		
-		// &:hover,
-		// &.hover {
-			
-		// 	opacity: 1;
-		// 	filter: alpha(opacity=100);
-			
-		// 	//.ps-scrollbar-x { background-color: $tertiary; }
-			
-		// }
-		
-		// &.in-scrolling {
-		// 	opacity: 1;
-		// 	filter: alpha(opacity=100);
-		// }
-		
+		visibility: hidden;
 	}
+	
+	&.ps-active-x .ps-scrollbar-x-rail { visibility: visible; }
 	
 	.ps-scrollbar-x {
 		background-color: rgba($tertiary, .9);
@@ -65,14 +49,8 @@
 		position: absolute;
 		bottom: 0;
 		cursor: pointer;
-		// -webkit-border-radius: 4px;
-		//    -moz-border-radius: 4px;
-		//         border-radius: 4px;
-		// -webkit-transition: background-color .2s linear;
-		//    -moz-transition: background-color .2s linear;
-		//     -ms-transition: background-color .2s linear;
-		//      -o-transition: background-color .2s linear;
-		//         transition: background-color .2s linear;
 	}
+	
+	.ps-scrollbar-y-rail { display: none !important; } // We never want the Y rail to show.
 	
 }
