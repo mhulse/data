@@ -492,8 +492,12 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   color: #000;
-  background: #fff url(../images/grunge.gif) center top;
+  background: #fff;
   padding: 25px;
+}
+
+.blend body {
+  background: #fff url(../images/grunge.gif) center top;
 }
 
 p.excerpt {

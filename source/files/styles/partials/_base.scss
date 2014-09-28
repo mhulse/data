@@ -33,9 +33,11 @@ body {
 	font-family: $sans;
 	text-align: center;
 	color: $raven;
-	background: $milk url(../images/grunge.gif) center top;
+	background: $milk;
 	padding: 25px;
 }
+
+.blend body { background: $milk url(../images/grunge.gif) center top; }
 
 p {
 	

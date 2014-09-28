@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-touch no-js" lang="en" dir="ltr">
+<html class="no-touch no-js no-blend" lang="en" dir="ltr">
 
 <!-- Copyright © 2013-14 Micky Hulse. All rights reserved. -->
 
@@ -10,6 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<script>/*! https://gist.github.com/mhulse/4704893 */!function(e,n,o){("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch||o.MaxTouchPoints>0||o.msMaxTouchPoints>0)&&(n.documentElement.className=n.documentElement.className.replace(/\bno-touch\b/,"touch")),n.documentElement.className=n.documentElement.className.replace(/\bno-js\b/,"js")}(window,document,navigator);</script>
+	
+	<script>/* https://gist.github.com/mhulse/6ec4db51a61eb958b82d */!function(e,n){e.getComputedStyle(n.head,null).mixBlendMode&&(n.documentElement.className=n.documentElement.className.replace(/\bno-blend\b/,"blend"))}(window,document);</script>
 	
 	<meta name="copyright" content="Copyright © 2013-14 Micky Hulse. All rights reserved.">
 	
